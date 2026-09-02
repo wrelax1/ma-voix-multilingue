@@ -105,7 +105,7 @@ function handleTopRightButton() {
 		!activeScreen ||
 		activeScreen.id === "homeScreen"
 	) {
-		playAttentionAlarm();
+		openVoiceScreen();
 		return;
 	}
 
@@ -129,8 +129,8 @@ function updateTopRightButton(screenId) {
 
 	if (screenId === "homeScreen") {
 
-		button.textContent = "HEP!";
-		button.classList.add("emergency");
+		button.textContent = "LANGUE";
+		button.classList.remove("emergency");
 		button.classList.remove("return-mode");
 
 	}
