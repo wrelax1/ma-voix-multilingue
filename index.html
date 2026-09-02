@@ -184,88 +184,110 @@
     </section>
 
 <!-- RESPIRATION -->
-    <section id="respirationScreen" class="screen">
+<section id="respirationScreen" class="screen">
+
+    <button
+        class="back-button"
+        onclick="showScreen('homeScreen')"
+    >
+        ← RETOUR
+    </button>
+
+    <h1 id="respirationTitle">
+        Respiration
+    </h1>
+
+    <div class="phrase-buttons">
 
         <button
-            class="back-button"
-            onclick="showScreen('homeScreen')"
+            onclick="speakRespirationPhrase('breathing')"
         >
-            ← RETOUR
-        </button>
-
-        <h1>Respiration</h1>
-
-        <div class="phrase-buttons">
-
-            <button
-                onclick="speak('J’ai du mal à respirer')"
-            >
+            <span id="respirationBreathingButton">
                 J'AI DU MAL<br>
                 À RESPIRER
-            </button>
+            </span>
+        </button>
 
-            <button
-                onclick="speak('J’ai besoin d’être aspiré')"
-            >
+        <button
+            onclick="speakRespirationPhrase('suction')"
+        >
+            <span id="respirationSuctionButton">
                 J'AI BESOIN<br>
                 D'ÊTRE ASPIRÉ
-            </button>
+            </span>
+        </button>
 
-            <button
-                onclick="speak('J’ai des sécrétions qui me gênent')"
-            >
+        <button
+            onclick="speakRespirationPhrase('secretions')"
+        >
+            <span id="respirationSecretionsButton">
                 SÉCRÉTIONS
-            </button>
+            </span>
+        </button>
 
-            <button
-                onclick="speak('J’ai l’impression que quelque chose est bouché')"
-            >
+        <button
+            onclick="speakRespirationPhrase('blocked')"
+        >
+            <span id="respirationBlockedButton">
                 ÇA SEMBLE<br>
                 BOUCHÉ
-            </button>
+            </span>
+        </button>
 
-            <button
-                onclick="speak('J’ai mal autour de ma trachéotomie')"
-            >
+        <button
+            onclick="speakRespirationPhrase('tracheostomyPain')"
+        >
+            <span id="respirationTracheostomyPainButton">
                 DOULEUR AUTOUR<br>
                 DE LA TRACHÉOTOMIE
-            </button>
+            </span>
+        </button>
 
-            <button
-                onclick="speak('J’ai la gorge sèche')"
-            >
+        <button
+            onclick="speakRespirationPhrase('dryThroat')"
+        >
+            <span id="respirationDryThroatButton">
                 GORGE SÈCHE
-            </button>
+            </span>
+        </button>
 
-            <button
-                onclick="speak('J’ai la bouche très sèche')"
-            >
+        <button
+            onclick="speakRespirationPhrase('dryMouth')"
+        >
+            <span id="respirationDryMouthButton">
                 BOUCHE SÈCHE
-            </button>
+            </span>
+        </button>
 
-            <button
-                onclick="speak('Ça va mieux maintenant')"
-            >
+        <button
+            onclick="speakRespirationPhrase('better')"
+        >
+            <span id="respirationBetterButton">
                 ÇA VA MIEUX
-            </button>
+            </span>
+        </button>
 
-            <button
-                onclick="speak('Ça ne va toujours pas mieux')"
-            >
+        <button
+            onclick="speakRespirationPhrase('notBetter')"
+        >
+            <span id="respirationNotBetterButton">
                 ÇA NE VA<br>
                 PAS MIEUX
-            </button>
+            </span>
+        </button>
 
-            <button
-                onclick="speak('Restez avec moi s’il vous plaît')"
-            >
+        <button
+            onclick="speakRespirationPhrase('stay')"
+        >
+            <span id="respirationStayButton">
                 RESTEZ<br>
                 AVEC MOI
-            </button>
-			
-        </div>
+            </span>
+        </button>
 
-    </section>
+    </div>
+
+</section>
 
 <!-- DOULEUR -->
 <section id="painScreen" class="screen">

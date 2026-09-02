@@ -169,6 +169,344 @@ const HOME_TRANSLATIONS = {
 
 };
 
+/* =========================================
+   RESPIRATION — TRADUCTIONS
+   ========================================= */
+
+const RESPIRATION_TRANSLATIONS = {
+
+    fr: {
+
+        title: "Respiration",
+
+        breathing: {
+            label: "J'AI DU MAL<br>À RESPIRER",
+            speech: "J’ai du mal à respirer"
+        },
+
+        suction: {
+            label: "J'AI BESOIN<br>D'ÊTRE ASPIRÉ",
+            speech: "J’ai besoin d’être aspiré"
+        },
+
+        secretions: {
+            label: "SÉCRÉTIONS",
+            speech: "J’ai des sécrétions qui me gênent"
+        },
+
+        blocked: {
+            label: "ÇA SEMBLE<br>BOUCHÉ",
+            speech: "J’ai l’impression que quelque chose est bouché"
+        },
+
+        tracheostomyPain: {
+            label: "DOULEUR AUTOUR<br>DE LA TRACHÉOTOMIE",
+            speech: "J’ai mal autour de ma trachéotomie"
+        },
+
+        dryThroat: {
+            label: "GORGE SÈCHE",
+            speech: "J’ai la gorge sèche"
+        },
+
+        dryMouth: {
+            label: "BOUCHE SÈCHE",
+            speech: "J’ai la bouche très sèche"
+        },
+
+        better: {
+            label: "ÇA VA MIEUX",
+            speech: "Ça va mieux maintenant"
+        },
+
+        notBetter: {
+            label: "ÇA NE VA<br>PAS MIEUX",
+            speech: "Ça ne va toujours pas mieux"
+        },
+
+        stay: {
+            label: "RESTEZ<br>AVEC MOI",
+            speech: "Restez avec moi, s’il vous plaît"
+        }
+    },
+
+
+    en: {
+
+        title: "Breathing",
+
+        breathing: {
+            label: "I'M HAVING TROUBLE<br>BREATHING",
+            speech: "I'm having trouble breathing"
+        },
+
+        suction: {
+            label: "I NEED<br>SUCTION",
+            speech: "I need to be suctioned"
+        },
+
+        secretions: {
+            label: "SECRETIONS",
+            speech: "I have secretions that are bothering me"
+        },
+
+        blocked: {
+            label: "IT FEELS<br>BLOCKED",
+            speech: "It feels like something is blocked"
+        },
+
+        tracheostomyPain: {
+            label: "PAIN AROUND<br>TRACHEOSTOMY",
+            speech: "I have pain around my tracheostomy"
+        },
+
+        dryThroat: {
+            label: "DRY THROAT",
+            speech: "My throat is dry"
+        },
+
+        dryMouth: {
+            label: "DRY MOUTH",
+            speech: "My mouth is very dry"
+        },
+
+        better: {
+            label: "I FEEL BETTER",
+            speech: "I feel better now"
+        },
+
+        notBetter: {
+            label: "STILL NOT<br>BETTER",
+            speech: "I still don't feel better"
+        },
+
+        stay: {
+            label: "STAY<br>WITH ME",
+            speech: "Please stay with me"
+        }
+    },
+
+
+    de: {
+
+        title: "Atmung",
+
+        breathing: {
+            label: "ICH BEKOMME<br>SCHLECHT LUFT",
+            speech: "Ich bekomme schlecht Luft"
+        },
+
+        suction: {
+            label: "BITTE<br>ABSAUGEN",
+            speech: "Ich muss abgesaugt werden"
+        },
+
+        secretions: {
+            label: "SEKRET",
+            speech: "Ich habe Sekret, das mich stört"
+        },
+
+        blocked: {
+            label: "ETWAS IST<br>BLOCKIERT",
+            speech: "Ich habe das Gefühl, dass etwas blockiert ist"
+        },
+
+        tracheostomyPain: {
+            label: "SCHMERZEN AN DER<br>TRACHEOSTOMIE",
+            speech: "Ich habe Schmerzen im Bereich der Tracheostomie"
+        },
+
+        dryThroat: {
+            label: "TROCKENER HALS",
+            speech: "Mein Hals ist trocken"
+        },
+
+        dryMouth: {
+            label: "TROCKENER MUND",
+            speech: "Mein Mund ist sehr trocken"
+        },
+
+        better: {
+            label: "ES GEHT<br>BESSER",
+            speech: "Jetzt geht es mir besser"
+        },
+
+        notBetter: {
+            label: "NOCH NICHT<br>BESSER",
+            speech: "Es geht mir immer noch nicht besser"
+        },
+
+        stay: {
+            label: "BLEIBEN SIE<br>BEI MIR",
+            speech: "Bitte bleiben Sie bei mir"
+        }
+    },
+
+
+    it: {
+
+        title: "Respirazione",
+
+        breathing: {
+            label: "FACCIO FATICA<br>A RESPIRARE",
+            speech: "Faccio fatica a respirare"
+        },
+
+        suction: {
+            label: "HO BISOGNO<br>DI ASPIRAZIONE",
+            speech: "Ho bisogno di essere aspirato"
+        },
+
+        secretions: {
+            label: "SECREZIONI",
+            speech: "Ho delle secrezioni che mi danno fastidio"
+        },
+
+        blocked: {
+            label: "SEMBRA<br>OSTRUITO",
+            speech: "Ho l'impressione che ci sia qualcosa di ostruito"
+        },
+
+        tracheostomyPain: {
+            label: "DOLORE INTORNO<br>ALLA TRACHEOSTOMIA",
+            speech: "Ho dolore intorno alla tracheostomia"
+        },
+
+        dryThroat: {
+            label: "GOLA SECCA",
+            speech: "Ho la gola secca"
+        },
+
+        dryMouth: {
+            label: "BOCCA SECCA",
+            speech: "Ho la bocca molto secca"
+        },
+
+        better: {
+            label: "ORA VA MEGLIO",
+            speech: "Adesso va meglio"
+        },
+
+        notBetter: {
+            label: "NON VA<br>ANCORA MEGLIO",
+            speech: "Non va ancora meglio"
+        },
+
+        stay: {
+            label: "RESTI<br>CON ME",
+            speech: "Rimanga con me, per favore"
+        }
+    }
+
+};
+
+function updateRespirationLanguage() {
+
+    const translation =
+        RESPIRATION_TRANSLATIONS[
+            patientLanguage
+        ];
+
+    if (!translation) {
+        return;
+    }
+
+
+    const title =
+        document.getElementById(
+            "respirationTitle"
+        );
+
+    if (title) {
+        title.textContent =
+            translation.title;
+    }
+
+
+    const elements = {
+
+        respirationBreathingButton:
+            translation.breathing.label,
+
+        respirationSuctionButton:
+            translation.suction.label,
+
+        respirationSecretionsButton:
+            translation.secretions.label,
+
+        respirationBlockedButton:
+            translation.blocked.label,
+
+        respirationTracheostomyPainButton:
+            translation.tracheostomyPain.label,
+
+        respirationDryThroatButton:
+            translation.dryThroat.label,
+
+        respirationDryMouthButton:
+            translation.dryMouth.label,
+
+        respirationBetterButton:
+            translation.better.label,
+
+        respirationNotBetterButton:
+            translation.notBetter.label,
+
+        respirationStayButton:
+            translation.stay.label
+    };
+
+
+    Object.entries(elements).forEach(
+        function(entry) {
+
+            const elementId =
+                entry[0];
+
+            const html =
+                entry[1];
+
+            const element =
+                document.getElementById(
+                    elementId
+                );
+
+            if (element) {
+                element.innerHTML =
+                    html;
+            }
+
+        }
+    );
+}
+
+
+function speakRespirationPhrase(phraseKey) {
+
+    const translation =
+        RESPIRATION_TRANSLATIONS[
+            caregiverLanguage
+        ];
+
+    if (!translation) {
+        return;
+    }
+
+
+    const phrase =
+        translation[phraseKey];
+
+    if (!phrase) {
+        return;
+    }
+
+
+    speak(
+        phrase.speech,
+        caregiverLanguage
+    );
+}
+
 function updateHomeLanguage() {
 
     const translation =
@@ -854,6 +1192,8 @@ function choosePatientLanguage(language) {
 	updateQuickBarLanguage();
 	
 	updateHomeLanguage();
+	
+	updateRespirationLanguage();
 
     updateTopRightButton("voiceScreen");
 }
@@ -1837,6 +2177,8 @@ document.addEventListener(
 		updateQuickBarLanguage();
 		
 		updateHomeLanguage();
+		
+		updateRespirationLanguage();
 
 		updateTopRightButton("homeScreen");
 		
