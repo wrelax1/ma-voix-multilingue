@@ -154,33 +154,49 @@ function handleTopRightButton() {
     if (backButton) {
         backButton.click();
     }
+	else {
+        showScreen("homeScreen");
+    }
 }
-
 
 function updateTopRightButton(screenId) {
 
-    const button =LANGUE
+    const button =
         document.getElementById("topRightButton");
 
     if (!button) {
         return;
     }
 
-	if (screenId === "homeScreen") {
 
-		button.textContent =
-			getLanguagePairLabel();
-		button.classList.remove("emergency");
-		button.classList.remove("return-mode");
+    if (screenId === "homeScreen") {
 
-	}
-	else {
+        button.textContent =
+            getLanguagePairLabel();
 
-		button.textContent = "↶";
-		button.classList.add("emergency");
-		button.classList.add("return-mode");
+        button.classList.remove(
+            "emergency"
+        );
 
-	}
+        button.classList.remove(
+            "return-mode"
+        );
+
+    }
+    else {
+
+        button.textContent =
+            "↶";
+
+        button.classList.remove(
+            "emergency"
+        );
+
+        button.classList.add(
+            "return-mode"
+        );
+
+    }
 }
 
 function showScreen(screenId) {
