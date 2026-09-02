@@ -1563,6 +1563,61 @@ function deleteFavorite(index) {
     renderCustomFavorites();
 }
 
+async function updateAppVersion() {
+
+    const versionElement =
+        document.getElementById("appVersion");
+
+    if (!versionElement) {
+        return;
+    }
+
+    if (!("caches" in window)) {
+        return;
+    }
+
+    try {
+
+        const cacheNames =
+            await caches.keys();
+
+        const prefix =
+            "ma-voix-multilingue-v";
+
+        const versions =
+            cacheNames
+                .filter(function(name) {
+                    return name.startsWith(prefix);
+                })
+                .map(function(name) {
+                    return parseInt(
+                        name.substring(prefix.length),
+                        10
+                    );
+                })
+                .filter(function(version) {
+                    return !isNaN(version);
+                });
+
+        if (versions.length === 0) {
+            return;
+        }
+
+        const latestVersion =
+            Math.max.apply(null, versions);
+
+        versionElement.textContent =
+            "(v" + latestVersion + ")";
+
+    }
+    catch (error) {
+
+        console.warn(
+            "Impossible de lire la version :",
+            error
+        );
+    }
+}
 
 document.addEventListener(
     "DOMContentLoaded",
@@ -1579,6 +1634,8 @@ document.addEventListener(
 		updateQuickBarLanguage();
 
 		updateTopRightButton("homeScreen");
+		
+		updateAppVersion();
 
     }
 );

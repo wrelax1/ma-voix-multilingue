@@ -60,6 +60,12 @@ h1 {
     line-height: 1.1;
 }
 
+#appVersion {
+    font-size: 0.45em;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
 h2 {
     margin:
         clamp(18px, 4vw, 28px)
