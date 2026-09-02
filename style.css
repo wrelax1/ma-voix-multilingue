@@ -606,6 +606,34 @@ button:focus-visible {
     background: #e9fbe9;
 }
 
+.language-voice-status {
+    margin:
+        clamp(12px, 3vw, 18px)
+        0
+        0 !important;
+
+    padding:
+        clamp(12px, 3vw, 16px);
+
+    border-radius: 12px;
+
+    text-align: center;
+
+    font-size: clamp(16px, 3.2vw, 19px) !important;
+    font-weight: 800;
+    line-height: 1.35;
+}
+
+
+.voice-status-ok {
+    background: #e9fbe9;
+}
+
+
+.voice-status-warning {
+    background: #fff4d6;
+}
+
 /* =========================================
    RÉGLAGE DES VOIX
    ========================================= */

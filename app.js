@@ -112,6 +112,7 @@ function writeLocalSetting(key, value) {
 }
 
 
+let availableVoices = [];
 let availableFrenchVoices = [];
 
 let maleVoiceName = readLocalSetting(
@@ -160,6 +161,107 @@ function getLanguagePairLabel() {
         " → " +
         caregiverLanguage.toUpperCase()
     );
+}
+
+function getVoicesForLanguage(language) {
+
+    return availableVoices.filter(
+        function(voice) {
+
+            return voice.lang
+                .toLowerCase()
+                .startsWith(
+                    language.toLowerCase()
+                );
+        }
+    );
+}
+
+
+function getAutomaticVoice(language) {
+
+    const voices =
+        getVoicesForLanguage(language);
+
+    if (voices.length === 0) {
+        return null;
+    }
+
+
+    const expectedLocale =
+        (
+            LANGUAGE_LOCALES[language] ||
+            language
+        ).toLowerCase();
+
+
+    /*
+       Priorité 1 :
+       bonne langue + bon pays + voix locale
+    */
+
+    const exactLocalVoice =
+        voices.find(
+            function(voice) {
+
+                return (
+                    voice.localService === true &&
+                    voice.lang.toLowerCase() ===
+                        expectedLocale
+                );
+            }
+        );
+
+    if (exactLocalVoice) {
+        return exactLocalVoice;
+    }
+
+
+    /*
+       Priorité 2 :
+       n'importe quelle voix locale
+       dans la bonne langue
+    */
+
+    const localVoice =
+        voices.find(
+            function(voice) {
+                return voice.localService === true;
+            }
+        );
+
+    if (localVoice) {
+        return localVoice;
+    }
+
+
+    /*
+       Priorité 3 :
+       bonne langue + bon pays
+    */
+
+    const exactVoice =
+        voices.find(
+            function(voice) {
+
+                return (
+                    voice.lang.toLowerCase() ===
+                    expectedLocale
+                );
+            }
+        );
+
+    if (exactVoice) {
+        return exactVoice;
+    }
+
+
+    /*
+       Dernier recours :
+       première voix trouvée dans la langue
+    */
+
+    return voices[0];
 }
 
 function updateQuickBarLanguage() {
@@ -261,38 +363,67 @@ function speak(text, language = "fr") {
        les phrases françaises.
     */
 
-    if (language === "fr") {
-
-        let selectedVoiceName = "";
-
-        if (activeVoiceType === "male") {
-            selectedVoiceName =
-                maleVoiceName;
-        }
-        else {
-            selectedVoiceName =
-                femaleVoiceName;
-        }
+let selectedVoice = null;
 
 
-        const selectedVoice =
-            availableFrenchVoices.find(
-                function(voice) {
-                    return voice.name ===
-                        selectedVoiceName;
-                }
-            );
+/*
+   En français, on conserve le choix
+   masculin / féminin déjà configuré.
+*/
+
+	if (language === "fr") {
+
+		let selectedVoiceName = "";
+
+		if (activeVoiceType === "male") {
+
+			selectedVoiceName =
+				maleVoiceName;
+
+		}
+		else {
+
+			selectedVoiceName =
+				femaleVoiceName;
+
+		}
 
 
-        if (selectedVoice) {
+		selectedVoice =
+			availableFrenchVoices.find(
+				function(voice) {
 
-            message.voice =
-                selectedVoice;
+					return voice.name ===
+						selectedVoiceName;
 
-            message.lang =
-                selectedVoice.lang;
-        }
-    }
+				}
+			);
+	}
+
+
+	/*
+	   Si aucune voix manuelle n'est trouvée,
+	   Ma Voix choisit automatiquement
+	   la meilleure voix disponible.
+	*/
+
+	if (!selectedVoice) {
+
+		selectedVoice =
+			getAutomaticVoice(language);
+
+	}
+
+
+	if (selectedVoice) {
+
+		message.voice =
+			selectedVoice;
+
+		message.lang =
+			selectedVoice.lang;
+
+	}
 
 
     window.speechSynthesis.speak(
@@ -398,15 +529,21 @@ function loadFrenchVoices() {
     const voices =
         window.speechSynthesis.getVoices();
 
+
+    availableVoices =
+        voices;
+
+
     availableFrenchVoices =
-        voices.filter(function(voice) {
+        voices.filter(
+            function(voice) {
 
-            return voice.lang
-                .toLowerCase()
-                .startsWith("fr");
+                return voice.lang
+                    .toLowerCase()
+                    .startsWith("fr");
 
-        });
-
+            }
+        );
 
     fillVoiceSelect(
         "maleVoiceSelect",
@@ -489,6 +626,8 @@ function openVoiceScreen() {
     showScreen("voiceScreen");
 
     updateLanguageButtons();
+	
+	updateCaregiverVoiceStatus();
 
     updateVoiceButtons();
 }
@@ -530,6 +669,8 @@ function chooseCaregiverLanguage(language) {
     );
 
     updateLanguageButtons();
+	
+	updateCaregiverVoiceStatus();
 
     updateTopRightButton("voiceScreen");
 }
@@ -569,6 +710,93 @@ function updateLanguageButtons() {
                     caregiverLanguage
             );
         }
+    );
+}
+
+function updateCaregiverVoiceStatus() {
+
+    const status =
+        document.getElementById(
+            "caregiverVoiceStatus"
+        );
+
+    if (!status) {
+        return;
+    }
+
+
+    const voices =
+        getVoicesForLanguage(
+            caregiverLanguage
+        );
+
+
+    const localVoices =
+        voices.filter(
+            function(voice) {
+
+                return voice.localService === true;
+
+            }
+        );
+
+
+    const languageNames = {
+        fr: "française",
+        en: "anglaise",
+        de: "allemande",
+        it: "italienne"
+    };
+
+
+    const languageName =
+        languageNames[caregiverLanguage] ||
+        caregiverLanguage;
+
+
+    status.classList.remove(
+        "voice-status-ok",
+        "voice-status-warning"
+    );
+
+
+    if (localVoices.length > 0) {
+
+        status.textContent =
+            "✓ Voix " +
+            languageName +
+            " disponible hors connexion.";
+
+        status.classList.add(
+            "voice-status-ok"
+        );
+
+        return;
+    }
+
+
+    if (voices.length > 0) {
+
+        status.textContent =
+            "⚠️ Voix " +
+            languageName +
+            " détectée, mais son fonctionnement hors connexion n'est pas garanti.";
+
+        status.classList.add(
+            "voice-status-warning"
+        );
+
+        return;
+    }
+
+
+    status.textContent =
+        "⚠️ Aucune voix " +
+        languageName +
+        " détectée sur cet appareil.";
+
+    status.classList.add(
+        "voice-status-warning"
     );
 }
 
@@ -846,10 +1074,15 @@ if (
     typeof window.speechSynthesis.addEventListener === "function"
 ) {
 
-    window.speechSynthesis.addEventListener(
-        "voiceschanged",
-        loadFrenchVoices
-    );
+	window.speechSynthesis.addEventListener(
+		"voiceschanged",
+		function() {
+
+			loadFrenchVoices();
+
+			updateCaregiverVoiceStatus();
+		}
+	);
 
 }
 
