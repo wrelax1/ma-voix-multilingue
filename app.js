@@ -1342,6 +1342,8 @@ document.addEventListener(
         updateVoiceButtons();
 		
 		updateLanguageButtons();
+		
+		updateQuickBarLanguage();
 
 		updateTopRightButton("homeScreen");
 
