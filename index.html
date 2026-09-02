@@ -30,17 +30,29 @@
 
 <header class="quick-bar">
 
-    <button class="quick" onclick="speak('Oui')">
-        OUI
-    </button>
+	<button
+		id="quickYesButton"
+		class="quick"
+		onclick="speakQuickPhrase('yes')"
+	>
+		OUI
+	</button>
 
-    <button class="quick" onclick="speak('Non')">
-        NON
-    </button>
+	<button
+		id="quickNoButton"
+		class="quick"
+		onclick="speakQuickPhrase('no')"
+	>
+		NON
+	</button>
 
-    <button class="quick" onclick="speak('Stop, s’il vous plaît')">
-        STOP
-    </button>
+	<button
+		id="quickStopButton"
+		class="quick"
+		onclick="speakQuickPhrase('stop')"
+	>
+		STOP
+	</button>
 
 	<button
 		id="topRightButton"

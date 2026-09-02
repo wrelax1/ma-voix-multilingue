@@ -16,6 +16,75 @@ const SUPPORTED_LANGUAGES = [
     "it"
 ];
 
+const LANGUAGE_LOCALES = {
+    fr: "fr-FR",
+    en: "en-GB",
+    de: "de-DE",
+    it: "it-IT"
+};
+
+
+const QUICK_PHRASES = {
+
+    yes: {
+        fr: {
+            label: "OUI",
+            speech: "Oui"
+        },
+        en: {
+            label: "YES",
+            speech: "Yes"
+        },
+        de: {
+            label: "JA",
+            speech: "Ja"
+        },
+        it: {
+            label: "SÌ",
+            speech: "Sì"
+        }
+    },
+
+    no: {
+        fr: {
+            label: "NON",
+            speech: "Non"
+        },
+        en: {
+            label: "NO",
+            speech: "No"
+        },
+        de: {
+            label: "NEIN",
+            speech: "Nein"
+        },
+        it: {
+            label: "NO",
+            speech: "No"
+        }
+    },
+
+    stop: {
+        fr: {
+            label: "STOP",
+            speech: "Stop, s’il vous plaît"
+        },
+        en: {
+            label: "STOP",
+            speech: "Stop, please"
+        },
+        de: {
+            label: "STOPP",
+            speech: "Stopp, bitte"
+        },
+        it: {
+            label: "STOP",
+            speech: "Stop, per favore"
+        }
+    }
+
+};
+
 function readLocalSetting(key, fallbackValue = "") {
 
     try {
@@ -93,7 +162,74 @@ function getLanguagePairLabel() {
     );
 }
 
-function speak(text) {
+function updateQuickBarLanguage() {
+
+    const yesButton =
+        document.getElementById(
+            "quickYesButton"
+        );
+
+    const noButton =
+        document.getElementById(
+            "quickNoButton"
+        );
+
+    const stopButton =
+        document.getElementById(
+            "quickStopButton"
+        );
+
+
+    if (yesButton) {
+        yesButton.textContent =
+            QUICK_PHRASES.yes[
+                patientLanguage
+            ].label;
+    }
+
+
+    if (noButton) {
+        noButton.textContent =
+            QUICK_PHRASES.no[
+                patientLanguage
+            ].label;
+    }
+
+
+    if (stopButton) {
+        stopButton.textContent =
+            QUICK_PHRASES.stop[
+                patientLanguage
+            ].label;
+    }
+}
+
+
+function speakQuickPhrase(phraseKey) {
+
+    const phrase =
+        QUICK_PHRASES[phraseKey];
+
+    if (!phrase) {
+        return;
+    }
+
+
+    const translation =
+        phrase[caregiverLanguage];
+
+    if (!translation) {
+        return;
+    }
+
+
+    speak(
+        translation.speech,
+        caregiverLanguage
+    );
+}
+
+function speak(text, language = "fr") {
 
     if (!text) {
         return;
@@ -104,35 +240,64 @@ function speak(text) {
     const message =
         new SpeechSynthesisUtterance(text);
 
-    message.lang = "fr-FR";
-    message.rate = 0.9;
+
+    const locale =
+        LANGUAGE_LOCALES[language] ||
+        "fr-FR";
 
 
-    let selectedVoiceName = "";
+    message.lang =
+        locale;
 
-    if (activeVoiceType === "male") {
-        selectedVoiceName = maleVoiceName;
+    message.rate =
+        0.9;
+
+
+    /*
+       Pour l'instant, les voix choisies manuellement
+       dans Ma Voix sont encore les voix françaises.
+
+       Elles sont donc utilisées uniquement pour
+       les phrases françaises.
+    */
+
+    if (language === "fr") {
+
+        let selectedVoiceName = "";
+
+        if (activeVoiceType === "male") {
+            selectedVoiceName =
+                maleVoiceName;
+        }
+        else {
+            selectedVoiceName =
+                femaleVoiceName;
+        }
+
+
+        const selectedVoice =
+            availableFrenchVoices.find(
+                function(voice) {
+                    return voice.name ===
+                        selectedVoiceName;
+                }
+            );
+
+
+        if (selectedVoice) {
+
+            message.voice =
+                selectedVoice;
+
+            message.lang =
+                selectedVoice.lang;
+        }
     }
-    else {
-        selectedVoiceName = femaleVoiceName;
-    }
 
 
-    const selectedVoice =
-        availableFrenchVoices.find(
-            function(voice) {
-                return voice.name === selectedVoiceName;
-            }
-        );
-
-
-    if (selectedVoice) {
-        message.voice = selectedVoice;
-        message.lang = selectedVoice.lang;
-    }
-
-
-    window.speechSynthesis.speak(message);
+    window.speechSynthesis.speak(
+        message
+    );
 }
 
 function handleTopRightButton() {
@@ -343,6 +508,8 @@ function choosePatientLanguage(language) {
     );
 
     updateLanguageButtons();
+	
+	updateQuickBarLanguage();
 
     updateTopRightButton("voiceScreen");
 }
