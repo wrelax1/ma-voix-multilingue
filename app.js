@@ -4,6 +4,17 @@ const VOICE_STORAGE_KEYS = {
     active: "maVoixActiveVoiceType"
 };
 
+const LANGUAGE_STORAGE_KEYS = {
+    patient: "maVoixPatientLanguage",
+    caregiver: "maVoixCaregiverLanguage"
+};
+
+const SUPPORTED_LANGUAGES = [
+    "fr",
+    "en",
+    "de",
+    "it"
+];
 
 function readLocalSetting(key, fallbackValue = "") {
 
@@ -53,6 +64,34 @@ if (activeVoiceType !== "male" && activeVoiceType !== "female") {
     activeVoiceType = "male";
 }
 
+let patientLanguage = readLocalSetting(
+    LANGUAGE_STORAGE_KEYS.patient,
+    "fr"
+);
+
+let caregiverLanguage = readLocalSetting(
+    LANGUAGE_STORAGE_KEYS.caregiver,
+    "fr"
+);
+
+
+if (!SUPPORTED_LANGUAGES.includes(patientLanguage)) {
+    patientLanguage = "fr";
+}
+
+if (!SUPPORTED_LANGUAGES.includes(caregiverLanguage)) {
+    caregiverLanguage = "fr";
+}
+
+
+function getLanguagePairLabel() {
+
+    return (
+        patientLanguage.toUpperCase() +
+        " → " +
+        caregiverLanguage.toUpperCase()
+    );
+}
 
 function speak(text) {
 
@@ -120,7 +159,7 @@ function handleTopRightButton() {
 
 function updateTopRightButton(screenId) {
 
-    const button =
+    const button =LANGUE
         document.getElementById("topRightButton");
 
     if (!button) {
@@ -129,7 +168,8 @@ function updateTopRightButton(screenId) {
 
 	if (screenId === "homeScreen") {
 
-		button.textContent = "LANGUE";
+		button.textContent =
+			getLanguagePairLabel();
 		button.classList.remove("emergency");
 		button.classList.remove("return-mode");
 
@@ -267,9 +307,87 @@ function openVoiceScreen() {
 
     showScreen("voiceScreen");
 
+    updateLanguageButtons();
+
     updateVoiceButtons();
 }
 
+function choosePatientLanguage(language) {
+
+    if (!SUPPORTED_LANGUAGES.includes(language)) {
+        return;
+    }
+
+    patientLanguage =
+        language;
+
+    writeLocalSetting(
+        LANGUAGE_STORAGE_KEYS.patient,
+        patientLanguage
+    );
+
+    updateLanguageButtons();
+
+    updateTopRightButton("voiceScreen");
+}
+
+
+function chooseCaregiverLanguage(language) {
+
+    if (!SUPPORTED_LANGUAGES.includes(language)) {
+        return;
+    }
+
+    caregiverLanguage =
+        language;
+
+    writeLocalSetting(
+        LANGUAGE_STORAGE_KEYS.caregiver,
+        caregiverLanguage
+    );
+
+    updateLanguageButtons();
+
+    updateTopRightButton("voiceScreen");
+}
+
+
+function updateLanguageButtons() {
+
+    const patientButtons =
+        document.querySelectorAll(
+            "[data-patient-language]"
+        );
+
+    const caregiverButtons =
+        document.querySelectorAll(
+            "[data-caregiver-language]"
+        );
+
+
+    patientButtons.forEach(
+        function(button) {
+
+            button.classList.toggle(
+                "language-active",
+                button.dataset.patientLanguage ===
+                    patientLanguage
+            );
+        }
+    );
+
+
+    caregiverButtons.forEach(
+        function(button) {
+
+            button.classList.toggle(
+                "language-active",
+                button.dataset.caregiverLanguage ===
+                    caregiverLanguage
+            );
+        }
+    );
+}
 
 function testVoice(type) {
 
@@ -1039,6 +1157,10 @@ document.addEventListener(
         loadFrenchVoices();
 
         updateVoiceButtons();
+		
+		updateLanguageButtons();
+
+		updateTopRightButton("homeScreen");
 
     }
 );

@@ -564,6 +564,49 @@ button:focus-visible {
 }
 
 /* =========================================
+   RÉGLAGE DES LANGUES
+   ========================================= */
+
+.language-setting {
+    margin-bottom: clamp(28px, 5vw, 40px);
+}
+
+.language-help {
+    margin:
+        0
+        0
+        clamp(12px, 3vw, 18px);
+
+    text-align: center;
+
+    font-size: clamp(17px, 3.5vw, 20px);
+    line-height: 1.4;
+}
+
+.language-choice {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: clamp(8px, 2vw, 14px);
+}
+
+.language-choice button {
+    min-width: 0;
+
+    min-height: clamp(82px, 12vh, 110px);
+
+    font-size: clamp(17px, 3.8vw, 23px);
+}
+
+.language-active {
+    border: 5px solid #111 !important;
+
+    background: #e9fbe9;
+}
+
+/* =========================================
    RÉGLAGE DES VOIX
    ========================================= */
 

@@ -47,7 +47,7 @@
 		class="quick"
 		onclick="handleTopRightButton()"
 	>
-		LANGUE
+		FR → FR
 	</button>
 
 </header>
@@ -1258,6 +1258,99 @@
     </button>
 
     <h1>Langues / Voix</h1>
+
+<div class="language-setting">
+
+    <h2>Langue du patient</h2>
+
+    <p class="language-help">
+        Langue utilisée pour les textes affichés à l'écran.
+    </p>
+
+    <div class="language-choice">
+
+        <button
+            data-patient-language="fr"
+            onclick="choosePatientLanguage('fr')"
+        >
+            🇫🇷<br>
+            FRANÇAIS
+        </button>
+
+        <button
+            data-patient-language="en"
+            onclick="choosePatientLanguage('en')"
+        >
+            🇬🇧<br>
+            ENGLISH
+        </button>
+
+        <button
+            data-patient-language="de"
+            onclick="choosePatientLanguage('de')"
+        >
+            🇩🇪<br>
+            DEUTSCH
+        </button>
+
+        <button
+            data-patient-language="it"
+            onclick="choosePatientLanguage('it')"
+        >
+            🇮🇹<br>
+            ITALIANO
+        </button>
+
+    </div>
+
+</div>
+
+
+<div class="language-setting">
+
+    <h2>Langue du soignant</h2>
+
+    <p class="language-help">
+        Langue utilisée lorsque Ma Voix prononce les phrases.
+    </p>
+
+    <div class="language-choice">
+
+        <button
+            data-caregiver-language="fr"
+            onclick="chooseCaregiverLanguage('fr')"
+        >
+            🇫🇷<br>
+            FRANÇAIS
+        </button>
+
+        <button
+            data-caregiver-language="en"
+            onclick="chooseCaregiverLanguage('en')"
+        >
+            🇬🇧<br>
+            ENGLISH
+        </button>
+
+        <button
+            data-caregiver-language="de"
+            onclick="chooseCaregiverLanguage('de')"
+        >
+            🇩🇪<br>
+            DEUTSCH
+        </button>
+
+        <button
+            data-caregiver-language="it"
+            onclick="chooseCaregiverLanguage('it')"
+        >
+            🇮🇹<br>
+            ITALIANO
+        </button>
+
+    </div>
+
+</div>
 
     <p class="voice-help">
         Choisissez une voix française pour chaque bouton.
