@@ -85,6 +85,209 @@ const QUICK_PHRASES = {
 
 };
 
+/* =========================================
+   ÉCRAN PRINCIPAL — TRADUCTIONS
+   ========================================= */
+
+const HOME_TRANSLATIONS = {
+
+    fr: {
+        title: "Je veux vous dire…",
+        respiration: "RESPIRATION /<br>GORGE",
+        pain: "J'AI MAL",
+        position: "POSITION",
+        care: "BESOIN DE SOINS",
+        hygiene: "TOILETTES",
+        environment: "MA CHAMBRE",
+        questions: "QUESTIONS<br>MÉDECIN",
+        understand: "COMPRENDRE",
+        talk: "FAMILLE / AMIS",
+        emotions: "ÉMOTIONS",
+        recharge: "RECHARGEZ<br>MON TÉLÉPHONE",
+        rechargeSpeech: "Rechargez mon téléphone, s’il vous plaît",
+        phrases: "MES PHRASES",
+        voice: "VOIX",
+        about: "À PROPOS"
+    },
+
+    en: {
+        title: "I want to tell you…",
+        respiration: "BREATHING /<br>THROAT",
+        pain: "I'M IN PAIN",
+        position: "POSITION",
+        care: "I NEED CARE",
+        hygiene: "TOILET /<br>HYGIENE",
+        environment: "MY ROOM",
+        questions: "QUESTIONS<br>FOR THE DOCTOR",
+        understand: "UNDERSTAND",
+        talk: "FAMILY / FRIENDS",
+        emotions: "EMOTIONS",
+        recharge: "CHARGE<br>MY PHONE",
+        rechargeSpeech: "Please charge my phone",
+        phrases: "MY PHRASES",
+        voice: "VOICE",
+        about: "ABOUT"
+    },
+
+    de: {
+        title: "Ich möchte Ihnen sagen…",
+        respiration: "ATMUNG /<br>HALS",
+        pain: "ICH HABE SCHMERZEN",
+        position: "POSITION",
+        care: "ICH BRAUCHE PFLEGE",
+        hygiene: "TOILETTE /<br>HYGIENE",
+        environment: "MEIN ZIMMER",
+        questions: "FRAGEN AN<br>DEN ARZT",
+        understand: "VERSTEHEN",
+        talk: "FAMILIE / FREUNDE",
+        emotions: "GEFÜHLE",
+        recharge: "BITTE MEIN<br>HANDY LADEN",
+        rechargeSpeech: "Bitte laden Sie mein Handy auf",
+        phrases: "MEINE SÄTZE",
+        voice: "STIMME",
+        about: "ÜBER DIE APP"
+    },
+
+    it: {
+        title: "Vorrei dirle…",
+        respiration: "RESPIRAZIONE /<br>GOLA",
+        pain: "HO DOLORE",
+        position: "POSIZIONE",
+        care: "HO BISOGNO DI CURE",
+        hygiene: "TOILETTE /<br>IGIENE",
+        environment: "LA MIA STANZA",
+        questions: "DOMANDE<br>AL MEDICO",
+        understand: "CAPIRE",
+        talk: "FAMIGLIA / AMICI",
+        emotions: "EMOZIONI",
+        recharge: "CARICATE<br>IL MIO TELEFONO",
+        rechargeSpeech: "Per favore, caricate il mio telefono",
+        phrases: "LE MIE FRASI",
+        voice: "VOCE",
+        about: "INFORMAZIONI"
+    }
+
+};
+
+function updateHomeLanguage() {
+
+    const translation =
+        HOME_TRANSLATIONS[patientLanguage];
+
+    if (!translation) {
+        return;
+    }
+
+
+    const title =
+        document.getElementById("homeTitleText");
+
+    if (title) {
+        title.textContent =
+            translation.title;
+    }
+
+
+    const elements = {
+
+        homeRespirationButton:
+            translation.respiration,
+
+        homePainButton:
+            translation.pain,
+
+        homePositionButton:
+            translation.position,
+
+        homeCareButton:
+            translation.care,
+
+        homeHygieneButton:
+            translation.hygiene,
+
+        homeEnvironmentButton:
+            translation.environment,
+
+        homeQuestionsButton:
+            translation.questions,
+
+        homeUnderstandButton:
+            translation.understand,
+
+        homeTalkButton:
+            translation.talk,
+
+        homeEmotionButton:
+            translation.emotions,
+
+        homeRechargeButton:
+            translation.recharge,
+
+        homePhrasesButton:
+            translation.phrases,
+
+        homeVoiceButton:
+            translation.voice,
+
+        homeAboutButton:
+            translation.about
+    };
+
+
+    Object.entries(elements).forEach(
+        function(entry) {
+
+            const elementId =
+                entry[0];
+
+            const html =
+                entry[1];
+
+            const element =
+                document.getElementById(
+                    elementId
+                );
+
+            if (element) {
+                element.innerHTML =
+                    html;
+            }
+
+        }
+    );
+}
+
+
+function speakHomePhrase(phraseKey) {
+
+    const translation =
+        HOME_TRANSLATIONS[
+            caregiverLanguage
+        ];
+
+    if (!translation) {
+        return;
+    }
+
+
+    const speechKey =
+        phraseKey + "Speech";
+
+
+    const text =
+        translation[speechKey];
+
+    if (!text) {
+        return;
+    }
+
+
+    speak(
+        text,
+        caregiverLanguage
+    );
+}
+
 function readLocalSetting(key, fallbackValue = "") {
 
     try {
@@ -649,6 +852,8 @@ function choosePatientLanguage(language) {
     updateLanguageButtons();
 	
 	updateQuickBarLanguage();
+	
+	updateHomeLanguage();
 
     updateTopRightButton("voiceScreen");
 }
@@ -1572,42 +1777,40 @@ async function updateAppVersion() {
         return;
     }
 
-    if (!("caches" in window)) {
-        return;
-    }
 
     try {
 
-        const cacheNames =
-            await caches.keys();
+        const response =
+            await fetch(
+                "./sw.js",
+                {
+                    cache: "no-store"
+                }
+            );
 
-        const prefix =
-            "ma-voix-multilingue-v";
 
-        const versions =
-            cacheNames
-                .filter(function(name) {
-                    return name.startsWith(prefix);
-                })
-                .map(function(name) {
-                    return parseInt(
-                        name.substring(prefix.length),
-                        10
-                    );
-                })
-                .filter(function(version) {
-                    return !isNaN(version);
-                });
-
-        if (versions.length === 0) {
+        if (!response.ok) {
             return;
         }
 
-        const latestVersion =
-            Math.max.apply(null, versions);
+
+        const swText =
+            await response.text();
+
+
+        const match =
+            swText.match(
+                /ma-voix-multilingue-v(\d+)/
+            );
+
+
+        if (!match) {
+            return;
+        }
+
 
         versionElement.textContent =
-            "(v" + latestVersion + ")";
+            "(v" + match[1] + ")";
 
     }
     catch (error) {
@@ -1632,6 +1835,8 @@ document.addEventListener(
 		updateLanguageButtons();
 		
 		updateQuickBarLanguage();
+		
+		updateHomeLanguage();
 
 		updateTopRightButton("homeScreen");
 		

@@ -70,86 +70,116 @@
     <!-- ÉCRAN PRINCIPAL -->
     <section id="homeScreen" class="screen active">
 
-        <h1>
-			Je veux vous dire…
+		<h1>
+			<span id="homeTitleText">
+				Je veux vous dire…
+			</span>
 			<span id="appVersion"></span>
 		</h1>
 			
-        <div class="buttons">
+		<div class="buttons">
 
-            <button onclick="showScreen('respirationScreen')">
-                🫁<br>
-                RESPIRATION /  GORGE
-            </button>
+			<button onclick="showScreen('respirationScreen')">
+				🫁<br>
+				<span id="homeRespirationButton">
+					RESPIRATION / GORGE
+				</span>
+			</button>
 
 			<button onclick="showScreen('painScreen')">
 				😣<br>
-				J'AI MAL
+				<span id="homePainButton">
+					J'AI MAL
+				</span>
 			</button>
-			
+
 			<button onclick="showScreen('positionScreen')">
 				🛏️<br>
-				POSITION
+				<span id="homePositionButton">
+					POSITION
+				</span>
 			</button>
 
 			<button onclick="showScreen('careScreen')">
 				👩‍⚕️<br>
-				BESOIN DE SOINS
+				<span id="homeCareButton">
+					BESOIN DE SOINS
+				</span>
 			</button>
-	
+
 			<button onclick="showScreen('hygieneScreen')">
 				🚻<br>
-				TOILETTES
+				<span id="homeHygieneButton">
+					TOILETTES
+				</span>
 			</button>
 
 			<button onclick="showScreen('environmentScreen')">
 				🏠<br>
-				MA CHAMBRE
+				<span id="homeEnvironmentButton">
+					MA CHAMBRE
+				</span>
 			</button>
-			
+
 			<button onclick="showScreen('questionsScreen')">
 				❓<br>
-				QUESTIONS<br>
-				MEDECIN
+				<span id="homeQuestionsButton">
+					QUESTIONS<br>
+					MÉDECIN
+				</span>
 			</button>
-			
+
 			<button onclick="showScreen('understandScreen')">
 				👂<br>
-				COMPRENDRE
+				<span id="homeUnderstandButton">
+					COMPRENDRE
+				</span>
 			</button>
 
 			<button onclick="showScreen('talkScreen')">
 				👥<br>
-				FAMILLE / AMIS
+				<span id="homeTalkButton">
+					FAMILLE / AMIS
+				</span>
 			</button>
-					
+
 			<button onclick="showScreen('emotionScreen')">
 				❤️<br>
-				ÉMOTIONS
+				<span id="homeEmotionButton">
+					ÉMOTIONS
+				</span>
 			</button>
-					
-			<button onclick="speak('Rechargez mon téléphone, s’il vous plaît')">
+
+			<button onclick="speakHomePhrase('recharge')">
 				🔋<br>
-				RECHARGEZ<br>
-				MON TÉLÉPHONE
+				<span id="homeRechargeButton">
+					RECHARGEZ<br>
+					MON TÉLÉPHONE
+				</span>
 			</button>
-			
+
 			<button onclick="openWriteScreen()">
 				⭐<br>
-				MES PHRASES
+				<span id="homePhrasesButton">
+					MES PHRASES
+				</span>
 			</button>
-							
+
 			<button onclick="openVoiceScreen()">
 				⚙️<br>
-				VOIX
+				<span id="homeVoiceButton">
+					VOIX
+				</span>
 			</button>
 
 			<button onclick="showScreen('aboutScreen')">
 				ℹ️<br>
-				À PROPOS
+				<span id="homeAboutButton">
+					À PROPOS
+				</span>
 			</button>
 
-        </div>
+		</div>
 
     </section>
 
