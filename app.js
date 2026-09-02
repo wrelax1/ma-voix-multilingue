@@ -1306,6 +1306,3634 @@ const POSITION_TRANSLATIONS = {
 
 };
 
+/* =========================================
+   SOINS — TRADUCTIONS
+   ========================================= */
+
+const CARE_TRANSLATIONS = {
+
+    fr: {
+
+        title: "Soins",
+
+        nurse: {
+            label: "INFIRMIÈRE",
+            speech: "Je voudrais voir une infirmière"
+        },
+
+        doctor: {
+            label: "MÉDECIN",
+            speech: "Je voudrais voir un médecin"
+        },
+
+        physio: {
+            label: "PHYSIO",
+            speech: "Je voudrais voir le physio thérapeute"
+        },
+
+        ergo: {
+            label: "ERGO",
+            speech: "Je voudrais voir l’ergo thérapeute"
+        },
+
+        logo: {
+            label: "LOGO",
+            speech: "Je voudrais voir le logopédiste"
+        },
+
+        nausea: {
+            label: "J'AI DES<br>NAUSÉES",
+            speech: "J’ai des nausées"
+        },
+
+        vomit: {
+            label: "JE VAIS<br>VOMIR",
+            speech: "Je vais vomir"
+        },
+
+        urinationPain: {
+            label: "J'AI MAL<br>QUAND J'URINE",
+            speech: "J’ai mal quand j’urine"
+        },
+
+        constipation: {
+            label: "JE SUIS<br>CONSTIPÉ",
+            speech: "Je suis constipé"
+        },
+
+        diarrhea: {
+            label: "J'AI LA<br>DIARRHÉE",
+            speech: "J’ai la diarrhée"
+        },
+
+        gas: {
+            label: "J'AI<br>DES GAZ",
+            speech: "J’ai des gaz"
+        },
+
+        painMedication: {
+            label: "MÉDICAMENT<br>/ DOULEUR",
+            speech: "J’ai besoin d’un médicament contre la douleur"
+        },
+
+        medicationNotEnough: {
+            label: "MÉDICAMENT<br>SUFFIT PAS",
+            speech: "Mon médicament ne me soulage pas assez"
+        },
+
+        sideEffect: {
+            label: "EFFET<br>INDÉSIRABLE",
+            speech: "Ce médicament me donne un effet désagréable"
+        }
+    },
+
+
+    en: {
+
+        title: "Care",
+
+        nurse: {
+            label: "NURSE",
+            speech: "I would like to see a nurse"
+        },
+
+        doctor: {
+            label: "DOCTOR",
+            speech: "I would like to see a doctor"
+        },
+
+        physio: {
+            label: "PHYSIOTHERAPIST",
+            speech: "I would like to see the physiotherapist"
+        },
+
+        ergo: {
+            label: "OCCUPATIONAL<br>THERAPIST",
+            speech: "I would like to see the occupational therapist"
+        },
+
+        logo: {
+            label: "SPEECH<br>THERAPIST",
+            speech: "I would like to see the speech therapist"
+        },
+
+        nausea: {
+            label: "I FEEL<br>NAUSEOUS",
+            speech: "I feel nauseous"
+        },
+
+        vomit: {
+            label: "I'M GOING<br>TO VOMIT",
+            speech: "I'm going to vomit"
+        },
+
+        urinationPain: {
+            label: "PAIN WHEN<br>I URINATE",
+            speech: "It hurts when I urinate"
+        },
+
+        constipation: {
+            label: "I'M<br>CONSTIPATED",
+            speech: "I'm constipated"
+        },
+
+        diarrhea: {
+            label: "I HAVE<br>DIARRHEA",
+            speech: "I have diarrhea"
+        },
+
+        gas: {
+            label: "I HAVE<br>GAS",
+            speech: "I have gas"
+        },
+
+        painMedication: {
+            label: "PAIN<br>MEDICATION",
+            speech: "I need medication for the pain"
+        },
+
+        medicationNotEnough: {
+            label: "PAIN MEDICATION<br>IS NOT ENOUGH",
+            speech: "My pain medication is not helping enough"
+        },
+
+        sideEffect: {
+            label: "SIDE<br>EFFECT",
+            speech: "This medication is causing an unpleasant side effect"
+        }
+    },
+
+
+    de: {
+
+        title: "Pflege",
+
+        nurse: {
+            label: "PFLEGEKRAFT",
+            speech: "Ich möchte eine Pflegekraft sehen"
+        },
+
+        doctor: {
+            label: "ARZT",
+            speech: "Ich möchte einen Arzt sehen"
+        },
+
+        physio: {
+            label: "PHYSIOTHERAPIE",
+            speech: "Ich möchte den Physiotherapeuten sehen"
+        },
+
+        ergo: {
+            label: "ERGOTHERAPIE",
+            speech: "Ich möchte den Ergotherapeuten sehen"
+        },
+
+        logo: {
+            label: "LOGOPÄDIE",
+            speech: "Ich möchte den Logopäden sehen"
+        },
+
+        nausea: {
+            label: "MIR IST<br>ÜBEL",
+            speech: "Mir ist übel"
+        },
+
+        vomit: {
+            label: "ICH MUSS<br>ERBRECHEN",
+            speech: "Ich muss erbrechen"
+        },
+
+        urinationPain: {
+            label: "SCHMERZEN BEIM<br>WASSERLASSEN",
+            speech: "Ich habe Schmerzen beim Wasserlassen"
+        },
+
+        constipation: {
+            label: "VERSTOPFUNG",
+            speech: "Ich habe Verstopfung"
+        },
+
+        diarrhea: {
+            label: "DURCHFALL",
+            speech: "Ich habe Durchfall"
+        },
+
+        gas: {
+            label: "BLÄHUNGEN",
+            speech: "Ich habe Blähungen"
+        },
+
+        painMedication: {
+            label: "SCHMERZMITTEL",
+            speech: "Ich brauche ein Schmerzmittel"
+        },
+
+        medicationNotEnough: {
+            label: "SCHMERZMITTEL<br>REICHT NICHT",
+            speech: "Mein Schmerzmittel wirkt nicht ausreichend"
+        },
+
+        sideEffect: {
+            label: "NEBENWIRKUNG",
+            speech: "Dieses Medikament verursacht eine unangenehme Nebenwirkung"
+        }
+    },
+
+
+    it: {
+
+        title: "Cure",
+
+        nurse: {
+            label: "INFERMIERE",
+            speech: "Vorrei vedere un infermiere"
+        },
+
+        doctor: {
+            label: "MEDICO",
+            speech: "Vorrei vedere un medico"
+        },
+
+        physio: {
+            label: "FISIOTERAPISTA",
+            speech: "Vorrei vedere il fisioterapista"
+        },
+
+        ergo: {
+            label: "ERGOTERAPISTA",
+            speech: "Vorrei vedere l’ergoterapista"
+        },
+
+        logo: {
+            label: "LOGOPEDISTA",
+            speech: "Vorrei vedere il logopedista"
+        },
+
+        nausea: {
+            label: "HO<br>NAUSEA",
+            speech: "Ho nausea"
+        },
+
+        vomit: {
+            label: "STO PER<br>VOMITARE",
+            speech: "Sto per vomitare"
+        },
+
+        urinationPain: {
+            label: "HO DOLORE<br>QUANDO URINO",
+            speech: "Ho dolore quando urino"
+        },
+
+        constipation: {
+            label: "HO<br>STITICHEZZA",
+            speech: "Ho stitichezza"
+        },
+
+        diarrhea: {
+            label: "HO<br>DIARREA",
+            speech: "Ho diarrea"
+        },
+
+        gas: {
+            label: "HO<br>GAS INTESTINALI",
+            speech: "Ho gas intestinali"
+        },
+
+        painMedication: {
+            label: "ANTIDOLORIFICO",
+            speech: "Ho bisogno di un antidolorifico"
+        },
+
+        medicationNotEnough: {
+            label: "ANTIDOLORIFICO<br>NON BASTA",
+            speech: "L’antidolorifico non mi allevia abbastanza il dolore"
+        },
+
+        sideEffect: {
+            label: "EFFETTO<br>INDESIDERATO",
+            speech: "Questo farmaco mi provoca un effetto indesiderato"
+        }
+    }
+
+};
+
+/* =========================================
+   TOILETTES / HYGIÈNE — TRADUCTIONS
+   ========================================= */
+
+const HYGIENE_TRANSLATIONS = {
+
+    fr: {
+
+        title: "Toilettes / Hygiène",
+
+        urinate: {
+            label: "J'AI BESOIN<br>D'URINER",
+            speech: "J’ai besoin d’uriner"
+        },
+
+        stool: {
+            label: "J'AI BESOIN<br>D'ALLER À LA SELLE",
+            speech: "J’ai besoin d’aller à la selle"
+        },
+
+        change: {
+            label: "J'AI BESOIN<br>D'ÊTRE CHANGÉ",
+            speech: "J’ai besoin d’être changé"
+        },
+
+        wet: {
+            label: "JE SUIS<br>MOUILLÉ",
+            speech: "Je suis mouillé"
+        },
+
+        clean: {
+            label: "J'AI BESOIN<br>D'ÊTRE NETTOYÉ",
+            speech: "J’ai besoin d’être nettoyé"
+        },
+
+        wash: {
+            label: "JE VEUX<br>ME LAVER",
+            speech: "Je voudrais me laver"
+        },
+
+        face: {
+            label: "LAVEZ-MOI<br>LE VISAGE",
+            speech: "Lavez-moi le visage, s’il vous plaît"
+        },
+
+        teeth: {
+            label: "BROSSER<br>MES DENTS",
+            speech: "Je voudrais me brosser les dents"
+        },
+
+        shave: {
+            label: "ME RASER",
+            speech: "Je voudrais me raser"
+        },
+
+        shower: {
+            label: "PRENDRE<br>UNE DOUCHE",
+            speech: "Je voudrais prendre une douche"
+        },
+
+        itch: {
+            label: "ÇA ME<br>GRATTE",
+            speech: "Ça me gratte"
+        },
+
+        scratch: {
+            label: "GRATTEZ-MOI",
+            speech: "J’ai besoin qu’on me gratte"
+        }
+    },
+
+
+    en: {
+
+        title: "Toilet / Hygiene",
+
+        urinate: {
+            label: "I NEED<br>TO URINATE",
+            speech: "I need to urinate"
+        },
+
+        stool: {
+            label: "I NEED A<br>BOWEL MOVEMENT",
+            speech: "I need to have a bowel movement"
+        },
+
+        change: {
+            label: "I NEED<br>TO BE CHANGED",
+            speech: "I need to be changed"
+        },
+
+        wet: {
+            label: "I'M<br>WET",
+            speech: "I'm wet"
+        },
+
+        clean: {
+            label: "I NEED<br>TO BE CLEANED",
+            speech: "I need to be cleaned"
+        },
+
+        wash: {
+            label: "I WANT<br>TO WASH",
+            speech: "I would like to wash"
+        },
+
+        face: {
+            label: "WASH<br>MY FACE",
+            speech: "Please wash my face"
+        },
+
+        teeth: {
+            label: "BRUSH<br>MY TEETH",
+            speech: "I would like to brush my teeth"
+        },
+
+        shave: {
+            label: "SHAVE",
+            speech: "I would like to shave"
+        },
+
+        shower: {
+            label: "TAKE A<br>SHOWER",
+            speech: "I would like to take a shower"
+        },
+
+        itch: {
+            label: "I'M<br>ITCHY",
+            speech: "I'm itchy"
+        },
+
+        scratch: {
+            label: "SCRATCH ME",
+            speech: "Please scratch me"
+        }
+    },
+
+
+    de: {
+
+        title: "Toilette / Hygiene",
+
+        urinate: {
+            label: "ICH MUSS<br>WASSER LASSEN",
+            speech: "Ich muss Wasser lassen"
+        },
+
+        stool: {
+            label: "ICH MUSS<br>AUF DIE TOILETTE",
+            speech: "Ich muss Stuhlgang haben"
+        },
+
+        change: {
+            label: "BITTE<br>WECHSELN",
+            speech: "Ich muss gewechselt werden"
+        },
+
+        wet: {
+            label: "ICH BIN<br>NASS",
+            speech: "Ich bin nass"
+        },
+
+        clean: {
+            label: "BITTE<br>SAUBER MACHEN",
+            speech: "Ich muss sauber gemacht werden"
+        },
+
+        wash: {
+            label: "ICH MÖCHTE<br>MICH WASCHEN",
+            speech: "Ich möchte mich waschen"
+        },
+
+        face: {
+            label: "GESICHT<br>WASCHEN",
+            speech: "Bitte waschen Sie mein Gesicht"
+        },
+
+        teeth: {
+            label: "ZÄHNE<br>PUTZEN",
+            speech: "Ich möchte meine Zähne putzen"
+        },
+
+        shave: {
+            label: "RASIEREN",
+            speech: "Ich möchte mich rasieren"
+        },
+
+        shower: {
+            label: "DUSCHEN",
+            speech: "Ich möchte duschen"
+        },
+
+        itch: {
+            label: "ES JUCKT",
+            speech: "Es juckt"
+        },
+
+        scratch: {
+            label: "BITTE<br>KRATZEN",
+            speech: "Bitte kratzen Sie mich"
+        }
+    },
+
+
+    it: {
+
+        title: "Toilette / Igiene",
+
+        urinate: {
+            label: "DEVO<br>URINARE",
+            speech: "Ho bisogno di urinare"
+        },
+
+        stool: {
+            label: "DEVO ANDARE<br>DI CORPO",
+            speech: "Ho bisogno di andare di corpo"
+        },
+
+        change: {
+            label: "HO BISOGNO<br>DI ESSERE CAMBIATO",
+            speech: "Ho bisogno di essere cambiato"
+        },
+
+        wet: {
+            label: "SONO<br>BAGNATO",
+            speech: "Sono bagnato"
+        },
+
+        clean: {
+            label: "HO BISOGNO<br>DI ESSERE PULITO",
+            speech: "Ho bisogno di essere pulito"
+        },
+
+        wash: {
+            label: "VOGLIO<br>LAVARMI",
+            speech: "Vorrei lavarmi"
+        },
+
+        face: {
+            label: "LAVATEMI<br>IL VISO",
+            speech: "Lavatemi il viso, per favore"
+        },
+
+        teeth: {
+            label: "LAVARMI<br>I DENTI",
+            speech: "Vorrei lavarmi i denti"
+        },
+
+        shave: {
+            label: "FARMI<br>LA BARBA",
+            speech: "Vorrei farmi la barba"
+        },
+
+        shower: {
+            label: "FARE UNA<br>DOCCIA",
+            speech: "Vorrei fare una doccia"
+        },
+
+        itch: {
+            label: "MI<br>PRUDE",
+            speech: "Mi prude"
+        },
+
+        scratch: {
+            label: "GRATTATEMI",
+            speech: "Ho bisogno che mi grattiate"
+        }
+    }
+
+};
+
+/* =========================================
+   ÉMOTIONS — TRADUCTIONS
+   ========================================= */
+
+const EMOTION_TRANSLATIONS = {
+
+    fr: {
+
+        title: "Émotions",
+
+        afraid: {
+            label: "J'AI PEUR",
+            speech: "J’ai peur"
+        },
+
+        sad: {
+            label: "JE SUIS<br>TRISTE",
+            speech: "Je suis triste"
+        },
+
+        angry: {
+            label: "JE SUIS<br>EN COLÈRE",
+            speech: "Je suis en colère"
+        },
+
+        fedUp: {
+            label: "J'EN AI<br>MARRE",
+            speech: "J’en ai marre"
+        },
+
+        discouraged: {
+            label: "JE SUIS<br>DÉCOURAGÉ",
+            speech: "Je suis découragé"
+        },
+
+        lonely: {
+            label: "JE ME SENS<br>SEUL",
+            speech: "Je me sens seul"
+        },
+
+        tired: {
+            label: "JE SUIS<br>FATIGUÉ",
+            speech: "Je suis fatigué"
+        },
+
+        bored: {
+            label: "JE M'ENNUIE",
+            speech: "Je m’ennuie"
+        },
+
+        happy: {
+            label: "JE SUIS<br>CONTENT",
+            speech: "Je suis content"
+        },
+
+        better: {
+            label: "JE ME SENS<br>MIEUX",
+            speech: "Je me sens mieux"
+        },
+
+        stay: {
+            label: "RESTEZ<br>AVEC MOI",
+            speech: "Restez un peu avec moi, s’il vous plaît"
+        },
+
+        alone: {
+            label: "JE VEUX<br>ÊTRE SEUL",
+            speech: "Je voudrais être seul un moment"
+        },
+
+        noTalk: {
+            label: "PAS ENVIE<br>DE PARLER",
+            speech: "Je n’ai pas envie de parler maintenant"
+        }
+    },
+
+
+    en: {
+
+        title: "Emotions",
+
+        afraid: {
+            label: "I'M AFRAID",
+            speech: "I'm afraid"
+        },
+
+        sad: {
+            label: "I'M<br>SAD",
+            speech: "I'm sad"
+        },
+
+        angry: {
+            label: "I'M<br>ANGRY",
+            speech: "I'm angry"
+        },
+
+        fedUp: {
+            label: "I'VE HAD<br>ENOUGH",
+            speech: "I've had enough"
+        },
+
+        discouraged: {
+            label: "I FEEL<br>DISCOURAGED",
+            speech: "I feel discouraged"
+        },
+
+        lonely: {
+            label: "I FEEL<br>LONELY",
+            speech: "I feel lonely"
+        },
+
+        tired: {
+            label: "I'M<br>TIRED",
+            speech: "I'm tired"
+        },
+
+        bored: {
+            label: "I'M BORED",
+            speech: "I'm bored"
+        },
+
+        happy: {
+            label: "I'M<br>HAPPY",
+            speech: "I'm happy"
+        },
+
+        better: {
+            label: "I FEEL<br>BETTER",
+            speech: "I feel better"
+        },
+
+        stay: {
+            label: "STAY<br>WITH ME",
+            speech: "Please stay with me for a while"
+        },
+
+        alone: {
+            label: "I WANT TO<br>BE ALONE",
+            speech: "I would like to be alone for a while"
+        },
+
+        noTalk: {
+            label: "I DON'T WANT<br>TO TALK",
+            speech: "I don't want to talk right now"
+        }
+    },
+
+
+    de: {
+
+        title: "Gefühle",
+
+        afraid: {
+            label: "ICH HABE ANGST",
+            speech: "Ich habe Angst"
+        },
+
+        sad: {
+            label: "ICH BIN<br>TRAURIG",
+            speech: "Ich bin traurig"
+        },
+
+        angry: {
+            label: "ICH BIN<br>WÜTEND",
+            speech: "Ich bin wütend"
+        },
+
+        fedUp: {
+            label: "ICH HABE<br>GENUG",
+            speech: "Ich habe genug"
+        },
+
+        discouraged: {
+            label: "ICH BIN<br>ENTMUTIGT",
+            speech: "Ich bin entmutigt"
+        },
+
+        lonely: {
+            label: "ICH FÜHLE MICH<br>ALLEIN",
+            speech: "Ich fühle mich allein"
+        },
+
+        tired: {
+            label: "ICH BIN<br>MÜDE",
+            speech: "Ich bin müde"
+        },
+
+        bored: {
+            label: "MIR IST<br>LANGWEILIG",
+            speech: "Mir ist langweilig"
+        },
+
+        happy: {
+            label: "ICH BIN<br>FROH",
+            speech: "Ich bin froh"
+        },
+
+        better: {
+            label: "MIR GEHT ES<br>BESSER",
+            speech: "Mir geht es besser"
+        },
+
+        stay: {
+            label: "BLEIBEN SIE<br>BEI MIR",
+            speech: "Bitte bleiben Sie noch etwas bei mir"
+        },
+
+        alone: {
+            label: "ICH MÖCHTE<br>ALLEIN SEIN",
+            speech: "Ich möchte eine Weile allein sein"
+        },
+
+        noTalk: {
+            label: "ICH MÖCHTE<br>NICHT REDEN",
+            speech: "Ich möchte jetzt nicht reden"
+        }
+    },
+
+
+    it: {
+
+        title: "Emozioni",
+
+        afraid: {
+            label: "HO PAURA",
+            speech: "Ho paura"
+        },
+
+        sad: {
+            label: "SONO<br>TRISTE",
+            speech: "Sono triste"
+        },
+
+        angry: {
+            label: "SONO<br>ARRABBIATO",
+            speech: "Sono arrabbiato"
+        },
+
+        fedUp: {
+            label: "NON NE POSSO<br>PIÙ",
+            speech: "Non ne posso più"
+        },
+
+        discouraged: {
+            label: "SONO<br>SCORAGGIATO",
+            speech: "Sono scoraggiato"
+        },
+
+        lonely: {
+            label: "MI SENTO<br>SOLO",
+            speech: "Mi sento solo"
+        },
+
+        tired: {
+            label: "SONO<br>STANCO",
+            speech: "Sono stanco"
+        },
+
+        bored: {
+            label: "MI ANNOIO",
+            speech: "Mi annoio"
+        },
+
+        happy: {
+            label: "SONO<br>CONTENTO",
+            speech: "Sono contento"
+        },
+
+        better: {
+            label: "MI SENTO<br>MEGLIO",
+            speech: "Mi sento meglio"
+        },
+
+        stay: {
+            label: "RESTI<br>CON ME",
+            speech: "Rimanga un po’ con me, per favore"
+        },
+
+        alone: {
+            label: "VOGLIO STARE<br>DA SOLO",
+            speech: "Vorrei stare da solo per un po’"
+        },
+
+        noTalk: {
+            label: "NON VOGLIO<br>PARLARE",
+            speech: "Non voglio parlare adesso"
+        }
+    }
+
+};
+
+/* =========================================
+   QUESTIONS MÉDECIN — TRADUCTIONS
+   ========================================= */
+
+const QUESTIONS_TRANSLATIONS = {
+
+    fr: {
+
+        title: "Questions",
+
+        whatHappened: {
+            label: "QU'EST-CE QUI<br>M'EST ARRIVÉ ?",
+            speech: "Qu’est-ce qui m’est arrivé ?"
+        },
+
+        injuries: {
+            label: "QUELLES SONT<br>MES BLESSURES ?",
+            speech: "Quelles sont exactement mes blessures ?"
+        },
+
+        improving: {
+            label: "EST-CE QUE<br>JE VAIS MIEUX ?",
+            speech: "Est-ce que mon état s’améliore ?"
+        },
+
+        concern: {
+            label: "QU'EST-CE QUI<br>VOUS INQUIÈTE ?",
+            speech: "Est-ce que quelque chose vous inquiète encore ?"
+        },
+
+        nextGoal: {
+            label: "QUEL EST LE<br>PROCHAIN OBJECTIF ?",
+            speech: "Quel est le prochain objectif ?"
+        },
+
+        exams: {
+            label: "QUELS EXAMENS<br>VAIS-JE AVOIR ?",
+            speech: "Quels examens vais-je avoir ?"
+        },
+
+        resultsWhen: {
+            label: "QUAND AURAI-JE<br>LES RÉSULTATS ?",
+            speech: "Quand aurai-je les résultats ?"
+        },
+
+        resultsMeaning: {
+            label: "QUE MONTRENT<br>LES RÉSULTATS ?",
+            speech: "Que montrent les résultats ?"
+        },
+
+        speakWhen: {
+            label: "QUAND POURRAI-JE<br>PARLER ?",
+            speech: "Quand pourrai-je parler de nouveau ?"
+        },
+
+        speakNormally: {
+            label: "POURRAI-JE PARLER<br>NORMALEMENT ?",
+            speech: "Est-ce que je pourrai parler normalement ?"
+        },
+
+        tracheostomyHowLong: {
+            label: "COMBIEN DE TEMPS<br>LA TRACHÉOTOMIE ?",
+            speech: "Combien de temps vais-je garder la trachéotomie ?"
+        },
+
+        eatWhen: {
+            label: "QUAND POURRAI-JE<br>MANGER ?",
+            speech: "Quand pourrai-je manger normalement ?"
+        },
+
+        standWhen: {
+            label: "QUAND POURRAI-JE<br>ME LEVER ?",
+            speech: "Quand pourrai-je me lever ?"
+        },
+
+        walkWhen: {
+            label: "QUAND POURRAI-JE<br>MARCHER ?",
+            speech: "Quand pourrai-je marcher ?"
+        },
+
+        rehabilitation: {
+            label: "AURAI-JE BESOIN<br>DE RÉÉDUCATION ?",
+            speech: "Est-ce que je vais avoir besoin de rééducation ?"
+        },
+
+        leaveICU: {
+            label: "QUAND QUITTERAI-JE<br>LES SOINS INTENSIFS ?",
+            speech: "Quand pourrai-je quitter les soins intensifs ?"
+        },
+
+        leaveHospital: {
+            label: "QUAND QUITTERAI-JE<br>L'HÔPITAL ?",
+            speech: "Quand pourrai-je quitter l’hôpital ?"
+        },
+
+        goHome: {
+            label: "QUAND POURRAI-JE<br>RENTRER CHEZ MOI ?",
+            speech: "Quand pourrai-je rentrer chez moi ?"
+        },
+
+        improveBeforeHome: {
+            label: "QUE FAUT-IL ENCORE<br>AMÉLIORER ?",
+            speech: "Qu’est-ce qui doit encore s’améliorer avant que je puisse rentrer ?"
+        },
+
+        explainNext: {
+            label: "EXPLIQUEZ-MOI<br>LA SUITE",
+            speech: "Pouvez-vous m’expliquer la suite ?"
+        }
+    },
+
+
+    en: {
+
+        title: "Questions",
+
+        whatHappened: {
+            label: "WHAT HAPPENED<br>TO ME?",
+            speech: "What happened to me?"
+        },
+
+        injuries: {
+            label: "WHAT ARE<br>MY INJURIES?",
+            speech: "What exactly are my injuries?"
+        },
+
+        improving: {
+            label: "AM I<br>GETTING BETTER?",
+            speech: "Is my condition improving?"
+        },
+
+        concern: {
+            label: "WHAT ARE YOU<br>STILL CONCERNED ABOUT?",
+            speech: "Is there anything you are still concerned about?"
+        },
+
+        nextGoal: {
+            label: "WHAT IS THE<br>NEXT GOAL?",
+            speech: "What is the next goal?"
+        },
+
+        exams: {
+            label: "WHAT TESTS<br>WILL I HAVE?",
+            speech: "What tests will I have?"
+        },
+
+        resultsWhen: {
+            label: "WHEN WILL I GET<br>THE RESULTS?",
+            speech: "When will I get the results?"
+        },
+
+        resultsMeaning: {
+            label: "WHAT DO THE<br>RESULTS SHOW?",
+            speech: "What do the results show?"
+        },
+
+        speakWhen: {
+            label: "WHEN WILL I<br>SPEAK AGAIN?",
+            speech: "When will I be able to speak again?"
+        },
+
+        speakNormally: {
+            label: "WILL I SPEAK<br>NORMALLY?",
+            speech: "Will I be able to speak normally?"
+        },
+
+        tracheostomyHowLong: {
+            label: "HOW LONG WILL I<br>KEEP THE TRACHEOSTOMY?",
+            speech: "How long will I need the tracheostomy?"
+        },
+
+        eatWhen: {
+            label: "WHEN CAN I<br>EAT NORMALLY?",
+            speech: "When will I be able to eat normally?"
+        },
+
+        standWhen: {
+            label: "WHEN CAN I<br>GET UP?",
+            speech: "When will I be able to get up?"
+        },
+
+        walkWhen: {
+            label: "WHEN CAN I<br>WALK?",
+            speech: "When will I be able to walk?"
+        },
+
+        rehabilitation: {
+            label: "WILL I NEED<br>REHABILITATION?",
+            speech: "Will I need rehabilitation?"
+        },
+
+        leaveICU: {
+            label: "WHEN CAN I LEAVE<br>INTENSIVE CARE?",
+            speech: "When will I be able to leave intensive care?"
+        },
+
+        leaveHospital: {
+            label: "WHEN CAN I LEAVE<br>THE HOSPITAL?",
+            speech: "When will I be able to leave the hospital?"
+        },
+
+        goHome: {
+            label: "WHEN CAN I<br>GO HOME?",
+            speech: "When will I be able to go home?"
+        },
+
+        improveBeforeHome: {
+            label: "WHAT STILL NEEDS<br>TO IMPROVE?",
+            speech: "What still needs to improve before I can go home?"
+        },
+
+        explainNext: {
+            label: "EXPLAIN<br>WHAT COMES NEXT",
+            speech: "Can you explain what happens next?"
+        }
+    },
+
+
+    de: {
+
+        title: "Fragen",
+
+        whatHappened: {
+            label: "WAS IST MIR<br>PASSIERT?",
+            speech: "Was ist mir passiert?"
+        },
+
+        injuries: {
+            label: "WELCHE VERLETZUNGEN<br>HABE ICH?",
+            speech: "Welche Verletzungen habe ich genau?"
+        },
+
+        improving: {
+            label: "WIRD MEIN ZUSTAND<br>BESSER?",
+            speech: "Verbessert sich mein Zustand?"
+        },
+
+        concern: {
+            label: "WAS MACHT IHNEN<br>NOCH SORGEN?",
+            speech: "Gibt es noch etwas, das Ihnen Sorgen macht?"
+        },
+
+        nextGoal: {
+            label: "WAS IST DAS<br>NÄCHSTE ZIEL?",
+            speech: "Was ist das nächste Ziel?"
+        },
+
+        exams: {
+            label: "WELCHE UNTERSUCHUNGEN<br>BEKOMME ICH?",
+            speech: "Welche Untersuchungen werde ich bekommen?"
+        },
+
+        resultsWhen: {
+            label: "WANN BEKOMME ICH<br>DIE ERGEBNISSE?",
+            speech: "Wann bekomme ich die Ergebnisse?"
+        },
+
+        resultsMeaning: {
+            label: "WAS ZEIGEN<br>DIE ERGEBNISSE?",
+            speech: "Was zeigen die Ergebnisse?"
+        },
+
+        speakWhen: {
+            label: "WANN KANN ICH<br>WIEDER SPRECHEN?",
+            speech: "Wann kann ich wieder sprechen?"
+        },
+
+        speakNormally: {
+            label: "WERDE ICH NORMAL<br>SPRECHEN KÖNNEN?",
+            speech: "Werde ich wieder normal sprechen können?"
+        },
+
+        tracheostomyHowLong: {
+            label: "WIE LANGE NOCH<br>DIE TRACHEOSTOMIE?",
+            speech: "Wie lange werde ich die Tracheostomie noch brauchen?"
+        },
+
+        eatWhen: {
+            label: "WANN KANN ICH<br>WIEDER NORMAL ESSEN?",
+            speech: "Wann kann ich wieder normal essen?"
+        },
+
+        standWhen: {
+            label: "WANN KANN ICH<br>AUFSTEHEN?",
+            speech: "Wann kann ich wieder aufstehen?"
+        },
+
+        walkWhen: {
+            label: "WANN KANN ICH<br>GEHEN?",
+            speech: "Wann kann ich wieder gehen?"
+        },
+
+        rehabilitation: {
+            label: "BRAUCHE ICH<br>REHABILITATION?",
+            speech: "Werde ich eine Rehabilitation brauchen?"
+        },
+
+        leaveICU: {
+            label: "WANN KANN ICH DIE<br>INTENSIVSTATION VERLASSEN?",
+            speech: "Wann kann ich die Intensivstation verlassen?"
+        },
+
+        leaveHospital: {
+            label: "WANN KANN ICH DAS<br>KRANKENHAUS VERLASSEN?",
+            speech: "Wann kann ich das Krankenhaus verlassen?"
+        },
+
+        goHome: {
+            label: "WANN KANN ICH<br>NACH HAUSE?",
+            speech: "Wann kann ich nach Hause?"
+        },
+
+        improveBeforeHome: {
+            label: "WAS MUSS SICH NOCH<br>VERBESSERN?",
+            speech: "Was muss sich noch verbessern, bevor ich nach Hause kann?"
+        },
+
+        explainNext: {
+            label: "ERKLÄREN SIE MIR<br>WIE ES WEITERGEHT",
+            speech: "Können Sie mir erklären, wie es weitergeht?"
+        }
+    },
+
+
+    it: {
+
+        title: "Domande",
+
+        whatHappened: {
+            label: "COSA MI È<br>SUCCESSO?",
+            speech: "Cosa mi è successo?"
+        },
+
+        injuries: {
+            label: "QUALI SONO<br>LE MIE LESIONI?",
+            speech: "Quali sono esattamente le mie lesioni?"
+        },
+
+        improving: {
+            label: "STO<br>MIGLIORANDO?",
+            speech: "Le mie condizioni stanno migliorando?"
+        },
+
+        concern: {
+            label: "COSA LA PREOCCUPA<br>ANCORA?",
+            speech: "C’è ancora qualcosa che la preoccupa?"
+        },
+
+        nextGoal: {
+            label: "QUAL È IL<br>PROSSIMO OBIETTIVO?",
+            speech: "Qual è il prossimo obiettivo?"
+        },
+
+        exams: {
+            label: "QUALI ESAMI<br>DOVRÒ FARE?",
+            speech: "Quali esami dovrò fare?"
+        },
+
+        resultsWhen: {
+            label: "QUANDO AVRÒ<br>I RISULTATI?",
+            speech: "Quando avrò i risultati?"
+        },
+
+        resultsMeaning: {
+            label: "COSA MOSTRANO<br>I RISULTATI?",
+            speech: "Cosa mostrano i risultati?"
+        },
+
+        speakWhen: {
+            label: "QUANDO POTRÒ<br>PARLARE?",
+            speech: "Quando potrò parlare di nuovo?"
+        },
+
+        speakNormally: {
+            label: "POTRÒ PARLARE<br>NORMALMENTE?",
+            speech: "Potrò parlare normalmente?"
+        },
+
+        tracheostomyHowLong: {
+            label: "PER QUANTO TEMPO<br>LA TRACHEOSTOMIA?",
+            speech: "Per quanto tempo dovrò tenere la tracheostomia?"
+        },
+
+        eatWhen: {
+            label: "QUANDO POTRÒ<br>MANGIARE?",
+            speech: "Quando potrò mangiare normalmente?"
+        },
+
+        standWhen: {
+            label: "QUANDO POTRÒ<br>ALZARMI?",
+            speech: "Quando potrò alzarmi?"
+        },
+
+        walkWhen: {
+            label: "QUANDO POTRÒ<br>CAMMINARE?",
+            speech: "Quando potrò camminare?"
+        },
+
+        rehabilitation: {
+            label: "AVRÒ BISOGNO<br>DI RIABILITAZIONE?",
+            speech: "Avrò bisogno di riabilitazione?"
+        },
+
+        leaveICU: {
+            label: "QUANDO POTRÒ LASCIARE<br>LA TERAPIA INTENSIVA?",
+            speech: "Quando potrò lasciare la terapia intensiva?"
+        },
+
+        leaveHospital: {
+            label: "QUANDO POTRÒ LASCIARE<br>L'OSPEDALE?",
+            speech: "Quando potrò lasciare l’ospedale?"
+        },
+
+        goHome: {
+            label: "QUANDO POTRÒ<br>TORNARE A CASA?",
+            speech: "Quando potrò tornare a casa?"
+        },
+
+        improveBeforeHome: {
+            label: "COSA DEVE ANCORA<br>MIGLIORARE?",
+            speech: "Cosa deve ancora migliorare prima che io possa tornare a casa?"
+        },
+
+        explainNext: {
+            label: "MI SPIEGHI<br>COSA SUCCEDE DOPO",
+            speech: "Può spiegarmi cosa succederà dopo?"
+        }
+    }
+
+};
+
+/* =========================================
+   MA CHAMBRE / ENVIRONNEMENT — TRADUCTIONS
+   ========================================= */
+
+const ENVIRONMENT_TRANSLATIONS = {
+
+    fr: {
+
+        title: "Environnement",
+
+        closeDoor: {
+            label: "FERMEZ<br>LA PORTE",
+            speech: "Fermez la porte, s’il vous plaît"
+        },
+
+        openDoor: {
+            label: "OUVREZ<br>LA PORTE",
+            speech: "Ouvrez la porte, s’il vous plaît"
+        },
+
+        closeCurtains: {
+            label: "FERMEZ<br>LES RIDEAUX",
+            speech: "Fermez les rideaux, s’il vous plaît"
+        },
+
+        openCurtains: {
+            label: "OUVREZ<br>LES RIDEAUX",
+            speech: "Ouvrez les rideaux, s’il vous plaît"
+        },
+
+        lightOn: {
+            label: "ALLUMEZ<br>LA LUMIÈRE",
+            speech: "Allumez la lumière, s’il vous plaît"
+        },
+
+        lightOff: {
+            label: "ÉTEIGNEZ<br>LA LUMIÈRE",
+            speech: "Éteignez la lumière, s’il vous plaît"
+        },
+
+        noise: {
+            label: "TROP<br>DE BRUIT",
+            speech: "Il y a trop de bruit"
+        },
+
+        silence: {
+            label: "JE VEUX<br>DU SILENCE",
+            speech: "Je voudrais du silence, s’il vous plaît"
+        },
+
+        openWindow: {
+            label: "OUVREZ<br>LA FENÊTRE",
+            speech: "Ouvrez la fenêtre, s’il vous plaît"
+        },
+
+        closeWindow: {
+            label: "FERMEZ<br>LA FENÊTRE",
+            speech: "Fermez la fenêtre, s’il vous plaît"
+        },
+
+        television: {
+            label: "TÉLÉVISION",
+            speech: "Je voudrais regarder la télévision"
+        },
+
+        televisionOff: {
+            label: "ÉTEIGNEZ<br>LA TÉLÉVISION",
+            speech: "Éteignez la télévision, s’il vous plaît"
+        },
+
+        music: {
+            label: "MUSIQUE",
+            speech: "Je voudrais écouter de la musique"
+        },
+
+        musicOff: {
+            label: "ARRÊTEZ<br>LA MUSIQUE",
+            speech: "Arrêtez la musique, s’il vous plaît"
+        },
+
+        coverMe: {
+            label: "COUVREZ-MOI",
+            speech: "Couvrez-moi, s’il vous plaît"
+        },
+
+        privacy: {
+            label: "JE VEUX<br>DE L'INTIMITÉ",
+            speech: "Je voudrais un peu d’intimité"
+        },
+
+        noOneDuringCare: {
+            label: "PERSONNE<br>PENDANT LES SOINS",
+            speech: "Je préfère qu’il n’y ait personne pendant les soins"
+        },
+
+        notInFront: {
+            label: "PAS DEVANT<br>CETTE PERSONNE",
+            speech: "Je ne veux pas parler de cela devant cette personne"
+        },
+
+        sleep: {
+            label: "JE VEUX<br>DORMIR",
+            speech: "Je voudrais dormir"
+        },
+
+        doNotWake: {
+            label: "LAISSEZ-MOI<br>DORMIR",
+            speech: "Ne me réveillez pas sauf si c’est nécessaire"
+        }
+    },
+
+
+    en: {
+
+        title: "My Room",
+
+        closeDoor: {
+            label: "CLOSE<br>THE DOOR",
+            speech: "Please close the door"
+        },
+
+        openDoor: {
+            label: "OPEN<br>THE DOOR",
+            speech: "Please open the door"
+        },
+
+        closeCurtains: {
+            label: "CLOSE<br>THE CURTAINS",
+            speech: "Please close the curtains"
+        },
+
+        openCurtains: {
+            label: "OPEN<br>THE CURTAINS",
+            speech: "Please open the curtains"
+        },
+
+        lightOn: {
+            label: "TURN ON<br>THE LIGHT",
+            speech: "Please turn on the light"
+        },
+
+        lightOff: {
+            label: "TURN OFF<br>THE LIGHT",
+            speech: "Please turn off the light"
+        },
+
+        noise: {
+            label: "TOO MUCH<br>NOISE",
+            speech: "There is too much noise"
+        },
+
+        silence: {
+            label: "I WANT<br>QUIET",
+            speech: "I would like some quiet, please"
+        },
+
+        openWindow: {
+            label: "OPEN<br>THE WINDOW",
+            speech: "Please open the window"
+        },
+
+        closeWindow: {
+            label: "CLOSE<br>THE WINDOW",
+            speech: "Please close the window"
+        },
+
+        television: {
+            label: "TELEVISION",
+            speech: "I would like to watch television"
+        },
+
+        televisionOff: {
+            label: "TURN OFF<br>THE TELEVISION",
+            speech: "Please turn off the television"
+        },
+
+        music: {
+            label: "MUSIC",
+            speech: "I would like to listen to music"
+        },
+
+        musicOff: {
+            label: "STOP<br>THE MUSIC",
+            speech: "Please stop the music"
+        },
+
+        coverMe: {
+            label: "COVER ME",
+            speech: "Please cover me"
+        },
+
+        privacy: {
+            label: "I WANT<br>PRIVACY",
+            speech: "I would like some privacy"
+        },
+
+        noOneDuringCare: {
+            label: "NO ONE DURING<br>MY CARE",
+            speech: "I would prefer no one else to be present during my care"
+        },
+
+        notInFront: {
+            label: "NOT IN FRONT OF<br>THIS PERSON",
+            speech: "I don't want to talk about this in front of this person"
+        },
+
+        sleep: {
+            label: "I WANT<br>TO SLEEP",
+            speech: "I would like to sleep"
+        },
+
+        doNotWake: {
+            label: "LET ME<br>SLEEP",
+            speech: "Please don't wake me unless it is necessary"
+        }
+    },
+
+
+    de: {
+
+        title: "Mein Zimmer",
+
+        closeDoor: {
+            label: "TÜR<br>SCHLIESSEN",
+            speech: "Bitte schließen Sie die Tür"
+        },
+
+        openDoor: {
+            label: "TÜR<br>ÖFFNEN",
+            speech: "Bitte öffnen Sie die Tür"
+        },
+
+        closeCurtains: {
+            label: "VORHÄNGE<br>SCHLIESSEN",
+            speech: "Bitte schließen Sie die Vorhänge"
+        },
+
+        openCurtains: {
+            label: "VORHÄNGE<br>ÖFFNEN",
+            speech: "Bitte öffnen Sie die Vorhänge"
+        },
+
+        lightOn: {
+            label: "LICHT<br>AN",
+            speech: "Bitte machen Sie das Licht an"
+        },
+
+        lightOff: {
+            label: "LICHT<br>AUS",
+            speech: "Bitte machen Sie das Licht aus"
+        },
+
+        noise: {
+            label: "ZU VIEL<br>LÄRM",
+            speech: "Es ist zu laut"
+        },
+
+        silence: {
+            label: "ICH MÖCHTE<br>RUHE",
+            speech: "Ich möchte bitte etwas Ruhe"
+        },
+
+        openWindow: {
+            label: "FENSTER<br>ÖFFNEN",
+            speech: "Bitte öffnen Sie das Fenster"
+        },
+
+        closeWindow: {
+            label: "FENSTER<br>SCHLIESSEN",
+            speech: "Bitte schließen Sie das Fenster"
+        },
+
+        television: {
+            label: "FERNSEHEN",
+            speech: "Ich möchte fernsehen"
+        },
+
+        televisionOff: {
+            label: "FERNSEHER<br>AUSSCHALTEN",
+            speech: "Bitte schalten Sie den Fernseher aus"
+        },
+
+        music: {
+            label: "MUSIK",
+            speech: "Ich möchte Musik hören"
+        },
+
+        musicOff: {
+            label: "MUSIK<br>AUS",
+            speech: "Bitte machen Sie die Musik aus"
+        },
+
+        coverMe: {
+            label: "BITTE<br>ZUDECKEN",
+            speech: "Bitte decken Sie mich zu"
+        },
+
+        privacy: {
+            label: "ICH MÖCHTE<br>PRIVATSPHÄRE",
+            speech: "Ich möchte etwas Privatsphäre"
+        },
+
+        noOneDuringCare: {
+            label: "NIEMAND<br>BEI DER PFLEGE",
+            speech: "Ich möchte während der Pflege lieber allein sein"
+        },
+
+        notInFront: {
+            label: "NICHT VOR<br>DIESER PERSON",
+            speech: "Ich möchte darüber nicht vor dieser Person sprechen"
+        },
+
+        sleep: {
+            label: "ICH MÖCHTE<br>SCHLAFEN",
+            speech: "Ich möchte schlafen"
+        },
+
+        doNotWake: {
+            label: "BITTE NICHT<br>WECKEN",
+            speech: "Bitte wecken Sie mich nur, wenn es notwendig ist"
+        }
+    },
+
+
+    it: {
+
+        title: "La mia stanza",
+
+        closeDoor: {
+            label: "CHIUDETE<br>LA PORTA",
+            speech: "Chiudete la porta, per favore"
+        },
+
+        openDoor: {
+            label: "APRITE<br>LA PORTA",
+            speech: "Aprite la porta, per favore"
+        },
+
+        closeCurtains: {
+            label: "CHIUDETE<br>LE TENDE",
+            speech: "Chiudete le tende, per favore"
+        },
+
+        openCurtains: {
+            label: "APRITE<br>LE TENDE",
+            speech: "Aprite le tende, per favore"
+        },
+
+        lightOn: {
+            label: "ACCENDETE<br>LA LUCE",
+            speech: "Accendete la luce, per favore"
+        },
+
+        lightOff: {
+            label: "SPEGNETE<br>LA LUCE",
+            speech: "Spegnete la luce, per favore"
+        },
+
+        noise: {
+            label: "TROPPO<br>RUMORE",
+            speech: "C’è troppo rumore"
+        },
+
+        silence: {
+            label: "VOGLIO<br>SILENZIO",
+            speech: "Vorrei un po’ di silenzio, per favore"
+        },
+
+        openWindow: {
+            label: "APRITE<br>LA FINESTRA",
+            speech: "Aprite la finestra, per favore"
+        },
+
+        closeWindow: {
+            label: "CHIUDETE<br>LA FINESTRA",
+            speech: "Chiudete la finestra, per favore"
+        },
+
+        television: {
+            label: "TELEVISIONE",
+            speech: "Vorrei guardare la televisione"
+        },
+
+        televisionOff: {
+            label: "SPEGNETE<br>LA TELEVISIONE",
+            speech: "Spegnete la televisione, per favore"
+        },
+
+        music: {
+            label: "MUSICA",
+            speech: "Vorrei ascoltare della musica"
+        },
+
+        musicOff: {
+            label: "SPEGNETE<br>LA MUSICA",
+            speech: "Spegnete la musica, per favore"
+        },
+
+        coverMe: {
+            label: "COPRITEMI",
+            speech: "Copritemi, per favore"
+        },
+
+        privacy: {
+            label: "VOGLIO<br>PRIVACY",
+            speech: "Vorrei un po’ di privacy"
+        },
+
+        noOneDuringCare: {
+            label: "NESSUNO<br>DURANTE LE CURE",
+            speech: "Preferirei che non ci fosse nessuno durante le cure"
+        },
+
+        notInFront: {
+            label: "NON DAVANTI A<br>QUESTA PERSONA",
+            speech: "Non voglio parlare di questo davanti a questa persona"
+        },
+
+        sleep: {
+            label: "VOGLIO<br>DORMIRE",
+            speech: "Vorrei dormire"
+        },
+
+        doNotWake: {
+            label: "LASCIATEMI<br>DORMIRE",
+            speech: "Non svegliatemi a meno che non sia necessario"
+        }
+    }
+
+};
+
+/* =========================================
+   COMPRENDRE — TRADUCTIONS
+   ========================================= */
+
+const UNDERSTAND_TRANSLATIONS = {
+
+    fr: {
+
+        title: "Comprendre",
+
+        wait: {
+            label: "ATTENDEZ<br>JE N'AI PAS FINI",
+            speech: "Attendez, je n’ai pas fini"
+        },
+
+        choices: {
+            label: "DONNEZ-MOI<br>LES CHOIX",
+            speech: "Donnez-moi les choix possibles"
+        },
+
+        notUnderstand: {
+            label: "JE N'AI PAS<br>COMPRIS",
+            speech: "Je n’ai pas compris"
+        },
+
+        write: {
+            label: "JE VEUX<br>L'ÉCRIRE",
+            speech: "Je veux essayer de l’écrire"
+        },
+
+        louder: {
+            label: "PARLEZ<br>PLUS FORT",
+            speech: "Parlez plus fort, s’il vous plaît"
+        },
+
+        slower: {
+            label: "PARLEZ PLUS<br>LENTEMENT",
+            speech: "Parlez plus lentement, s’il vous plaît"
+        },
+
+        yesNo: {
+            label: "QUESTION<br>OUI / NON",
+            speech: "Posez-moi une question à laquelle je peux répondre par oui ou non"
+        },
+
+        repeat: {
+            label: "RÉPÉTEZ",
+            speech: "Répétez, s’il vous plaît"
+        },
+
+        oneQuestion: {
+            label: "UNE QUESTION<br>À LA FOIS",
+            speech: "Posez-moi une seule question à la fois"
+        },
+
+        misunderstood: {
+            label: "VOUS AVEZ<br>MAL COMPRIS",
+            speech: "Vous avez mal compris ce que je voulais dire"
+        }
+    },
+
+
+    en: {
+
+        title: "Understand",
+
+        wait: {
+            label: "WAIT<br>I'M NOT FINISHED",
+            speech: "Wait, I haven't finished"
+        },
+
+        choices: {
+            label: "GIVE ME<br>THE CHOICES",
+            speech: "Please give me the possible choices"
+        },
+
+        notUnderstand: {
+            label: "I DON'T<br>UNDERSTAND",
+            speech: "I don't understand"
+        },
+
+        write: {
+            label: "I WANT TO<br>WRITE IT",
+            speech: "I want to try to write it"
+        },
+
+        louder: {
+            label: "SPEAK<br>LOUDER",
+            speech: "Please speak louder"
+        },
+
+        slower: {
+            label: "SPEAK MORE<br>SLOWLY",
+            speech: "Please speak more slowly"
+        },
+
+        yesNo: {
+            label: "YES / NO<br>QUESTION",
+            speech: "Ask me a question I can answer with yes or no"
+        },
+
+        repeat: {
+            label: "REPEAT",
+            speech: "Please repeat"
+        },
+
+        oneQuestion: {
+            label: "ONE QUESTION<br>AT A TIME",
+            speech: "Please ask me one question at a time"
+        },
+
+        misunderstood: {
+            label: "YOU<br>MISUNDERSTOOD ME",
+            speech: "You misunderstood what I meant"
+        }
+    },
+
+
+    de: {
+
+        title: "Verstehen",
+
+        wait: {
+            label: "WARTEN SIE<br>ICH BIN NOCH NICHT FERTIG",
+            speech: "Warten Sie, ich bin noch nicht fertig"
+        },
+
+        choices: {
+            label: "NENNEN SIE MIR<br>DIE MÖGLICHKEITEN",
+            speech: "Nennen Sie mir bitte die möglichen Antworten"
+        },
+
+        notUnderstand: {
+            label: "ICH HABE ES<br>NICHT VERSTANDEN",
+            speech: "Ich habe es nicht verstanden"
+        },
+
+        write: {
+            label: "ICH MÖCHTE<br>ES SCHREIBEN",
+            speech: "Ich möchte versuchen, es zu schreiben"
+        },
+
+        louder: {
+            label: "SPRECHEN SIE<br>LAUTER",
+            speech: "Bitte sprechen Sie lauter"
+        },
+
+        slower: {
+            label: "SPRECHEN SIE<br>LANGSAMER",
+            speech: "Bitte sprechen Sie langsamer"
+        },
+
+        yesNo: {
+            label: "JA / NEIN<br>FRAGE",
+            speech: "Stellen Sie mir eine Frage, die ich mit Ja oder Nein beantworten kann"
+        },
+
+        repeat: {
+            label: "WIEDERHOLEN",
+            speech: "Bitte wiederholen Sie"
+        },
+
+        oneQuestion: {
+            label: "EINE FRAGE<br>NACH DER ANDEREN",
+            speech: "Stellen Sie mir bitte nur eine Frage nach der anderen"
+        },
+
+        misunderstood: {
+            label: "SIE HABEN MICH<br>FALSCH VERSTANDEN",
+            speech: "Sie haben falsch verstanden, was ich sagen wollte"
+        }
+    },
+
+
+    it: {
+
+        title: "Capire",
+
+        wait: {
+            label: "ASPETTI<br>NON HO FINITO",
+            speech: "Aspetti, non ho ancora finito"
+        },
+
+        choices: {
+            label: "MI DIA<br>LE POSSIBILITÀ",
+            speech: "Mi dia le possibili scelte"
+        },
+
+        notUnderstand: {
+            label: "NON HO<br>CAPITO",
+            speech: "Non ho capito"
+        },
+
+        write: {
+            label: "VOGLIO<br>SCRIVERLO",
+            speech: "Voglio provare a scriverlo"
+        },
+
+        louder: {
+            label: "PARLI<br>PIÙ FORTE",
+            speech: "Parli più forte, per favore"
+        },
+
+        slower: {
+            label: "PARLI PIÙ<br>LENTAMENTE",
+            speech: "Parli più lentamente, per favore"
+        },
+
+        yesNo: {
+            label: "DOMANDA<br>SÌ / NO",
+            speech: "Mi faccia una domanda a cui posso rispondere sì o no"
+        },
+
+        repeat: {
+            label: "RIPETA",
+            speech: "Ripeta, per favore"
+        },
+
+        oneQuestion: {
+            label: "UNA DOMANDA<br>ALLA VOLTA",
+            speech: "Mi faccia una sola domanda alla volta"
+        },
+
+        misunderstood: {
+            label: "HA CAPITO<br>MALE",
+            speech: "Ha capito male quello che volevo dire"
+        }
+    }
+
+};
+
+/* =========================================
+   FAMILLE / AMIS — TRADUCTIONS
+   ========================================= */
+
+const TALK_TRANSLATIONS = {
+
+    fr: {
+
+        title: "Famille / Amis",
+
+        hello: {
+            label: "BONJOUR",
+            speech: "Bonjour"
+        },
+
+        seeYou: {
+            label: "À BIENTÔT",
+            speech: "À bientôt"
+        },
+
+        happyToSee: {
+            label: "JE SUIS CONTENT<br>DE TE VOIR",
+            speech: "Je suis content de te voir"
+        },
+
+        missedYou: {
+            label: "TU M'AS MANQUÉ",
+            speech: "Tu m’as manqué"
+        },
+
+        loveYou: {
+            label: "JE T'AIME",
+            speech: "Je t’aime"
+        },
+
+        thankYou: {
+            label: "MERCI",
+            speech: "Merci"
+        },
+
+        sorry: {
+            label: "DÉSOLÉ",
+            speech: "Désolé"
+        },
+
+        dontWorry: {
+            label: "NE T'INQUIÈTE PAS",
+            speech: "Ne t’inquiète pas"
+        },
+
+        stayLonger: {
+            label: "RESTE ENCORE<br>UN PEU",
+            speech: "Reste encore un peu avec moi"
+        },
+
+        tellMe: {
+            label: "RACONTE-MOI",
+            speech: "Raconte-moi"
+        },
+
+        gettingBetter: {
+            label: "ÇA VA MIEUX",
+            speech: "Ça va mieux"
+        },
+
+        doingWell: {
+            label: "JE VAIS BIEN",
+            speech: "Je vais bien"
+        },
+
+        tiredButOkay: {
+            label: "JE SUIS FATIGUÉ,<br>MAIS ÇA VA",
+            speech: "Je suis fatigué, mais ça va"
+        },
+
+        dontKnow: {
+            label: "JE NE SAIS PAS",
+            speech: "Je ne sais pas"
+        },
+
+        asYouWant: {
+            label: "COMME TU VEUX",
+            speech: "Comme tu veux"
+        },
+
+        maybe: {
+            label: "PEUT-ÊTRE",
+            speech: "Peut-être"
+        },
+
+        changeSubject: {
+            label: "CHANGEONS<br>DE SUJET",
+            speech: "Changeons de sujet"
+        },
+
+        continue: {
+            label: "CONTINUE",
+            speech: "Continue"
+        }
+    },
+
+
+    en: {
+
+        title: "Family / Friends",
+
+        hello: {
+            label: "HELLO",
+            speech: "Hello"
+        },
+
+        seeYou: {
+            label: "SEE YOU SOON",
+            speech: "See you soon"
+        },
+
+        happyToSee: {
+            label: "I'M HAPPY<br>TO SEE YOU",
+            speech: "I'm happy to see you"
+        },
+
+        missedYou: {
+            label: "I MISSED YOU",
+            speech: "I missed you"
+        },
+
+        loveYou: {
+            label: "I LOVE YOU",
+            speech: "I love you"
+        },
+
+        thankYou: {
+            label: "THANK YOU",
+            speech: "Thank you"
+        },
+
+        sorry: {
+            label: "I'M SORRY",
+            speech: "I'm sorry"
+        },
+
+        dontWorry: {
+            label: "DON'T WORRY",
+            speech: "Don't worry"
+        },
+
+        stayLonger: {
+            label: "STAY A LITTLE<br>LONGER",
+            speech: "Stay with me a little longer"
+        },
+
+        tellMe: {
+            label: "TELL ME",
+            speech: "Tell me"
+        },
+
+        gettingBetter: {
+            label: "I'M GETTING<br>BETTER",
+            speech: "I'm getting better"
+        },
+
+        doingWell: {
+            label: "I'M DOING WELL",
+            speech: "I'm doing well"
+        },
+
+        tiredButOkay: {
+            label: "I'M TIRED,<br>BUT I'M OKAY",
+            speech: "I'm tired, but I'm okay"
+        },
+
+        dontKnow: {
+            label: "I DON'T KNOW",
+            speech: "I don't know"
+        },
+
+        asYouWant: {
+            label: "AS YOU WISH",
+            speech: "As you wish"
+        },
+
+        maybe: {
+            label: "MAYBE",
+            speech: "Maybe"
+        },
+
+        changeSubject: {
+            label: "LET'S CHANGE<br>THE SUBJECT",
+            speech: "Let's change the subject"
+        },
+
+        continue: {
+            label: "CONTINUE",
+            speech: "Continue"
+        }
+    },
+
+
+    de: {
+
+        title: "Familie / Freunde",
+
+        hello: {
+            label: "HALLO",
+            speech: "Hallo"
+        },
+
+        seeYou: {
+            label: "BIS BALD",
+            speech: "Bis bald"
+        },
+
+        happyToSee: {
+            label: "ICH FREUE MICH,<br>DICH ZU SEHEN",
+            speech: "Ich freue mich, dich zu sehen"
+        },
+
+        missedYou: {
+            label: "DU HAST MIR<br>GEFEHLT",
+            speech: "Du hast mir gefehlt"
+        },
+
+        loveYou: {
+            label: "ICH LIEBE DICH",
+            speech: "Ich liebe dich"
+        },
+
+        thankYou: {
+            label: "DANKE",
+            speech: "Danke"
+        },
+
+        sorry: {
+            label: "ES TUT MIR LEID",
+            speech: "Es tut mir leid"
+        },
+
+        dontWorry: {
+            label: "MACH DIR<br>KEINE SORGEN",
+            speech: "Mach dir keine Sorgen"
+        },
+
+        stayLonger: {
+            label: "BLEIB NOCH<br>EIN WENIG",
+            speech: "Bleib noch ein wenig bei mir"
+        },
+
+        tellMe: {
+            label: "ERZÄHL MIR",
+            speech: "Erzähl mir"
+        },
+
+        gettingBetter: {
+            label: "ES GEHT<br>BESSER",
+            speech: "Es geht mir besser"
+        },
+
+        doingWell: {
+            label: "MIR GEHT ES GUT",
+            speech: "Mir geht es gut"
+        },
+
+        tiredButOkay: {
+            label: "ICH BIN MÜDE,<br>ABER ES GEHT",
+            speech: "Ich bin müde, aber es geht"
+        },
+
+        dontKnow: {
+            label: "ICH WEISS ES NICHT",
+            speech: "Ich weiß es nicht"
+        },
+
+        asYouWant: {
+            label: "WIE DU WILLST",
+            speech: "Wie du willst"
+        },
+
+        maybe: {
+            label: "VIELLEICHT",
+            speech: "Vielleicht"
+        },
+
+        changeSubject: {
+            label: "WECHSELN WIR<br>DAS THEMA",
+            speech: "Wechseln wir das Thema"
+        },
+
+        continue: {
+            label: "WEITER",
+            speech: "Weiter"
+        }
+    },
+
+
+    it: {
+
+        title: "Famiglia / Amici",
+
+        hello: {
+            label: "CIAO",
+            speech: "Ciao"
+        },
+
+        seeYou: {
+            label: "A PRESTO",
+            speech: "A presto"
+        },
+
+        happyToSee: {
+            label: "SONO CONTENTO<br>DI VEDERTI",
+            speech: "Sono contento di vederti"
+        },
+
+        missedYou: {
+            label: "MI SEI MANCATO",
+            speech: "Mi sei mancato"
+        },
+
+        loveYou: {
+            label: "TI VOGLIO BENE",
+            speech: "Ti voglio bene"
+        },
+
+        thankYou: {
+            label: "GRAZIE",
+            speech: "Grazie"
+        },
+
+        sorry: {
+            label: "MI DISPIACE",
+            speech: "Mi dispiace"
+        },
+
+        dontWorry: {
+            label: "NON PREOCCUPARTI",
+            speech: "Non preoccuparti"
+        },
+
+        stayLonger: {
+            label: "RESTA ANCORA<br>UN PO'",
+            speech: "Resta ancora un po’ con me"
+        },
+
+        tellMe: {
+            label: "RACCONTAMI",
+            speech: "Raccontami"
+        },
+
+        gettingBetter: {
+            label: "VA MEGLIO",
+            speech: "Va meglio"
+        },
+
+        doingWell: {
+            label: "STO BENE",
+            speech: "Sto bene"
+        },
+
+        tiredButOkay: {
+            label: "SONO STANCO,<br>MA VA BENE",
+            speech: "Sono stanco, ma va bene"
+        },
+
+        dontKnow: {
+            label: "NON LO SO",
+            speech: "Non lo so"
+        },
+
+        asYouWant: {
+            label: "COME VUOI",
+            speech: "Come vuoi"
+        },
+
+        maybe: {
+            label: "FORSE",
+            speech: "Forse"
+        },
+
+        changeSubject: {
+            label: "CAMBIAMO<br>ARGOMENTO",
+            speech: "Cambiamo argomento"
+        },
+
+        continue: {
+            label: "CONTINUA",
+            speech: "Continua"
+        }
+    }
+
+};
+
+/* =========================================
+   MES PHRASES — TRADUCTIONS
+   ========================================= */
+
+const WRITE_TRANSLATIONS = {
+
+    fr: {
+
+        title: "Mes phrases",
+
+        starters: {
+            wouldLike: {
+                label: "JE VOUDRAIS…",
+                text: "Je voudrais "
+            },
+
+            need: {
+                label: "J'AI BESOIN DE…",
+                text: "J’ai besoin de "
+            },
+
+            want: {
+                label: "JE VEUX…",
+                text: "Je veux "
+            },
+
+            dontWant: {
+                label: "JE NE VEUX PAS…",
+                text: "Je ne veux pas "
+            },
+
+            canYou: {
+                label: "POUVEZ-VOUS…",
+                text: "Pouvez-vous "
+            },
+
+            helpMe: {
+                label: "AIDEZ-MOI À…",
+                text: "Aidez-moi à "
+            },
+
+            when: {
+                label: "QUAND… ?",
+                text: "Quand est-ce que "
+            },
+
+            why: {
+                label: "POURQUOI… ?",
+                text: "Pourquoi "
+            },
+
+            isIt: {
+                label: "EST-CE QUE… ?",
+                text: "Est-ce que "
+            },
+
+            think: {
+                label: "JE PENSE QUE…",
+                text: "Je pense que "
+            }
+        },
+
+        placeholder:
+            "Écrivez ici ce que vous voulez dire...",
+
+        clear:
+            "🗑️ EFFACER",
+
+        speak:
+            "🔊 DIRE",
+
+        save:
+            "⭐ ENREGISTRER",
+
+        personalTitle:
+            "Mes phrases personnelles",
+
+		noFavorites:
+			"Aucune phrase personnelle pour le moment.",
+
+		duplicateFavorite:
+			"Cette phrase est déjà dans vos favoris.",
+
+		favoriteAdded:
+			"Phrase ajoutée.",
+
+		deleteConfirm:
+			"Supprimer cette phrase ?"
+    },
+
+
+    en: {
+
+        title: "My phrases",
+
+        starters: {
+            wouldLike: {
+                label: "I WOULD LIKE…",
+                text: "I would like "
+            },
+
+            need: {
+                label: "I NEED…",
+                text: "I need "
+            },
+
+            want: {
+                label: "I WANT…",
+                text: "I want "
+            },
+
+            dontWant: {
+                label: "I DON'T WANT…",
+                text: "I don't want "
+            },
+
+            canYou: {
+                label: "CAN YOU…",
+                text: "Can you "
+            },
+
+            helpMe: {
+                label: "HELP ME TO…",
+                text: "Help me to "
+            },
+
+            when: {
+                label: "WHEN… ?",
+                text: "When "
+            },
+
+            why: {
+                label: "WHY… ?",
+                text: "Why "
+            },
+
+            isIt: {
+                label: "IS IT… ?",
+                text: "Is it "
+            },
+
+            think: {
+                label: "I THINK…",
+                text: "I think "
+            }
+        },
+
+        placeholder:
+            "Write here what you want to say...",
+
+        clear:
+            "🗑️ CLEAR",
+
+        speak:
+            "🔊 SAY",
+
+        save:
+            "⭐ SAVE",
+
+        personalTitle:
+            "My personal phrases",
+
+		noFavorites:
+			"No personal phrases yet.",
+
+		duplicateFavorite:
+			"This phrase is already in your favorites.",
+
+		favoriteAdded:
+			"Phrase saved.",
+
+		deleteConfirm:
+			"Delete this phrase?"
+    },
+
+
+    de: {
+
+        title: "Meine Sätze",
+
+        starters: {
+            wouldLike: {
+                label: "ICH MÖCHTE…",
+                text: "Ich möchte "
+            },
+
+            need: {
+                label: "ICH BRAUCHE…",
+                text: "Ich brauche "
+            },
+
+            want: {
+                label: "ICH WILL…",
+                text: "Ich will "
+            },
+
+            dontWant: {
+                label: "ICH WILL NICHT…",
+                text: "Ich will nicht "
+            },
+
+            canYou: {
+                label: "KÖNNEN SIE…",
+                text: "Können Sie "
+            },
+
+            helpMe: {
+                label: "HELFEN SIE MIR…",
+                text: "Helfen Sie mir "
+            },
+
+            when: {
+                label: "WANN… ?",
+                text: "Wann "
+            },
+
+            why: {
+                label: "WARUM… ?",
+                text: "Warum "
+            },
+
+            isIt: {
+                label: "IST ES… ?",
+                text: "Ist es "
+            },
+
+            think: {
+                label: "ICH DENKE…",
+                text: "Ich denke, dass "
+            }
+        },
+
+        placeholder:
+            "Schreiben Sie hier, was Sie sagen möchten...",
+
+        clear:
+            "🗑️ LÖSCHEN",
+
+        speak:
+            "🔊 SAGEN",
+
+        save:
+            "⭐ SPEICHERN",
+
+        personalTitle:
+            "Meine persönlichen Sätze",
+
+		noFavorites:
+			"Noch keine persönlichen Sätze.",
+
+		duplicateFavorite:
+			"Dieser Satz ist bereits in Ihren Favoriten.",
+
+		favoriteAdded:
+			"Satz gespeichert.",
+
+		deleteConfirm:
+			"Diesen Satz löschen?"
+    },
+
+
+    it: {
+
+        title: "Le mie frasi",
+
+        starters: {
+            wouldLike: {
+                label: "VORREI…",
+                text: "Vorrei "
+            },
+
+            need: {
+                label: "HO BISOGNO DI…",
+                text: "Ho bisogno di "
+            },
+
+            want: {
+                label: "VOGLIO…",
+                text: "Voglio "
+            },
+
+            dontWant: {
+                label: "NON VOGLIO…",
+                text: "Non voglio "
+            },
+
+            canYou: {
+                label: "PUÒ…",
+                text: "Può "
+            },
+
+            helpMe: {
+                label: "MI AIUTI A…",
+                text: "Mi aiuti a "
+            },
+
+            when: {
+                label: "QUANDO… ?",
+                text: "Quando "
+            },
+
+            why: {
+                label: "PERCHÉ… ?",
+                text: "Perché "
+            },
+
+            isIt: {
+                label: "È… ?",
+                text: "È "
+            },
+
+            think: {
+                label: "PENSO CHE…",
+                text: "Penso che "
+            }
+        },
+
+        placeholder:
+            "Scriva qui quello che vuole dire...",
+
+        clear:
+            "🗑️ CANCELLA",
+
+        speak:
+            "🔊 DI'",
+
+        save:
+            "⭐ SALVA",
+
+        personalTitle:
+            "Le mie frasi personali",
+
+		noFavorites:
+			"Nessuna frase personale per il momento.",
+
+		duplicateFavorite:
+			"Questa frase è già nei preferiti.",
+
+		favoriteAdded:
+			"Frase salvata.",
+
+		deleteConfirm:
+			"Eliminare questa frase?"
+    }
+
+};
+
+function updateWriteLanguage() {
+
+    const translation =
+        WRITE_TRANSLATIONS[
+            patientLanguage
+        ];
+
+    if (!translation) {
+        return;
+    }
+
+    const title =
+        document.getElementById(
+            "writeTitle"
+        );
+
+    if (title) {
+        title.textContent =
+            translation.title;
+    }
+
+    const starters = {
+
+        writeWouldLikeButton:
+            translation.starters.wouldLike.label,
+
+        writeNeedButton:
+            translation.starters.need.label,
+
+        writeWantButton:
+            translation.starters.want.label,
+
+        writeDontWantButton:
+            translation.starters.dontWant.label,
+
+        writeCanYouButton:
+            translation.starters.canYou.label,
+
+        writeHelpMeButton:
+            translation.starters.helpMe.label,
+
+        writeWhenButton:
+            translation.starters.when.label,
+
+        writeWhyButton:
+            translation.starters.why.label,
+
+        writeIsItButton:
+            translation.starters.isIt.label,
+
+        writeThinkButton:
+            translation.starters.think.label
+    };
+
+    Object.entries(starters).forEach(
+        function(entry) {
+
+            const element =
+                document.getElementById(
+                    entry[0]
+                );
+
+            if (element) {
+                element.textContent =
+                    entry[1];
+            }
+        }
+    );
+
+    const textArea =
+        document.getElementById(
+            "customText"
+        );
+
+    if (textArea) {
+        textArea.placeholder =
+            translation.placeholder;
+    }
+
+    const clearButton =
+        document.getElementById(
+            "writeClearButton"
+        );
+
+    if (clearButton) {
+        clearButton.textContent =
+            translation.clear;
+    }
+
+    const speakButton =
+        document.getElementById(
+            "writeSpeakButton"
+        );
+
+    if (speakButton) {
+        speakButton.textContent =
+            translation.speak;
+    }
+
+    const saveButton =
+        document.getElementById(
+            "writeSaveButton"
+        );
+
+    if (saveButton) {
+        saveButton.textContent =
+            translation.save;
+    }
+
+    const personalTitle =
+        document.getElementById(
+            "writePersonalTitle"
+        );
+
+    if (personalTitle) {
+        personalTitle.textContent =
+            translation.personalTitle;
+    }
+
+    renderCustomFavorites();
+}
+
+
+function addQuickText(phraseKey) {
+
+    const translation =
+        WRITE_TRANSLATIONS[
+            patientLanguage
+        ];
+
+    if (!translation) {
+        return;
+    }
+
+    const phrase =
+        translation.starters[
+            phraseKey
+        ];
+
+    if (!phrase) {
+        return;
+    }
+
+    addText(
+        phrase.text
+    );
+}
+
+function updateTalkLanguage() {
+
+    const translation =
+        TALK_TRANSLATIONS[
+            patientLanguage
+        ];
+
+    if (!translation) {
+        return;
+    }
+
+    const title =
+        document.getElementById(
+            "talkTitle"
+        );
+
+    if (title) {
+        title.textContent =
+            translation.title;
+    }
+
+    const elements = {
+
+        talkHelloButton:
+            translation.hello.label,
+
+        talkSeeYouButton:
+            translation.seeYou.label,
+
+        talkHappyToSeeButton:
+            translation.happyToSee.label,
+
+        talkMissedYouButton:
+            translation.missedYou.label,
+
+        talkLoveYouButton:
+            translation.loveYou.label,
+
+        talkThankYouButton:
+            translation.thankYou.label,
+
+        talkSorryButton:
+            translation.sorry.label,
+
+        talkDontWorryButton:
+            translation.dontWorry.label,
+
+        talkStayLongerButton:
+            translation.stayLonger.label,
+
+        talkTellMeButton:
+            translation.tellMe.label,
+
+        talkGettingBetterButton:
+            translation.gettingBetter.label,
+
+        talkDoingWellButton:
+            translation.doingWell.label,
+
+        talkTiredButOkayButton:
+            translation.tiredButOkay.label,
+
+        talkDontKnowButton:
+            translation.dontKnow.label,
+
+        talkAsYouWantButton:
+            translation.asYouWant.label,
+
+        talkMaybeButton:
+            translation.maybe.label,
+
+        talkChangeSubjectButton:
+            translation.changeSubject.label,
+
+        talkContinueButton:
+            translation.continue.label
+    };
+
+    Object.entries(elements).forEach(
+        function(entry) {
+
+            const element =
+                document.getElementById(
+                    entry[0]
+                );
+
+            if (element) {
+                element.innerHTML =
+                    entry[1];
+            }
+        }
+    );
+}
+
+
+function speakTalkPhrase(phraseKey) {
+
+    const translation =
+        TALK_TRANSLATIONS[
+            caregiverLanguage
+        ];
+
+    if (!translation) {
+        return;
+    }
+
+    const phrase =
+        translation[phraseKey];
+
+    if (!phrase) {
+        return;
+    }
+
+    speak(
+        phrase.speech,
+        caregiverLanguage
+    );
+}
+
+function updateUnderstandLanguage() {
+
+    const translation =
+        UNDERSTAND_TRANSLATIONS[
+            patientLanguage
+        ];
+
+    if (!translation) {
+        return;
+    }
+
+    const title =
+        document.getElementById(
+            "understandTitle"
+        );
+
+    if (title) {
+        title.textContent =
+            translation.title;
+    }
+
+    const elements = {
+
+        understandWaitButton:
+            translation.wait.label,
+
+        understandChoicesButton:
+            translation.choices.label,
+
+        understandNotUnderstandButton:
+            translation.notUnderstand.label,
+
+        understandWriteButton:
+            translation.write.label,
+
+        understandLouderButton:
+            translation.louder.label,
+
+        understandSlowerButton:
+            translation.slower.label,
+
+        understandYesNoButton:
+            translation.yesNo.label,
+
+        understandRepeatButton:
+            translation.repeat.label,
+
+        understandOneQuestionButton:
+            translation.oneQuestion.label,
+
+        understandMisunderstoodButton:
+            translation.misunderstood.label
+    };
+
+    Object.entries(elements).forEach(
+        function(entry) {
+
+            const element =
+                document.getElementById(
+                    entry[0]
+                );
+
+            if (element) {
+                element.innerHTML =
+                    entry[1];
+            }
+        }
+    );
+}
+
+
+function speakUnderstandPhrase(phraseKey) {
+
+    const translation =
+        UNDERSTAND_TRANSLATIONS[
+            caregiverLanguage
+        ];
+
+    if (!translation) {
+        return;
+    }
+
+    const phrase =
+        translation[phraseKey];
+
+    if (!phrase) {
+        return;
+    }
+
+    speak(
+        phrase.speech,
+        caregiverLanguage
+    );
+}
+
+function updateEnvironmentLanguage() {
+
+    const translation =
+        ENVIRONMENT_TRANSLATIONS[
+            patientLanguage
+        ];
+
+    if (!translation) {
+        return;
+    }
+
+    const title =
+        document.getElementById(
+            "environmentTitle"
+        );
+
+    if (title) {
+        title.textContent =
+            translation.title;
+    }
+
+    const elements = {
+
+        environmentCloseDoorButton:
+            translation.closeDoor.label,
+
+        environmentOpenDoorButton:
+            translation.openDoor.label,
+
+        environmentCloseCurtainsButton:
+            translation.closeCurtains.label,
+
+        environmentOpenCurtainsButton:
+            translation.openCurtains.label,
+
+        environmentLightOnButton:
+            translation.lightOn.label,
+
+        environmentLightOffButton:
+            translation.lightOff.label,
+
+        environmentNoiseButton:
+            translation.noise.label,
+
+        environmentSilenceButton:
+            translation.silence.label,
+
+        environmentOpenWindowButton:
+            translation.openWindow.label,
+
+        environmentCloseWindowButton:
+            translation.closeWindow.label,
+
+        environmentTelevisionButton:
+            translation.television.label,
+
+        environmentTelevisionOffButton:
+            translation.televisionOff.label,
+
+        environmentMusicButton:
+            translation.music.label,
+
+        environmentMusicOffButton:
+            translation.musicOff.label,
+
+        environmentCoverMeButton:
+            translation.coverMe.label,
+
+        environmentPrivacyButton:
+            translation.privacy.label,
+
+        environmentNoOneDuringCareButton:
+            translation.noOneDuringCare.label,
+
+        environmentNotInFrontButton:
+            translation.notInFront.label,
+
+        environmentSleepButton:
+            translation.sleep.label,
+
+        environmentDoNotWakeButton:
+            translation.doNotWake.label
+    };
+
+    Object.entries(elements).forEach(
+        function(entry) {
+
+            const element =
+                document.getElementById(
+                    entry[0]
+                );
+
+            if (element) {
+                element.innerHTML =
+                    entry[1];
+            }
+        }
+    );
+}
+
+
+function speakEnvironmentPhrase(phraseKey) {
+
+    const translation =
+        ENVIRONMENT_TRANSLATIONS[
+            caregiverLanguage
+        ];
+
+    if (!translation) {
+        return;
+    }
+
+    const phrase =
+        translation[phraseKey];
+
+    if (!phrase) {
+        return;
+    }
+
+    speak(
+        phrase.speech,
+        caregiverLanguage
+    );
+}
+
+function updateQuestionsLanguage() {
+
+    const translation =
+        QUESTIONS_TRANSLATIONS[
+            patientLanguage
+        ];
+
+    if (!translation) {
+        return;
+    }
+
+    const title =
+        document.getElementById(
+            "questionsTitle"
+        );
+
+    if (title) {
+        title.textContent =
+            translation.title;
+    }
+
+    const elements = {
+
+        questionsWhatHappenedButton:
+            translation.whatHappened.label,
+
+        questionsInjuriesButton:
+            translation.injuries.label,
+
+        questionsImprovingButton:
+            translation.improving.label,
+
+        questionsConcernButton:
+            translation.concern.label,
+
+        questionsNextGoalButton:
+            translation.nextGoal.label,
+
+        questionsExamsButton:
+            translation.exams.label,
+
+        questionsResultsWhenButton:
+            translation.resultsWhen.label,
+
+        questionsResultsMeaningButton:
+            translation.resultsMeaning.label,
+
+        questionsSpeakWhenButton:
+            translation.speakWhen.label,
+
+        questionsSpeakNormallyButton:
+            translation.speakNormally.label,
+
+        questionsTracheostomyHowLongButton:
+            translation.tracheostomyHowLong.label,
+
+        questionsEatWhenButton:
+            translation.eatWhen.label,
+
+        questionsStandWhenButton:
+            translation.standWhen.label,
+
+        questionsWalkWhenButton:
+            translation.walkWhen.label,
+
+        questionsRehabilitationButton:
+            translation.rehabilitation.label,
+
+        questionsLeaveICUButton:
+            translation.leaveICU.label,
+
+        questionsLeaveHospitalButton:
+            translation.leaveHospital.label,
+
+        questionsGoHomeButton:
+            translation.goHome.label,
+
+        questionsImproveBeforeHomeButton:
+            translation.improveBeforeHome.label,
+
+        questionsExplainNextButton:
+            translation.explainNext.label
+    };
+
+    Object.entries(elements).forEach(
+        function(entry) {
+
+            const element =
+                document.getElementById(
+                    entry[0]
+                );
+
+            if (element) {
+                element.innerHTML =
+                    entry[1];
+            }
+        }
+    );
+}
+
+
+function speakQuestionsPhrase(phraseKey) {
+
+    const translation =
+        QUESTIONS_TRANSLATIONS[
+            caregiverLanguage
+        ];
+
+    if (!translation) {
+        return;
+    }
+
+    const phrase =
+        translation[phraseKey];
+
+    if (!phrase) {
+        return;
+    }
+
+    speak(
+        phrase.speech,
+        caregiverLanguage
+    );
+}
+
+function updateEmotionLanguage() {
+
+    const translation =
+        EMOTION_TRANSLATIONS[
+            patientLanguage
+        ];
+
+    if (!translation) {
+        return;
+    }
+
+    const title =
+        document.getElementById(
+            "emotionTitle"
+        );
+
+    if (title) {
+        title.textContent =
+            translation.title;
+    }
+
+    const elements = {
+
+        emotionAfraidButton:
+            translation.afraid.label,
+
+        emotionSadButton:
+            translation.sad.label,
+
+        emotionAngryButton:
+            translation.angry.label,
+
+        emotionFedUpButton:
+            translation.fedUp.label,
+
+        emotionDiscouragedButton:
+            translation.discouraged.label,
+
+        emotionLonelyButton:
+            translation.lonely.label,
+
+        emotionTiredButton:
+            translation.tired.label,
+
+        emotionBoredButton:
+            translation.bored.label,
+
+        emotionHappyButton:
+            translation.happy.label,
+
+        emotionBetterButton:
+            translation.better.label,
+
+        emotionStayButton:
+            translation.stay.label,
+
+        emotionAloneButton:
+            translation.alone.label,
+
+        emotionNoTalkButton:
+            translation.noTalk.label
+    };
+
+    Object.entries(elements).forEach(
+        function(entry) {
+
+            const element =
+                document.getElementById(
+                    entry[0]
+                );
+
+            if (element) {
+                element.innerHTML =
+                    entry[1];
+            }
+        }
+    );
+}
+
+
+function speakEmotionPhrase(phraseKey) {
+
+    const translation =
+        EMOTION_TRANSLATIONS[
+            caregiverLanguage
+        ];
+
+    if (!translation) {
+        return;
+    }
+
+    const phrase =
+        translation[phraseKey];
+
+    if (!phrase) {
+        return;
+    }
+
+    speak(
+        phrase.speech,
+        caregiverLanguage
+    );
+}
+
+function updateHygieneLanguage() {
+
+    const translation =
+        HYGIENE_TRANSLATIONS[
+            patientLanguage
+        ];
+
+    if (!translation) {
+        return;
+    }
+
+    const title =
+        document.getElementById(
+            "hygieneTitle"
+        );
+
+    if (title) {
+        title.textContent =
+            translation.title;
+    }
+
+    const elements = {
+
+        hygieneUrinateButton:
+            translation.urinate.label,
+
+        hygieneStoolButton:
+            translation.stool.label,
+
+        hygieneChangeButton:
+            translation.change.label,
+
+        hygieneWetButton:
+            translation.wet.label,
+
+        hygieneCleanButton:
+            translation.clean.label,
+
+        hygieneWashButton:
+            translation.wash.label,
+
+        hygieneFaceButton:
+            translation.face.label,
+
+        hygieneTeethButton:
+            translation.teeth.label,
+
+        hygieneShaveButton:
+            translation.shave.label,
+
+        hygieneShowerButton:
+            translation.shower.label,
+
+        hygieneItchButton:
+            translation.itch.label,
+
+        hygieneScratchButton:
+            translation.scratch.label
+    };
+
+    Object.entries(elements).forEach(
+        function(entry) {
+
+            const element =
+                document.getElementById(
+                    entry[0]
+                );
+
+            if (element) {
+                element.innerHTML =
+                    entry[1];
+            }
+        }
+    );
+}
+
+
+function speakHygienePhrase(phraseKey) {
+
+    const translation =
+        HYGIENE_TRANSLATIONS[
+            caregiverLanguage
+        ];
+
+    if (!translation) {
+        return;
+    }
+
+    const phrase =
+        translation[phraseKey];
+
+    if (!phrase) {
+        return;
+    }
+
+    speak(
+        phrase.speech,
+        caregiverLanguage
+    );
+}
+
+function updateCareLanguage() {
+
+    const translation =
+        CARE_TRANSLATIONS[
+            patientLanguage
+        ];
+
+    if (!translation) {
+        return;
+    }
+
+    const title =
+        document.getElementById(
+            "careTitle"
+        );
+
+    if (title) {
+        title.textContent =
+            translation.title;
+    }
+
+    const elements = {
+
+        careNurseButton:
+            translation.nurse.label,
+
+        careDoctorButton:
+            translation.doctor.label,
+
+        carePhysioButton:
+            translation.physio.label,
+
+        careErgoButton:
+            translation.ergo.label,
+
+        careLogoButton:
+            translation.logo.label,
+
+        careNauseaButton:
+            translation.nausea.label,
+
+        careVomitButton:
+            translation.vomit.label,
+
+        careUrinationPainButton:
+            translation.urinationPain.label,
+
+        careConstipationButton:
+            translation.constipation.label,
+
+        careDiarrheaButton:
+            translation.diarrhea.label,
+
+        careGasButton:
+            translation.gas.label,
+
+        carePainMedicationButton:
+            translation.painMedication.label,
+
+        careMedicationNotEnoughButton:
+            translation.medicationNotEnough.label,
+
+        careSideEffectButton:
+            translation.sideEffect.label
+    };
+
+    Object.entries(elements).forEach(
+        function(entry) {
+
+            const element =
+                document.getElementById(
+                    entry[0]
+                );
+
+            if (element) {
+                element.innerHTML =
+                    entry[1];
+            }
+        }
+    );
+}
+
+
+function speakCarePhrase(phraseKey) {
+
+    const translation =
+        CARE_TRANSLATIONS[
+            caregiverLanguage
+        ];
+
+    if (!translation) {
+        return;
+    }
+
+    const phrase =
+        translation[phraseKey];
+
+    if (!phrase) {
+        return;
+    }
+
+    speak(
+        phrase.speech,
+        caregiverLanguage
+    );
+}
+
 function updatePositionLanguage() {
 
     const translation =
@@ -2396,6 +6024,22 @@ function choosePatientLanguage(language) {
 	updatePainLanguage();
 	
 	updatePositionLanguage();
+	
+	updateCareLanguage();
+	
+	updateHygieneLanguage();
+	
+	updateEmotionLanguage();
+	
+	updateQuestionsLanguage();
+	
+	updateEnvironmentLanguage();
+	
+	updateUnderstandLanguage();
+	
+	updateTalkLanguage();
+	
+	updateWriteLanguage();
 
     updateTopRightButton("voiceScreen");
 }
@@ -2962,13 +6606,19 @@ function resetPain() {
 function speakCustomText() {
 
     const text =
-        document.getElementById("customText").value.trim();
+        document
+            .getElementById("customText")
+            .value
+            .trim();
 
     if (text === "") {
         return;
     }
 
-    speak(text);
+    speak(
+        text,
+        patientLanguage
+    );
 }
 
 
@@ -3236,15 +6886,28 @@ function saveFavoriteText(textAreaId) {
         return;
     }
 
+
+    const translation =
+        WRITE_TRANSLATIONS[
+            patientLanguage
+        ] ||
+        WRITE_TRANSLATIONS.fr;
+
+
     const favorites =
         getCustomFavorites();
 
+
     if (favorites.includes(phrase)) {
 
-        speak("Cette phrase est déjà dans vos favoris");
+        speak(
+            translation.duplicateFavorite,
+            patientLanguage
+        );
 
         return;
     }
+
 
     favorites.push(phrase);
 
@@ -3257,7 +6920,10 @@ function saveFavoriteText(textAreaId) {
 
     renderCustomFavorites();
 
-    speak("Phrase ajoutée");
+    speak(
+        translation.favoriteAdded,
+        patientLanguage
+    );
 }
 
 
@@ -3293,8 +6959,15 @@ function renderCustomFavorites() {
 
         message.className = "no-favorites";
 
-        message.textContent =
-            "Aucune phrase personnelle pour le moment.";
+		const translation =
+			WRITE_TRANSLATIONS[
+				patientLanguage
+			];
+
+		message.textContent =
+			translation
+				? translation.noFavorites
+				: "Aucune phrase personnelle pour le moment.";
 
         container.appendChild(message);
 
@@ -3319,10 +6992,14 @@ function renderCustomFavorites() {
         speakButton.textContent =
             phrase;
 
-        speakButton.onclick =
-            function() {
-                speak(phrase);
-            };
+		speakButton.onclick =
+			function() {
+
+				speak(
+					phrase,
+					patientLanguage
+				);
+			};
 
 		const deleteButton =
 			document.createElement("button");
@@ -3333,9 +7010,15 @@ function renderCustomFavorites() {
 		deleteButton.textContent =
 			"🗑️";
 
+		const translation =
+			WRITE_TRANSLATIONS[
+				patientLanguage
+			] ||
+			WRITE_TRANSLATIONS.fr;
+
 		deleteButton.setAttribute(
 			"aria-label",
-			"Supprimer la phrase"
+			translation.deleteConfirm
 		);
 
 		deleteButton.onclick =
@@ -3363,15 +7046,26 @@ function deleteFavorite(index) {
     const phrase =
         favorites[index];
 
+
+    const translation =
+        WRITE_TRANSLATIONS[
+            patientLanguage
+        ] ||
+        WRITE_TRANSLATIONS.fr;
+
+
     const confirmed =
         confirm(
-            "Supprimer cette phrase ?\n\n" +
+            translation.deleteConfirm +
+            "\n\n" +
             phrase
         );
+
 
     if (!confirmed) {
         return;
     }
+
 
     favorites.splice(index, 1);
 
@@ -3458,6 +7152,22 @@ document.addEventListener(
 		updatePainLanguage();
 		
 		updatePositionLanguage();
+		
+		updateCareLanguage();
+		
+		updateHygieneLanguage();
+		
+		updateEmotionLanguage();
+		
+		updateQuestionsLanguage();
+		
+		updateEnvironmentLanguage();
+		
+		updateUnderstandLanguage();
+		
+		updateTalkLanguage();
+		
+		updateWriteLanguage();
 
 		updateTopRightButton("homeScreen");
 		

@@ -631,77 +631,107 @@
         ← RETOUR
     </button>
 
-    <h1>Soins</h1>
+    <h1 id="careTitle">
+        Soins
+    </h1>
 
     <div class="phrase-buttons">
 
-        <button onclick="speak('Je voudrais voir une infirmière')">
-            INFIRMIÈRE
+        <button onclick="speakCarePhrase('nurse')">
+            <span id="careNurseButton">
+                INFIRMIÈRE
+            </span>
         </button>
 
-        <button onclick="speak('Je voudrais voir un médecin')">
-            MÉDECIN
+        <button onclick="speakCarePhrase('doctor')">
+            <span id="careDoctorButton">
+                MÉDECIN
+            </span>
         </button>
 
-		<div class="care-therapists">
+        <div class="care-therapists">
 
-			<button onclick="speak('Je voudrais voir le physiotérapeute')">
-				PHYSIO
-			</button>
+            <button onclick="speakCarePhrase('physio')">
+                <span id="carePhysioButton">
+                    PHYSIO
+                </span>
+            </button>
 
-			<button onclick="speak('Je voudrais voir l’ergotérapeute')">
-				ERGO
-			</button>
+            <button onclick="speakCarePhrase('ergo')">
+                <span id="careErgoButton">
+                    ERGO
+                </span>
+            </button>
 
-			<button onclick="speak('Je voudrais voir le logopédiste')">
-				LOGO
-			</button>
+            <button onclick="speakCarePhrase('logo')">
+                <span id="careLogoButton">
+                    LOGO
+                </span>
+            </button>
 
-		</div>
-		
-        <button onclick="speak('J’ai des nausées')">
-            J'AI DES<br>
-            NAUSÉES
+        </div>
+
+        <button onclick="speakCarePhrase('nausea')">
+            <span id="careNauseaButton">
+                J'AI DES<br>
+                NAUSÉES
+            </span>
         </button>
 
-        <button onclick="speak('Je vais vomir')">
-            JE VAIS<br>
-            VOMIR
-        </button>
-		
-		<button onclick="speak('J’ai mal quand j’urine')">
-			J'AI MAL<br>
-			QUAND J'URINE
-		</button>
-
-		<button onclick="speak('Je suis constipé')">
-			JE SUIS<br>
-			CONSTIPÉ
-		</button>
-
-		<button onclick="speak('J’ai la diarrhée')">
-			J'AI LA<br>
-			DIARRHÉE
-		</button>
-
-		<button onclick="speak('J’ai des gaz')">
-			J'AI<br>
-			DES GAZ
-		</button>
-
-        <button onclick="speak('J’ai besoin d’un médicament contre la douleur')">
-            MÉDICAMENT<br>
-            / DOULEUR
+        <button onclick="speakCarePhrase('vomit')">
+            <span id="careVomitButton">
+                JE VAIS<br>
+                VOMIR
+            </span>
         </button>
 
-        <button onclick="speak('Mon médicament ne me soulage pas assez')">
-            MÉDICAMENT<br>
-            SUFFIT PAS
+        <button onclick="speakCarePhrase('urinationPain')">
+            <span id="careUrinationPainButton">
+                J'AI MAL<br>
+                QUAND J'URINE
+            </span>
         </button>
 
-        <button onclick="speak('Ce médicament me donne un effet désagréable')">
-            EFFET<br>
-            INDÉSIRABLE
+        <button onclick="speakCarePhrase('constipation')">
+            <span id="careConstipationButton">
+                JE SUIS<br>
+                CONSTIPÉ
+            </span>
+        </button>
+
+        <button onclick="speakCarePhrase('diarrhea')">
+            <span id="careDiarrheaButton">
+                J'AI LA<br>
+                DIARRHÉE
+            </span>
+        </button>
+
+        <button onclick="speakCarePhrase('gas')">
+            <span id="careGasButton">
+                J'AI<br>
+                DES GAZ
+            </span>
+        </button>
+
+        <button onclick="speakCarePhrase('painMedication')">
+            <span id="carePainMedicationButton">
+                MÉDICAMENT<br>
+                / DOULEUR
+            </span>
+        </button>
+
+        <button onclick="speakCarePhrase('medicationNotEnough')">
+            <span id="careMedicationNotEnoughButton">
+                MÉDICAMENT<br>
+                SUFFIT PAS
+            </span>
+        </button>
+
+        <button onclick="speakCarePhrase('sideEffect')">
+            <span id="careSideEffectButton">
+                EFFET<br>
+                INDÉSIRABLE
+            </span>
         </button>
 
     </div>
@@ -724,66 +754,92 @@
         ← RETOUR
     </button>
 
-    <h1>Toilettes / Hygiène</h1>
+    <h1 id="hygieneTitle">
+        Toilettes / Hygiène
+    </h1>
 
     <div class="phrase-buttons">
 
-        <button onclick="speak('J’ai besoin d’uriner')">
-            J'AI BESOIN<br>
-            D'URINER
+        <button onclick="speakHygienePhrase('urinate')">
+            <span id="hygieneUrinateButton">
+                J'AI BESOIN<br>
+                D'URINER
+            </span>
         </button>
 
-        <button onclick="speak('J’ai besoin d’aller à la selle')">
-            J'AI BESOIN<br>
-            D'ALLER À LA SELLE
+        <button onclick="speakHygienePhrase('stool')">
+            <span id="hygieneStoolButton">
+                J'AI BESOIN<br>
+                D'ALLER À LA SELLE
+            </span>
         </button>
 
-        <button onclick="speak('J’ai besoin d’être changé')">
-            J'AI BESOIN<br>
-            D'ÊTRE CHANGÉ
+        <button onclick="speakHygienePhrase('change')">
+            <span id="hygieneChangeButton">
+                J'AI BESOIN<br>
+                D'ÊTRE CHANGÉ
+            </span>
         </button>
 
-        <button onclick="speak('Je suis mouillé')">
-            JE SUIS<br>
-            MOUILLÉ
+        <button onclick="speakHygienePhrase('wet')">
+            <span id="hygieneWetButton">
+                JE SUIS<br>
+                MOUILLÉ
+            </span>
         </button>
 
-        <button onclick="speak('J’ai besoin d’être nettoyé')">
-            J'AI BESOIN<br>
-            D'ÊTRE NETTOYÉ
+        <button onclick="speakHygienePhrase('clean')">
+            <span id="hygieneCleanButton">
+                J'AI BESOIN<br>
+                D'ÊTRE NETTOYÉ
+            </span>
         </button>
 
-        <button onclick="speak('Je voudrais me laver')">
-            JE VEUX<br>
-            ME LAVER
+        <button onclick="speakHygienePhrase('wash')">
+            <span id="hygieneWashButton">
+                JE VEUX<br>
+                ME LAVER
+            </span>
         </button>
 
-        <button onclick="speak('Lavez-moi le visage, s’il vous plaît')">
-            LAVEZ-MOI<br>
-            LE VISAGE
+        <button onclick="speakHygienePhrase('face')">
+            <span id="hygieneFaceButton">
+                LAVEZ-MOI<br>
+                LE VISAGE
+            </span>
         </button>
 
-        <button onclick="speak('Je voudrais me brosser les dents')">
-            BROSSER<br>
-            MES DENTS
+        <button onclick="speakHygienePhrase('teeth')">
+            <span id="hygieneTeethButton">
+                BROSSER<br>
+                MES DENTS
+            </span>
         </button>
 
-        <button onclick="speak('Je voudrais me raser')">
-            ME RASER
+        <button onclick="speakHygienePhrase('shave')">
+            <span id="hygieneShaveButton">
+                ME RASER
+            </span>
         </button>
 
-        <button onclick="speak('Je voudrais prendre une douche')">
-            PRENDRE<br>
-            UNE DOUCHE
+        <button onclick="speakHygienePhrase('shower')">
+            <span id="hygieneShowerButton">
+                PRENDRE<br>
+                UNE DOUCHE
+            </span>
         </button>
 
-        <button onclick="speak('Ça me gratte')">
-            ÇA ME<br>
-            GRATTE
+        <button onclick="speakHygienePhrase('itch')">
+            <span id="hygieneItchButton">
+                ÇA ME<br>
+                GRATTE
+            </span>
         </button>
 
-        <button onclick="speak('J’ai besoin qu’on me gratte')">
-            GRATTEZ-MOI
+        <button onclick="speakHygienePhrase('scratch')">
+            <span id="hygieneScratchButton">
+                GRATTEZ-MOI
+            </span>
         </button>
 
     </div>
@@ -806,71 +862,99 @@
         ← RETOUR
     </button>
 
-    <h1>Émotions</h1>
+    <h1 id="emotionTitle">
+        Émotions
+    </h1>
 
     <div class="phrase-buttons">
 
-        <button onclick="speak('J’ai peur')">
-            J'AI PEUR
+        <button onclick="speakEmotionPhrase('afraid')">
+            <span id="emotionAfraidButton">
+                J'AI PEUR
+            </span>
         </button>
 
-        <button onclick="speak('Je suis triste')">
-            JE SUIS<br>
-            TRISTE
+        <button onclick="speakEmotionPhrase('sad')">
+            <span id="emotionSadButton">
+                JE SUIS<br>
+                TRISTE
+            </span>
         </button>
 
-        <button onclick="speak('Je suis en colère')">
-            JE SUIS<br>
-            EN COLÈRE
+        <button onclick="speakEmotionPhrase('angry')">
+            <span id="emotionAngryButton">
+                JE SUIS<br>
+                EN COLÈRE
+            </span>
         </button>
 
-        <button onclick="speak('J’en ai marre')">
-            J'EN AI<br>
-            MARRE
+        <button onclick="speakEmotionPhrase('fedUp')">
+            <span id="emotionFedUpButton">
+                J'EN AI<br>
+                MARRE
+            </span>
         </button>
 
-        <button onclick="speak('Je suis découragé')">
-            JE SUIS<br>
-            DÉCOURAGÉ
+        <button onclick="speakEmotionPhrase('discouraged')">
+            <span id="emotionDiscouragedButton">
+                JE SUIS<br>
+                DÉCOURAGÉ
+            </span>
         </button>
 
-        <button onclick="speak('Je me sens seul')">
-            JE ME SENS<br>
-            SEUL
+        <button onclick="speakEmotionPhrase('lonely')">
+            <span id="emotionLonelyButton">
+                JE ME SENS<br>
+                SEUL
+            </span>
         </button>
 
-        <button onclick="speak('Je suis fatigué')">
-            JE SUIS<br>
-            FATIGUÉ
+        <button onclick="speakEmotionPhrase('tired')">
+            <span id="emotionTiredButton">
+                JE SUIS<br>
+                FATIGUÉ
+            </span>
         </button>
 
-        <button onclick="speak('Je m’ennuie')">
-            JE M'ENNUIE
+        <button onclick="speakEmotionPhrase('bored')">
+            <span id="emotionBoredButton">
+                JE M'ENNUIE
+            </span>
         </button>
 
-        <button onclick="speak('Je suis content')">
-            JE SUIS<br>
-            CONTENT
+        <button onclick="speakEmotionPhrase('happy')">
+            <span id="emotionHappyButton">
+                JE SUIS<br>
+                CONTENT
+            </span>
         </button>
 
-        <button onclick="speak('Je me sens mieux')">
-            JE ME SENS<br>
-            MIEUX
+        <button onclick="speakEmotionPhrase('better')">
+            <span id="emotionBetterButton">
+                JE ME SENS<br>
+                MIEUX
+            </span>
         </button>
 
-        <button onclick="speak('Restez un peu avec moi, s’il vous plaît')">
-            RESTEZ<br>
-            AVEC MOI
+        <button onclick="speakEmotionPhrase('stay')">
+            <span id="emotionStayButton">
+                RESTEZ<br>
+                AVEC MOI
+            </span>
         </button>
 
-        <button onclick="speak('Je voudrais être seul un moment')">
-            JE VEUX<br>
-            ÊTRE SEUL
+        <button onclick="speakEmotionPhrase('alone')">
+            <span id="emotionAloneButton">
+                JE VEUX<br>
+                ÊTRE SEUL
+            </span>
         </button>
 
-        <button onclick="speak('Je n’ai pas envie de parler maintenant')">
-            PAS ENVIE<br>
-            DE PARLER
+        <button onclick="speakEmotionPhrase('noTalk')">
+            <span id="emotionNoTalkButton">
+                PAS ENVIE<br>
+                DE PARLER
+            </span>
         </button>
 
     </div>
@@ -893,108 +977,150 @@
         ← RETOUR
     </button>
 
-    <h1>Questions</h1>
+    <h1 id="questionsTitle">
+        Questions
+    </h1>
 
     <div class="phrase-buttons">
 
-        <button onclick="speak('Qu’est-ce qui m’est arrivé ?')">
-            QU'EST-CE QUI<br>
-            M'EST ARRIVÉ ?
+        <button onclick="speakQuestionsPhrase('whatHappened')">
+            <span id="questionsWhatHappenedButton">
+                QU'EST-CE QUI<br>
+                M'EST ARRIVÉ ?
+            </span>
         </button>
 
-        <button onclick="speak('Quelles sont exactement mes blessures ?')">
-            QUELLES SONT<br>
-            MES BLESSURES ?
+        <button onclick="speakQuestionsPhrase('injuries')">
+            <span id="questionsInjuriesButton">
+                QUELLES SONT<br>
+                MES BLESSURES ?
+            </span>
         </button>
 
-        <button onclick="speak('Est-ce que mon état s’améliore ?')">
-            EST-CE QUE<br>
-            JE VAIS MIEUX ?
+        <button onclick="speakQuestionsPhrase('improving')">
+            <span id="questionsImprovingButton">
+                EST-CE QUE<br>
+                JE VAIS MIEUX ?
+            </span>
         </button>
 
-        <button onclick="speak('Est-ce que quelque chose vous inquiète encore ?')">
-            QU'EST-CE QUI<br>
-            VOUS INQUIÈTE ?
+        <button onclick="speakQuestionsPhrase('concern')">
+            <span id="questionsConcernButton">
+                QU'EST-CE QUI<br>
+                VOUS INQUIÈTE ?
+            </span>
         </button>
 
-        <button onclick="speak('Quel est le prochain objectif ?')">
-            QUEL EST LE<br>
-            PROCHAIN OBJECTIF ?
+        <button onclick="speakQuestionsPhrase('nextGoal')">
+            <span id="questionsNextGoalButton">
+                QUEL EST LE<br>
+                PROCHAIN OBJECTIF ?
+            </span>
         </button>
 
-        <button onclick="speak('Quels examens vais-je avoir ?')">
-            QUELS EXAMENS<br>
-            VAIS-JE AVOIR ?
+        <button onclick="speakQuestionsPhrase('exams')">
+            <span id="questionsExamsButton">
+                QUELS EXAMENS<br>
+                VAIS-JE AVOIR ?
+            </span>
         </button>
 
-        <button onclick="speak('Quand aurai-je les résultats ?')">
-            QUAND AURAI-JE<br>
-            LES RÉSULTATS ?
+        <button onclick="speakQuestionsPhrase('resultsWhen')">
+            <span id="questionsResultsWhenButton">
+                QUAND AURAI-JE<br>
+                LES RÉSULTATS ?
+            </span>
         </button>
 
-        <button onclick="speak('Que montrent les résultats ?')">
-            QUE MONTRENT<br>
-            LES RÉSULTATS ?
+        <button onclick="speakQuestionsPhrase('resultsMeaning')">
+            <span id="questionsResultsMeaningButton">
+                QUE MONTRENT<br>
+                LES RÉSULTATS ?
+            </span>
         </button>
 
-        <button onclick="speak('Quand pourrai-je parler de nouveau ?')">
-            QUAND POURRAI-JE<br>
-            PARLER ?
+        <button onclick="speakQuestionsPhrase('speakWhen')">
+            <span id="questionsSpeakWhenButton">
+                QUAND POURRAI-JE<br>
+                PARLER ?
+            </span>
         </button>
 
-        <button onclick="speak('Est-ce que je pourrai parler normalement ?')">
-            POURRAI-JE PARLER<br>
-            NORMALEMENT ?
+        <button onclick="speakQuestionsPhrase('speakNormally')">
+            <span id="questionsSpeakNormallyButton">
+                POURRAI-JE PARLER<br>
+                NORMALEMENT ?
+            </span>
         </button>
 
-        <button onclick="speak('Combien de temps vais-je garder la trachéotomie ?')">
-            COMBIEN DE TEMPS<br>
-            LA TRACHÉOTOMIE ?
+        <button onclick="speakQuestionsPhrase('tracheostomyHowLong')">
+            <span id="questionsTracheostomyHowLongButton">
+                COMBIEN DE TEMPS<br>
+                LA TRACHÉOTOMIE ?
+            </span>
         </button>
 
-        <button onclick="speak('Quand pourrai-je manger normalement ?')">
-            QUAND POURRAI-JE<br>
-            MANGER ?
+        <button onclick="speakQuestionsPhrase('eatWhen')">
+            <span id="questionsEatWhenButton">
+                QUAND POURRAI-JE<br>
+                MANGER ?
+            </span>
         </button>
 
-        <button onclick="speak('Quand pourrai-je me lever ?')">
-            QUAND POURRAI-JE<br>
-            ME LEVER ?
+        <button onclick="speakQuestionsPhrase('standWhen')">
+            <span id="questionsStandWhenButton">
+                QUAND POURRAI-JE<br>
+                ME LEVER ?
+            </span>
         </button>
 
-        <button onclick="speak('Quand pourrai-je marcher ?')">
-            QUAND POURRAI-JE<br>
-            MARCHER ?
+        <button onclick="speakQuestionsPhrase('walkWhen')">
+            <span id="questionsWalkWhenButton">
+                QUAND POURRAI-JE<br>
+                MARCHER ?
+            </span>
         </button>
 
-        <button onclick="speak('Est-ce que je vais avoir besoin de rééducation ?')">
-            AURAI-JE BESOIN<br>
-            DE RÉÉDUCATION ?
+        <button onclick="speakQuestionsPhrase('rehabilitation')">
+            <span id="questionsRehabilitationButton">
+                AURAI-JE BESOIN<br>
+                DE RÉÉDUCATION ?
+            </span>
         </button>
 
-        <button onclick="speak('Quand pourrai-je quitter les soins intensifs ?')">
-            QUAND QUITTERAI-JE<br>
-            LES SOINS INTENSIFS ?
+        <button onclick="speakQuestionsPhrase('leaveICU')">
+            <span id="questionsLeaveICUButton">
+                QUAND QUITTERAI-JE<br>
+                LES SOINS INTENSIFS ?
+            </span>
         </button>
 
-        <button onclick="speak('Quand pourrai-je quitter l’hôpital ?')">
-            QUAND QUITTERAI-JE<br>
-            L'HÔPITAL ?
+        <button onclick="speakQuestionsPhrase('leaveHospital')">
+            <span id="questionsLeaveHospitalButton">
+                QUAND QUITTERAI-JE<br>
+                L'HÔPITAL ?
+            </span>
         </button>
 
-        <button onclick="speak('Quand pourrai-je rentrer chez moi ?')">
-            QUAND POURRAI-JE<br>
-            RENTRER CHEZ MOI ?
+        <button onclick="speakQuestionsPhrase('goHome')">
+            <span id="questionsGoHomeButton">
+                QUAND POURRAI-JE<br>
+                RENTRER CHEZ MOI ?
+            </span>
         </button>
 
-        <button onclick="speak('Qu’est-ce qui doit encore s’améliorer avant que je puisse rentrer ?')">
-            QUE FAUT-IL ENCORE<br>
-            AMÉLIORER ?
+        <button onclick="speakQuestionsPhrase('improveBeforeHome')">
+            <span id="questionsImproveBeforeHomeButton">
+                QUE FAUT-IL ENCORE<br>
+                AMÉLIORER ?
+            </span>
         </button>
 
-        <button onclick="speak('Pouvez-vous m’expliquer la suite ?')">
-            EXPLIQUEZ-MOI<br>
-            LA SUITE
+        <button onclick="speakQuestionsPhrase('explainNext')">
+            <span id="questionsExplainNextButton">
+                EXPLIQUEZ-MOI<br>
+                LA SUITE
+            </span>
         </button>
 
     </div>
@@ -1017,105 +1143,147 @@
         ← RETOUR
     </button>
 
-    <h1>Environnement</h1>
+    <h1 id="environmentTitle">
+        Environnement
+    </h1>
 
     <div class="phrase-buttons">
 
-        <button onclick="speak('Fermez la porte, s’il vous plaît')">
-            FERMEZ<br>
-            LA PORTE
+        <button onclick="speakEnvironmentPhrase('closeDoor')">
+            <span id="environmentCloseDoorButton">
+                FERMEZ<br>
+                LA PORTE
+            </span>
         </button>
 
-        <button onclick="speak('Ouvrez la porte, s’il vous plaît')">
-            OUVREZ<br>
-            LA PORTE
+        <button onclick="speakEnvironmentPhrase('openDoor')">
+            <span id="environmentOpenDoorButton">
+                OUVREZ<br>
+                LA PORTE
+            </span>
         </button>
 
-        <button onclick="speak('Fermez les rideaux, s’il vous plaît')">
-            FERMEZ<br>
-            LES RIDEAUX
+        <button onclick="speakEnvironmentPhrase('closeCurtains')">
+            <span id="environmentCloseCurtainsButton">
+                FERMEZ<br>
+                LES RIDEAUX
+            </span>
         </button>
 
-        <button onclick="speak('Ouvrez les rideaux, s’il vous plaît')">
-            OUVREZ<br>
-            LES RIDEAUX
+        <button onclick="speakEnvironmentPhrase('openCurtains')">
+            <span id="environmentOpenCurtainsButton">
+                OUVREZ<br>
+                LES RIDEAUX
+            </span>
         </button>
 
-        <button onclick="speak('Allumez la lumière, s’il vous plaît')">
-            ALLUMEZ<br>
-            LA LUMIÈRE
+        <button onclick="speakEnvironmentPhrase('lightOn')">
+            <span id="environmentLightOnButton">
+                ALLUMEZ<br>
+                LA LUMIÈRE
+            </span>
         </button>
 
-        <button onclick="speak('Éteignez la lumière, s’il vous plaît')">
-            ÉTEIGNEZ<br>
-            LA LUMIÈRE
+        <button onclick="speakEnvironmentPhrase('lightOff')">
+            <span id="environmentLightOffButton">
+                ÉTEIGNEZ<br>
+                LA LUMIÈRE
+            </span>
         </button>
 
-        <button onclick="speak('Il y a trop de bruit')">
-            TROP<br>
-            DE BRUIT
+        <button onclick="speakEnvironmentPhrase('noise')">
+            <span id="environmentNoiseButton">
+                TROP<br>
+                DE BRUIT
+            </span>
         </button>
 
-        <button onclick="speak('Je voudrais du silence, s’il vous plaît')">
-            JE VEUX<br>
-            DU SILENCE
+        <button onclick="speakEnvironmentPhrase('silence')">
+            <span id="environmentSilenceButton">
+                JE VEUX<br>
+                DU SILENCE
+            </span>
         </button>
 
-        <button onclick="speak('Ouvrez la fenêtre, s’il vous plaît')">
-            OUVREZ<br>
-            LA FENÊTRE
+        <button onclick="speakEnvironmentPhrase('openWindow')">
+            <span id="environmentOpenWindowButton">
+                OUVREZ<br>
+                LA FENÊTRE
+            </span>
         </button>
 
-        <button onclick="speak('Fermez la fenêtre, s’il vous plaît')">
-            FERMEZ<br>
-            LA FENÊTRE
+        <button onclick="speakEnvironmentPhrase('closeWindow')">
+            <span id="environmentCloseWindowButton">
+                FERMEZ<br>
+                LA FENÊTRE
+            </span>
         </button>
 
-        <button onclick="speak('Je voudrais regarder la télévision')">
-            TÉLÉVISION
+        <button onclick="speakEnvironmentPhrase('television')">
+            <span id="environmentTelevisionButton">
+                TÉLÉVISION
+            </span>
         </button>
 
-        <button onclick="speak('Éteignez la télévision, s’il vous plaît')">
-            ÉTEIGNEZ<br>
-            LA TÉLÉVISION
+        <button onclick="speakEnvironmentPhrase('televisionOff')">
+            <span id="environmentTelevisionOffButton">
+                ÉTEIGNEZ<br>
+                LA TÉLÉVISION
+            </span>
         </button>
 
-        <button onclick="speak('Je voudrais écouter de la musique')">
-            MUSIQUE
+        <button onclick="speakEnvironmentPhrase('music')">
+            <span id="environmentMusicButton">
+                MUSIQUE
+            </span>
         </button>
 
-        <button onclick="speak('Arrêtez la musique, s’il vous plaît')">
-            ARRÊTEZ<br>
-            LA MUSIQUE
+        <button onclick="speakEnvironmentPhrase('musicOff')">
+            <span id="environmentMusicOffButton">
+                ARRÊTEZ<br>
+                LA MUSIQUE
+            </span>
         </button>
 
-        <button onclick="speak('Couvrez-moi, s’il vous plaît')">
-            COUVREZ-MOI
+        <button onclick="speakEnvironmentPhrase('coverMe')">
+            <span id="environmentCoverMeButton">
+                COUVREZ-MOI
+            </span>
         </button>
 
-        <button onclick="speak('Je voudrais un peu d’intimité')">
-            JE VEUX<br>
-            DE L'INTIMITÉ
+        <button onclick="speakEnvironmentPhrase('privacy')">
+            <span id="environmentPrivacyButton">
+                JE VEUX<br>
+                DE L'INTIMITÉ
+            </span>
         </button>
 
-        <button onclick="speak('Je préfère qu’il n’y ait personne pendant les soins')">
-            PERSONNE<br>
-            PENDANT LES SOINS
+        <button onclick="speakEnvironmentPhrase('noOneDuringCare')">
+            <span id="environmentNoOneDuringCareButton">
+                PERSONNE<br>
+                PENDANT LES SOINS
+            </span>
         </button>
 
-        <button onclick="speak('Je ne veux pas parler de cela devant cette personne')">
-            PAS DEVANT<br>
-            CETTE PERSONNE
+        <button onclick="speakEnvironmentPhrase('notInFront')">
+            <span id="environmentNotInFrontButton">
+                PAS DEVANT<br>
+                CETTE PERSONNE
+            </span>
         </button>
 
-        <button onclick="speak('Je voudrais dormir')">
-            JE VEUX<br>
-            DORMIR
+        <button onclick="speakEnvironmentPhrase('sleep')">
+            <span id="environmentSleepButton">
+                JE VEUX<br>
+                DORMIR
+            </span>
         </button>
 
-        <button onclick="speak('Ne me réveillez pas sauf si c’est nécessaire')">
-            LAISSEZ-MOI<br>
-            DORMIR
+        <button onclick="speakEnvironmentPhrase('doNotWake')">
+            <span id="environmentDoNotWakeButton">
+                LAISSEZ-MOI<br>
+                DORMIR
+            </span>
         </button>
 
     </div>
@@ -1138,51 +1306,73 @@
         ← RETOUR
     </button>
 
-    <h1>Mes phrases</h1>
+    <h1 id="writeTitle">
+        Mes phrases
+    </h1>
 
-	<div class="quick-phrases">
+    <div class="quick-phrases">
 
-		<button onclick="addText('Je voudrais ')">
-			JE VOUDRAIS…
-		</button>
+        <button onclick="addQuickText('wouldLike')">
+            <span id="writeWouldLikeButton">
+                JE VOUDRAIS…
+            </span>
+        </button>
 
-		<button onclick="addText('J’ai besoin de ')">
-			J'AI BESOIN DE…
-		</button>
+        <button onclick="addQuickText('need')">
+            <span id="writeNeedButton">
+                J'AI BESOIN DE…
+            </span>
+        </button>
 
-		<button onclick="addText('Je veux ')">
-			JE VEUX…
-		</button>
+        <button onclick="addQuickText('want')">
+            <span id="writeWantButton">
+                JE VEUX…
+            </span>
+        </button>
 
-		<button onclick="addText('Je ne veux pas ')">
-			JE NE VEUX PAS…
-		</button>
+        <button onclick="addQuickText('dontWant')">
+            <span id="writeDontWantButton">
+                JE NE VEUX PAS…
+            </span>
+        </button>
 
-		<button onclick="addText('Pouvez-vous ')">
-			POUVEZ-VOUS…
-		</button>
+        <button onclick="addQuickText('canYou')">
+            <span id="writeCanYouButton">
+                POUVEZ-VOUS…
+            </span>
+        </button>
 
-		<button onclick="addText('Aidez-moi à ')">
-			AIDEZ-MOI À…
-		</button>
+        <button onclick="addQuickText('helpMe')">
+            <span id="writeHelpMeButton">
+                AIDEZ-MOI À…
+            </span>
+        </button>
 
-		<button onclick="addText('Quand est-ce que ')">
-			QUAND… ?
-		</button>
+        <button onclick="addQuickText('when')">
+            <span id="writeWhenButton">
+                QUAND… ?
+            </span>
+        </button>
 
-		<button onclick="addText('Pourquoi ')">
-			POURQUOI… ?
-		</button>
+        <button onclick="addQuickText('why')">
+            <span id="writeWhyButton">
+                POURQUOI… ?
+            </span>
+        </button>
 
-		<button onclick="addText('Est-ce que ')">
-			EST-CE QUE… ?
-		</button>
+        <button onclick="addQuickText('isIt')">
+            <span id="writeIsItButton">
+                EST-CE QUE… ?
+            </span>
+        </button>
 
-		<button onclick="addText('Je pense que ')">
-			JE PENSE QUE…
-		</button>
+        <button onclick="addQuickText('think')">
+            <span id="writeThinkButton">
+                JE PENSE QUE…
+            </span>
+        </button>
 
-	</div>
+    </div>
 
     <textarea
         id="customText"
@@ -1191,28 +1381,39 @@
         placeholder="Écrivez ici ce que vous voulez dire..."
     ></textarea>
 
-	<div class="write-actions">
+    <div class="write-actions">
 
-		<button onclick="clearCustomText()">
-			🗑️ EFFACER
-		</button>
+        <button
+            id="writeClearButton"
+            onclick="clearCustomText()"
+        >
+            🗑️ EFFACER
+        </button>
 
-		<button onclick="speakCustomText()">
-			🔊 DIRE
-		</button>
+        <button
+            id="writeSpeakButton"
+            onclick="speakCustomText()"
+        >
+            🔊 DIRE
+        </button>
 
-		<button onclick="saveFavoriteFromWrite()">
-			⭐ ENREGISTRER
-		</button>
+        <button
+            id="writeSaveButton"
+            onclick="saveFavoriteFromWrite()"
+        >
+            ⭐ ENREGISTRER
+        </button>
 
-	</div>
+    </div>
 
-	<h2>Mes phrases personnelles</h2>
+    <h2 id="writePersonalTitle">
+        Mes phrases personnelles
+    </h2>
 
-	<div
-		id="customFavorites"
-		class="custom-favorites"
-	></div>
+    <div
+        id="customFavorites"
+        class="custom-favorites"
+    ></div>
 
 </section>
 
@@ -1232,87 +1433,125 @@
         ← RETOUR
     </button>
 
-    <h1>Famille / Amis</h1>
+    <h1 id="talkTitle">
+        Famille / Amis
+    </h1>
 
-	<div class="phrase-buttons">
+    <div class="phrase-buttons">
 
-		<button onclick="speak('Bonjour')">
-			BONJOUR
-		</button>
+        <button onclick="speakTalkPhrase('hello')">
+            <span id="talkHelloButton">
+                BONJOUR
+            </span>
+        </button>
 
-		<button onclick="speak('À bientôt')">
-			À BIENTÔT
-		</button>
+        <button onclick="speakTalkPhrase('seeYou')">
+            <span id="talkSeeYouButton">
+                À BIENTÔT
+            </span>
+        </button>
 
-		<button onclick="speak('Je suis content de te voir')">
-			JE SUIS CONTENT<br>
-			DE TE VOIR
-		</button>
+        <button onclick="speakTalkPhrase('happyToSee')">
+            <span id="talkHappyToSeeButton">
+                JE SUIS CONTENT<br>
+                DE TE VOIR
+            </span>
+        </button>
 
-		<button onclick="speak('Tu m’as manqué')">
-			TU M'AS MANQUÉ
-		</button>
+        <button onclick="speakTalkPhrase('missedYou')">
+            <span id="talkMissedYouButton">
+                TU M'AS MANQUÉ
+            </span>
+        </button>
 
-		<button onclick="speak('Je t’aime')">
-			JE T'AIME
-		</button>
+        <button onclick="speakTalkPhrase('loveYou')">
+            <span id="talkLoveYouButton">
+                JE T'AIME
+            </span>
+        </button>
 
-		<button onclick="speak('Merci')">
-			MERCI
-		</button>
+        <button onclick="speakTalkPhrase('thankYou')">
+            <span id="talkThankYouButton">
+                MERCI
+            </span>
+        </button>
 
-		<button onclick="speak('Désolé')">
-			DÉSOLÉ
-		</button>
+        <button onclick="speakTalkPhrase('sorry')">
+            <span id="talkSorryButton">
+                DÉSOLÉ
+            </span>
+        </button>
 
-		<button onclick="speak('Ne t’inquiète pas')">
-			NE T'INQUIÈTE PAS
-		</button>
+        <button onclick="speakTalkPhrase('dontWorry')">
+            <span id="talkDontWorryButton">
+                NE T'INQUIÈTE PAS
+            </span>
+        </button>
 
-		<button onclick="speak('Reste encore un peu avec moi')">
-			RESTE ENCORE<br>
-			UN PEU
-		</button>
+        <button onclick="speakTalkPhrase('stayLonger')">
+            <span id="talkStayLongerButton">
+                RESTE ENCORE<br>
+                UN PEU
+            </span>
+        </button>
 
-		<button onclick="speak('Raconte-moi')">
-			RACONTE-MOI
-		</button>
+        <button onclick="speakTalkPhrase('tellMe')">
+            <span id="talkTellMeButton">
+                RACONTE-MOI
+            </span>
+        </button>
 
-		<button onclick="speak('Ça va mieux')">
-			ÇA VA MIEUX
-		</button>
+        <button onclick="speakTalkPhrase('gettingBetter')">
+            <span id="talkGettingBetterButton">
+                ÇA VA MIEUX
+            </span>
+        </button>
 
-		<button onclick="speak('Je vais bien')">
-			JE VAIS BIEN
-		</button>
+        <button onclick="speakTalkPhrase('doingWell')">
+            <span id="talkDoingWellButton">
+                JE VAIS BIEN
+            </span>
+        </button>
 
-		<button onclick="speak('Je suis fatigué, mais ça va')">
-			JE SUIS FATIGUÉ,<br>
-			MAIS ÇA VA
-		</button>
+        <button onclick="speakTalkPhrase('tiredButOkay')">
+            <span id="talkTiredButOkayButton">
+                JE SUIS FATIGUÉ,<br>
+                MAIS ÇA VA
+            </span>
+        </button>
 
-		<button onclick="speak('Je ne sais pas')">
-			JE NE SAIS PAS
-		</button>
+        <button onclick="speakTalkPhrase('dontKnow')">
+            <span id="talkDontKnowButton">
+                JE NE SAIS PAS
+            </span>
+        </button>
 
-		<button onclick="speak('Comme tu veux')">
-			COMME TU VEUX
-		</button>
+        <button onclick="speakTalkPhrase('asYouWant')">
+            <span id="talkAsYouWantButton">
+                COMME TU VEUX
+            </span>
+        </button>
 
-		<button onclick="speak('Peut-être')">
-			PEUT-ÊTRE
-		</button>
+        <button onclick="speakTalkPhrase('maybe')">
+            <span id="talkMaybeButton">
+                PEUT-ÊTRE
+            </span>
+        </button>
 
-		<button onclick="speak('Changeons de sujet')">
-			CHANGEONS<br>
-			DE SUJET
-		</button>
+        <button onclick="speakTalkPhrase('changeSubject')">
+            <span id="talkChangeSubjectButton">
+                CHANGEONS<br>
+                DE SUJET
+            </span>
+        </button>
 
-		<button onclick="speak('Continue')">
-			CONTINUE
-		</button>
+        <button onclick="speakTalkPhrase('continue')">
+            <span id="talkContinueButton">
+                CONTINUE
+            </span>
+        </button>
 
-	</div>
+    </div>
 
 </section>
 
@@ -1332,57 +1571,79 @@
         ← RETOUR
     </button>
 
-    <h1>Comprendre</h1>
+    <h1 id="understandTitle">
+        Comprendre
+    </h1>
 
     <div class="phrase-buttons">
 
-        <button onclick="speak('Attendez, je n’ai pas fini')">
-            ATTENDEZ<br>
-            JE N'AI PAS FINI
+        <button onclick="speakUnderstandPhrase('wait')">
+            <span id="understandWaitButton">
+                ATTENDEZ<br>
+                JE N'AI PAS FINI
+            </span>
         </button>
 
-        <button onclick="speak('Donnez-moi les choix possibles')">
-            DONNEZ-MOI<br>
-            LES CHOIX
+        <button onclick="speakUnderstandPhrase('choices')">
+            <span id="understandChoicesButton">
+                DONNEZ-MOI<br>
+                LES CHOIX
+            </span>
         </button>
 
-        <button onclick="speak('Je n’ai pas compris')">
-            JE N'AI PAS<br>
-            COMPRIS
+        <button onclick="speakUnderstandPhrase('notUnderstand')">
+            <span id="understandNotUnderstandButton">
+                JE N'AI PAS<br>
+                COMPRIS
+            </span>
         </button>
 
-        <button onclick="speak('Je veux essayer de l’écrire')">
-            JE VEUX<br>
-            L'ÉCRIRE
+        <button onclick="speakUnderstandPhrase('write')">
+            <span id="understandWriteButton">
+                JE VEUX<br>
+                L'ÉCRIRE
+            </span>
         </button>
 
-        <button onclick="speak('Parlez plus fort, s’il vous plaît')">
-            PARLEZ<br>
-            PLUS FORT
+        <button onclick="speakUnderstandPhrase('louder')">
+            <span id="understandLouderButton">
+                PARLEZ<br>
+                PLUS FORT
+            </span>
         </button>
 
-        <button onclick="speak('Parlez plus lentement, s’il vous plaît')">
-            PARLEZ PLUS<br>
-            LENTEMENT
+        <button onclick="speakUnderstandPhrase('slower')">
+            <span id="understandSlowerButton">
+                PARLEZ PLUS<br>
+                LENTEMENT
+            </span>
         </button>
 
-        <button onclick="speak('Posez-moi une question à laquelle je peux répondre par oui ou non')">
-            QUESTION<br>
-            OUI / NON
+        <button onclick="speakUnderstandPhrase('yesNo')">
+            <span id="understandYesNoButton">
+                QUESTION<br>
+                OUI / NON
+            </span>
         </button>
 
-        <button onclick="speak('Répétez, s’il vous plaît')">
-            RÉPÉTEZ
+        <button onclick="speakUnderstandPhrase('repeat')">
+            <span id="understandRepeatButton">
+                RÉPÉTEZ
+            </span>
         </button>
 
-        <button onclick="speak('Posez-moi une seule question à la fois')">
-            UNE QUESTION<br>
-            À LA FOIS
+        <button onclick="speakUnderstandPhrase('oneQuestion')">
+            <span id="understandOneQuestionButton">
+                UNE QUESTION<br>
+                À LA FOIS
+            </span>
         </button>
 
-        <button onclick="speak('Vous avez mal compris ce que je voulais dire')">
-            VOUS AVEZ<br>
-            MAL COMPRIS
+        <button onclick="speakUnderstandPhrase('misunderstood')">
+            <span id="understandMisunderstoodButton">
+                VOUS AVEZ<br>
+                MAL COMPRIS
+            </span>
         </button>
 
     </div>
