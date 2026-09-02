@@ -299,89 +299,127 @@
         ← RETOUR
     </button>
 
-    <h1>Douleur</h1>
+	<h1 id="painTitle">
+		Douleur
+	</h1>
 
     <div id="painStep1">
 
-        <h2>Où avez-vous mal ?</h2>
+		<h2 id="painWhereTitle">
+			Où avez-vous mal ?
+		</h2>
 
-        <div class="pain-locations">
+		<div class="pain-locations">
 
-            <button onclick="selectPainLocation('à la tête')">
-                TÊTE
-            </button>
-
-            <button onclick="selectPainLocation('au cou')">
-                COU
-            </button>
-
-            <button onclick="selectPainLocation('à la gorge')">
-                GORGE
-            </button>
-
-            <button onclick="selectPainLocation('à la poitrine')">
-                POITRINE
-            </button>
-
-            <button onclick="selectPainLocation('au dos')">
-                DOS
-            </button>
-
-            <button onclick="selectPainLocation('au ventre')">
-                VENTRE
-            </button>
-
-            <button onclick="selectPainLocation('à l’épaule gauche')">
-                ÉPAULE<br>GAUCHE
-            </button>
-
-            <button onclick="selectPainLocation('à l’épaule droite')">
-                ÉPAULE<br>DROITE
-            </button>
-
-            <button onclick="selectPainLocation('au bras gauche')">
-                BRAS<br>GAUCHE
-            </button>
-
-            <button onclick="selectPainLocation('au bras droit')">
-                BRAS<br>DROIT
-            </button>
-
-            <button onclick="selectPainLocation('à la main gauche')">
-                MAIN<br>GAUCHE
-            </button>
-
-            <button onclick="selectPainLocation('à la main droite')">
-                MAIN<br>DROITE
-            </button>
-
-            <button onclick="selectPainLocation('à la hanche gauche')">
-                HANCHE<br>GAUCHE
-            </button>
-
-            <button onclick="selectPainLocation('à la hanche droite')">
-                HANCHE<br>DROITE
-            </button>
-
-            <button onclick="selectPainLocation('à la jambe gauche')">
-                JAMBE<br>GAUCHE
-            </button>
-
-            <button onclick="selectPainLocation('à la jambe droite')">
-                JAMBE<br>DROITE
-            </button>
-			
-			<button onclick="selectPainLocation('au pied gauche')">
-				PIED<br>
-				GAUCHE
+			<button onclick="selectPainLocation('head')">
+				<span id="painLocationHead">
+					TÊTE
+				</span>
 			</button>
 
-			<button onclick="selectPainLocation('au pied droit')">
-				PIED<br>
-				DROIT
+			<button onclick="selectPainLocation('neck')">
+				<span id="painLocationNeck">
+					COU
+				</span>
 			</button>
 
-        </div>
+			<button onclick="selectPainLocation('throat')">
+				<span id="painLocationThroat">
+					GORGE
+				</span>
+			</button>
+
+			<button onclick="selectPainLocation('chest')">
+				<span id="painLocationChest">
+					POITRINE
+				</span>
+			</button>
+
+			<button onclick="selectPainLocation('back')">
+				<span id="painLocationBack">
+					DOS
+				</span>
+			</button>
+
+			<button onclick="selectPainLocation('abdomen')">
+				<span id="painLocationAbdomen">
+					VENTRE
+				</span>
+			</button>
+
+			<button onclick="selectPainLocation('leftShoulder')">
+				<span id="painLocationLeftShoulder">
+					ÉPAULE<br>GAUCHE
+				</span>
+			</button>
+
+			<button onclick="selectPainLocation('rightShoulder')">
+				<span id="painLocationRightShoulder">
+					ÉPAULE<br>DROITE
+				</span>
+			</button>
+
+			<button onclick="selectPainLocation('leftArm')">
+				<span id="painLocationLeftArm">
+					BRAS<br>GAUCHE
+				</span>
+			</button>
+
+			<button onclick="selectPainLocation('rightArm')">
+				<span id="painLocationRightArm">
+					BRAS<br>DROIT
+				</span>
+			</button>
+
+			<button onclick="selectPainLocation('leftHand')">
+				<span id="painLocationLeftHand">
+					MAIN<br>GAUCHE
+				</span>
+			</button>
+
+			<button onclick="selectPainLocation('rightHand')">
+				<span id="painLocationRightHand">
+					MAIN<br>DROITE
+				</span>
+			</button>
+
+			<button onclick="selectPainLocation('leftHip')">
+				<span id="painLocationLeftHip">
+					HANCHE<br>GAUCHE
+				</span>
+			</button>
+
+			<button onclick="selectPainLocation('rightHip')">
+				<span id="painLocationRightHip">
+					HANCHE<br>DROITE
+				</span>
+			</button>
+
+			<button onclick="selectPainLocation('leftLeg')">
+				<span id="painLocationLeftLeg">
+					JAMBE<br>GAUCHE
+				</span>
+			</button>
+
+			<button onclick="selectPainLocation('rightLeg')">
+				<span id="painLocationRightLeg">
+					JAMBE<br>DROITE
+				</span>
+			</button>
+
+			<button onclick="selectPainLocation('leftFoot')">
+				<span id="painLocationLeftFoot">
+					PIED<br>GAUCHE
+				</span>
+			</button>
+
+			<button onclick="selectPainLocation('rightFoot')">
+				<span id="painLocationRightFoot">
+					PIED<br>DROIT
+				</span>
+			</button>
+
+		</div>
 
     </div>
 
@@ -389,7 +427,7 @@
     <div id="painStep2" class="hidden">
 
         <h2 id="painLocationTitle">
-            Intensité ?
+            Quelle intensité ?
         </h2>
 
         <div class="pain-scale">
@@ -408,12 +446,13 @@
 
         </div>
 
-        <button
-            class="change-location"
-            onclick="changePainLocation()"
-        >
-            ← CHANGER L'ENDROIT
-        </button>
+		<button
+			id="painChangeLocationButton"
+			class="change-location"
+			onclick="changePainLocation()"
+		>
+			← CHANGER L'ENDROIT
+		</button>
 
     </div>
 
@@ -436,98 +475,140 @@
         ← RETOUR
     </button>
 
-    <h1>Position / Confort</h1>
+    <h1 id="positionTitle">
+        Position / Confort
+    </h1>
 
     <div class="phrase-buttons">
 
-        <button onclick="speak('Remettez-moi dans le lit, s’il vous plaît')">
-            COUCHEZ-MOI
+        <button onclick="speakPositionPhrase('bed')">
+            <span id="positionBedButton">
+                COUCHEZ-MOI
+            </span>
         </button>
 
-        <button onclick="speak('Mettez-moi sur le fauteuil, s’il vous plaît')">
-            ASSEYEZ-MOI
+        <button onclick="speakPositionPhrase('chair')">
+            <span id="positionChairButton">
+                ASSEYEZ-MOI
+            </span>
         </button>
 
-        <button onclick="speak('Remontez-moi dans le lit, s’il vous plaît')">
-            REMONTEZ-MOI
+        <button onclick="speakPositionPhrase('moveUp')">
+            <span id="positionMoveUpButton">
+                REMONTEZ-MOI
+            </span>
         </button>
 
-        <button onclick="speak('Descendez-moi un peu, s’il vous plaît')">
-            DESCENDEZ-MOI
+        <button onclick="speakPositionPhrase('moveDown')">
+            <span id="positionMoveDownButton">
+                DESCENDEZ-MOI
+            </span>
         </button>
 
-        <button onclick="speak('Tournez-moi à gauche, s’il vous plaît')">
-            TOURNEZ-MOI<br>
-            À GAUCHE
+        <button onclick="speakPositionPhrase('turnLeft')">
+            <span id="positionTurnLeftButton">
+                TOURNEZ-MOI<br>
+                À GAUCHE
+            </span>
         </button>
 
-        <button onclick="speak('Tournez-moi à droite, s’il vous plaît')">
-            TOURNEZ-MOI<br>
-            À DROITE
+        <button onclick="speakPositionPhrase('turnRight')">
+            <span id="positionTurnRightButton">
+                TOURNEZ-MOI<br>
+                À DROITE
+            </span>
         </button>
 
-        <button onclick="speak('Redressez-moi, s’il vous plaît')">
-            REDRESSEZ-MOI
+        <button onclick="speakPositionPhrase('sitUp')">
+            <span id="positionSitUpButton">
+                REDRESSEZ-MOI
+            </span>
         </button>
 
-        <button onclick="speak('Allongez-moi davantage, s’il vous plaît')">
-            ALLONGEZ-MOI
+        <button onclick="speakPositionPhrase('flatter')">
+            <span id="positionFlatterButton">
+                ALLONGEZ-MOI
+            </span>
         </button>
 
-        <button onclick="speak('Montez la tête du lit, s’il vous plaît')">
-            MONTEZ<br>
-            LA TÊTE DU LIT
+        <button onclick="speakPositionPhrase('headUp')">
+            <span id="positionHeadUpButton">
+                MONTEZ<br>
+                LA TÊTE DU LIT
+            </span>
         </button>
 
-        <button onclick="speak('Baissez la tête du lit, s’il vous plaît')">
-            BAISSEZ<br>
-            LA TÊTE DU LIT
+        <button onclick="speakPositionPhrase('headDown')">
+            <span id="positionHeadDownButton">
+                BAISSEZ<br>
+                LA TÊTE DU LIT
+            </span>
         </button>
 
-        <button onclick="speak('Montez mes jambes, s’il vous plaît')">
-            MONTEZ<br>
-            MES JAMBES
+        <button onclick="speakPositionPhrase('legsUp')">
+            <span id="positionLegsUpButton">
+                MONTEZ<br>
+                MES JAMBES
+            </span>
         </button>
 
-        <button onclick="speak('Baissez mes jambes, s’il vous plaît')">
-            BAISSEZ<br>
-            MES JAMBES
+        <button onclick="speakPositionPhrase('legsDown')">
+            <span id="positionLegsDownButton">
+                BAISSEZ<br>
+                MES JAMBES
+            </span>
         </button>
 
-        <button onclick="speak('J’ai besoin d’un oreiller')">
-            OREILLER
+        <button onclick="speakPositionPhrase('pillow')">
+            <span id="positionPillowButton">
+                OREILLER
+            </span>
         </button>
 
-        <button onclick="speak('Enlevez cet oreiller, s’il vous plaît')">
-            ENLEVEZ<br>
-            L'OREILLER
+        <button onclick="speakPositionPhrase('removePillow')">
+            <span id="positionRemovePillowButton">
+                ENLEVEZ<br>
+                L'OREILLER
+            </span>
         </button>
 
-        <button onclick="speak('J’ai chaud')">
-            J'AI CHAUD
+        <button onclick="speakPositionPhrase('hot')">
+            <span id="positionHotButton">
+                J'AI CHAUD
+            </span>
         </button>
 
-        <button onclick="speak('J’ai froid')">
-            J'AI FROID
+        <button onclick="speakPositionPhrase('cold')">
+            <span id="positionColdButton">
+                J'AI FROID
+            </span>
         </button>
 
-        <button onclick="speak('Mettez-moi une couverture, s’il vous plaît')">
-            COUVERTURE
+        <button onclick="speakPositionPhrase('blanket')">
+            <span id="positionBlanketButton">
+                COUVERTURE
+            </span>
         </button>
 
-        <button onclick="speak('Enlevez la couverture, s’il vous plaît')">
-            ENLEVEZ<br>
-            LA COUVERTURE
+        <button onclick="speakPositionPhrase('removeBlanket')">
+            <span id="positionRemoveBlanketButton">
+                ENLEVEZ<br>
+                LA COUVERTURE
+            </span>
         </button>
 
-        <button onclick="speak('Cette position me fait mal')">
-            CETTE POSITION<br>
-            ME FAIT MAL
+        <button onclick="speakPositionPhrase('positionHurts')">
+            <span id="positionHurtsButton">
+                CETTE POSITION<br>
+                ME FAIT MAL
+            </span>
         </button>
 
-        <button onclick="speak('Je suis bien comme ça')">
-            JE SUIS BIEN<br>
-            COMME ÇA
+        <button onclick="speakPositionPhrase('comfortable')">
+            <span id="positionComfortableButton">
+                JE SUIS BIEN<br>
+                COMME ÇA
+            </span>
         </button>
 
     </div>

@@ -400,6 +400,1204 @@ const RESPIRATION_TRANSLATIONS = {
 
 };
 
+/* =========================================
+   DOULEUR — TRADUCTIONS
+   ========================================= */
+
+const PAIN_TRANSLATIONS = {
+
+    fr: {
+        title: "Douleur",
+        where: "Où avez-vous mal ?",
+        intensity: "Quelle intensité ?",
+        changeLocation: "← CHANGER L'ENDROIT"
+    },
+
+    en: {
+        title: "Pain",
+        where: "Where does it hurt?",
+        intensity: "How severe is the pain?",
+        changeLocation: "← CHANGE LOCATION"
+    },
+
+    de: {
+        title: "Schmerzen",
+        where: "Wo haben Sie Schmerzen?",
+        intensity: "Wie stark sind die Schmerzen?",
+        changeLocation: "← ANDERE STELLE"
+    },
+
+    it: {
+        title: "Dolore",
+        where: "Dove ha dolore?",
+        intensity: "Quanto è forte il dolore?",
+        changeLocation: "← CAMBIA ZONA"
+    }
+
+};
+
+/* =========================================
+   DOULEUR — LOCALISATIONS
+   ========================================= */
+
+const PAIN_LOCATIONS = {
+
+    head: {
+
+        fr: {
+            label: "TÊTE",
+            speech: "J’ai mal à la tête"
+        },
+
+        en: {
+            label: "HEAD",
+            speech: "My head hurts"
+        },
+
+        de: {
+            label: "KOPF",
+            speech: "Ich habe Kopfschmerzen"
+        },
+
+        it: {
+            label: "TESTA",
+            speech: "Ho mal di testa"
+        }
+    },
+
+
+    neck: {
+
+        fr: {
+            label: "COU",
+            speech: "J’ai mal au cou"
+        },
+
+        en: {
+            label: "NECK",
+            speech: "I have pain in my neck"
+        },
+
+        de: {
+            label: "NACKEN",
+            speech: "Ich habe Schmerzen im Nacken"
+        },
+
+        it: {
+            label: "COLLO",
+            speech: "Ho dolore al collo"
+        }
+    },
+
+
+    throat: {
+
+        fr: {
+            label: "GORGE",
+            speech: "J’ai mal à la gorge"
+        },
+
+        en: {
+            label: "THROAT",
+            speech: "I have pain in my throat"
+        },
+
+        de: {
+            label: "HALS",
+            speech: "Ich habe Schmerzen im Hals"
+        },
+
+        it: {
+            label: "GOLA",
+            speech: "Ho dolore alla gola"
+        }
+    },
+
+
+    chest: {
+
+        fr: {
+            label: "POITRINE",
+            speech: "J’ai mal à la poitrine"
+        },
+
+        en: {
+            label: "CHEST",
+            speech: "I have pain in my chest"
+        },
+
+        de: {
+            label: "BRUST",
+            speech: "Ich habe Schmerzen in der Brust"
+        },
+
+        it: {
+            label: "PETTO",
+            speech: "Ho dolore al petto"
+        }
+    },
+
+
+    back: {
+
+        fr: {
+            label: "DOS",
+            speech: "J’ai mal au dos"
+        },
+
+        en: {
+            label: "BACK",
+            speech: "I have pain in my back"
+        },
+
+        de: {
+            label: "RÜCKEN",
+            speech: "Ich habe Schmerzen im Rücken"
+        },
+
+        it: {
+            label: "SCHIENA",
+            speech: "Ho dolore alla schiena"
+        }
+    },
+
+
+    abdomen: {
+
+        fr: {
+            label: "VENTRE",
+            speech: "J’ai mal au ventre"
+        },
+
+        en: {
+            label: "ABDOMEN",
+            speech: "I have pain in my abdomen"
+        },
+
+        de: {
+            label: "BAUCH",
+            speech: "Ich habe Schmerzen im Bauch"
+        },
+
+        it: {
+            label: "PANCIA",
+            speech: "Ho dolore alla pancia"
+        }
+    },
+
+
+    leftShoulder: {
+
+        fr: {
+            label: "ÉPAULE<br>GAUCHE",
+            speech: "J’ai mal à l’épaule gauche"
+        },
+
+        en: {
+            label: "LEFT<br>SHOULDER",
+            speech: "I have pain in my left shoulder"
+        },
+
+        de: {
+            label: "LINKE<br>SCHULTER",
+            speech: "Ich habe Schmerzen in der linken Schulter"
+        },
+
+        it: {
+            label: "SPALLA<br>SINISTRA",
+            speech: "Ho dolore alla spalla sinistra"
+        }
+    },
+
+
+    rightShoulder: {
+
+        fr: {
+            label: "ÉPAULE<br>DROITE",
+            speech: "J’ai mal à l’épaule droite"
+        },
+
+        en: {
+            label: "RIGHT<br>SHOULDER",
+            speech: "I have pain in my right shoulder"
+        },
+
+        de: {
+            label: "RECHTE<br>SCHULTER",
+            speech: "Ich habe Schmerzen in der rechten Schulter"
+        },
+
+        it: {
+            label: "SPALLA<br>DESTRA",
+            speech: "Ho dolore alla spalla destra"
+        }
+    },
+
+
+    leftArm: {
+
+        fr: {
+            label: "BRAS<br>GAUCHE",
+            speech: "J’ai mal au bras gauche"
+        },
+
+        en: {
+            label: "LEFT<br>ARM",
+            speech: "I have pain in my left arm"
+        },
+
+        de: {
+            label: "LINKER<br>ARM",
+            speech: "Ich habe Schmerzen im linken Arm"
+        },
+
+        it: {
+            label: "BRACCIO<br>SINISTRO",
+            speech: "Ho dolore al braccio sinistro"
+        }
+    },
+
+
+    rightArm: {
+
+        fr: {
+            label: "BRAS<br>DROIT",
+            speech: "J’ai mal au bras droit"
+        },
+
+        en: {
+            label: "RIGHT<br>ARM",
+            speech: "I have pain in my right arm"
+        },
+
+        de: {
+            label: "RECHTER<br>ARM",
+            speech: "Ich habe Schmerzen im rechten Arm"
+        },
+
+        it: {
+            label: "BRACCIO<br>DESTRO",
+            speech: "Ho dolore al braccio destro"
+        }
+    },
+
+
+    leftHand: {
+
+        fr: {
+            label: "MAIN<br>GAUCHE",
+            speech: "J’ai mal à la main gauche"
+        },
+
+        en: {
+            label: "LEFT<br>HAND",
+            speech: "I have pain in my left hand"
+        },
+
+        de: {
+            label: "LINKE<br>HAND",
+            speech: "Ich habe Schmerzen in der linken Hand"
+        },
+
+        it: {
+            label: "MANO<br>SINISTRA",
+            speech: "Ho dolore alla mano sinistra"
+        }
+    },
+
+
+    rightHand: {
+
+        fr: {
+            label: "MAIN<br>DROITE",
+            speech: "J’ai mal à la main droite"
+        },
+
+        en: {
+            label: "RIGHT<br>HAND",
+            speech: "I have pain in my right hand"
+        },
+
+        de: {
+            label: "RECHTE<br>HAND",
+            speech: "Ich habe Schmerzen in der rechten Hand"
+        },
+
+        it: {
+            label: "MANO<br>DESTRA",
+            speech: "Ho dolore alla mano destra"
+        }
+    },
+
+
+    leftHip: {
+
+        fr: {
+            label: "HANCHE<br>GAUCHE",
+            speech: "J’ai mal à la hanche gauche"
+        },
+
+        en: {
+            label: "LEFT<br>HIP",
+            speech: "I have pain in my left hip"
+        },
+
+        de: {
+            label: "LINKE<br>HÜFTE",
+            speech: "Ich habe Schmerzen in der linken Hüfte"
+        },
+
+        it: {
+            label: "ANCA<br>SINISTRA",
+            speech: "Ho dolore all’anca sinistra"
+        }
+    },
+
+
+    rightHip: {
+
+        fr: {
+            label: "HANCHE<br>DROITE",
+            speech: "J’ai mal à la hanche droite"
+        },
+
+        en: {
+            label: "RIGHT<br>HIP",
+            speech: "I have pain in my right hip"
+        },
+
+        de: {
+            label: "RECHTE<br>HÜFTE",
+            speech: "Ich habe Schmerzen in der rechten Hüfte"
+        },
+
+        it: {
+            label: "ANCA<br>DESTRA",
+            speech: "Ho dolore all’anca destra"
+        }
+    },
+
+
+    leftLeg: {
+
+        fr: {
+            label: "JAMBE<br>GAUCHE",
+            speech: "J’ai mal à la jambe gauche"
+        },
+
+        en: {
+            label: "LEFT<br>LEG",
+            speech: "I have pain in my left leg"
+        },
+
+        de: {
+            label: "LINKES<br>BEIN",
+            speech: "Ich habe Schmerzen im linken Bein"
+        },
+
+        it: {
+            label: "GAMBA<br>SINISTRA",
+            speech: "Ho dolore alla gamba sinistra"
+        }
+    },
+
+
+    rightLeg: {
+
+        fr: {
+            label: "JAMBE<br>DROITE",
+            speech: "J’ai mal à la jambe droite"
+        },
+
+        en: {
+            label: "RIGHT<br>LEG",
+            speech: "I have pain in my right leg"
+        },
+
+        de: {
+            label: "RECHTES<br>BEIN",
+            speech: "Ich habe Schmerzen im rechten Bein"
+        },
+
+        it: {
+            label: "GAMBA<br>DESTRA",
+            speech: "Ho dolore alla gamba destra"
+        }
+    },
+
+
+    leftFoot: {
+
+        fr: {
+            label: "PIED<br>GAUCHE",
+            speech: "J’ai mal au pied gauche"
+        },
+
+        en: {
+            label: "LEFT<br>FOOT",
+            speech: "I have pain in my left foot"
+        },
+
+        de: {
+            label: "LINKER<br>FUSS",
+            speech: "Ich habe Schmerzen im linken Fuß"
+        },
+
+        it: {
+            label: "PIEDE<br>SINISTRO",
+            speech: "Ho dolore al piede sinistro"
+        }
+    },
+
+
+    rightFoot: {
+
+        fr: {
+            label: "PIED<br>DROIT",
+            speech: "J’ai mal au pied droit"
+        },
+
+        en: {
+            label: "RIGHT<br>FOOT",
+            speech: "I have pain in my right foot"
+        },
+
+        de: {
+            label: "RECHTER<br>FUSS",
+            speech: "Ich habe Schmerzen im rechten Fuß"
+        },
+
+        it: {
+            label: "PIEDE<br>DESTRO",
+            speech: "Ho dolore al piede destro"
+        }
+    }
+
+};
+
+/* =========================================
+   POSITION / CONFORT — TRADUCTIONS
+   ========================================= */
+
+const POSITION_TRANSLATIONS = {
+
+    fr: {
+
+        title: "Position / Confort",
+
+        bed: {
+            label: "COUCHEZ-MOI",
+            speech: "Remettez-moi dans le lit, s’il vous plaît"
+        },
+
+        chair: {
+            label: "ASSEYEZ-MOI",
+            speech: "Mettez-moi sur le fauteuil, s’il vous plaît"
+        },
+
+        moveUp: {
+            label: "REMONTEZ-MOI",
+            speech: "Remontez-moi dans le lit, s’il vous plaît"
+        },
+
+        moveDown: {
+            label: "DESCENDEZ-MOI",
+            speech: "Descendez-moi un peu, s’il vous plaît"
+        },
+
+        turnLeft: {
+            label: "TOURNEZ-MOI<br>À GAUCHE",
+            speech: "Tournez-moi à gauche, s’il vous plaît"
+        },
+
+        turnRight: {
+            label: "TOURNEZ-MOI<br>À DROITE",
+            speech: "Tournez-moi à droite, s’il vous plaît"
+        },
+
+        sitUp: {
+            label: "REDRESSEZ-MOI",
+            speech: "Redressez-moi, s’il vous plaît"
+        },
+
+        flatter: {
+            label: "ALLONGEZ-MOI",
+            speech: "Allongez-moi davantage, s’il vous plaît"
+        },
+
+        headUp: {
+            label: "MONTEZ<br>LA TÊTE DU LIT",
+            speech: "Montez la tête du lit, s’il vous plaît"
+        },
+
+        headDown: {
+            label: "BAISSEZ<br>LA TÊTE DU LIT",
+            speech: "Baissez la tête du lit, s’il vous plaît"
+        },
+
+        legsUp: {
+            label: "MONTEZ<br>MES JAMBES",
+            speech: "Montez mes jambes, s’il vous plaît"
+        },
+
+        legsDown: {
+            label: "BAISSEZ<br>MES JAMBES",
+            speech: "Baissez mes jambes, s’il vous plaît"
+        },
+
+        pillow: {
+            label: "OREILLER",
+            speech: "J’ai besoin d’un oreiller"
+        },
+
+        removePillow: {
+            label: "ENLEVEZ<br>L'OREILLER",
+            speech: "Enlevez cet oreiller, s’il vous plaît"
+        },
+
+        hot: {
+            label: "J'AI CHAUD",
+            speech: "J’ai chaud"
+        },
+
+        cold: {
+            label: "J'AI FROID",
+            speech: "J’ai froid"
+        },
+
+        blanket: {
+            label: "COUVERTURE",
+            speech: "Mettez-moi une couverture, s’il vous plaît"
+        },
+
+        removeBlanket: {
+            label: "ENLEVEZ<br>LA COUVERTURE",
+            speech: "Enlevez la couverture, s’il vous plaît"
+        },
+
+        positionHurts: {
+            label: "CETTE POSITION<br>ME FAIT MAL",
+            speech: "Cette position me fait mal"
+        },
+
+        comfortable: {
+            label: "JE SUIS BIEN<br>COMME ÇA",
+            speech: "Je suis bien comme ça"
+        }
+    },
+
+
+    en: {
+
+        title: "Position / Comfort",
+
+        bed: {
+            label: "PUT ME<br>BACK IN BED",
+            speech: "Please put me back in bed"
+        },
+
+        chair: {
+            label: "SIT ME<br>IN THE CHAIR",
+            speech: "Please sit me in the chair"
+        },
+
+        moveUp: {
+            label: "MOVE ME<br>UP IN BED",
+            speech: "Please move me up in the bed"
+        },
+
+        moveDown: {
+            label: "MOVE ME<br>DOWN A LITTLE",
+            speech: "Please move me down a little"
+        },
+
+        turnLeft: {
+            label: "TURN ME<br>TO THE LEFT",
+            speech: "Please turn me to the left"
+        },
+
+        turnRight: {
+            label: "TURN ME<br>TO THE RIGHT",
+            speech: "Please turn me to the right"
+        },
+
+        sitUp: {
+            label: "SIT ME UP",
+            speech: "Please sit me more upright"
+        },
+
+        flatter: {
+            label: "LAY ME<br>FLATTER",
+            speech: "Please lay me flatter"
+        },
+
+        headUp: {
+            label: "RAISE THE<br>HEAD OF THE BED",
+            speech: "Please raise the head of the bed"
+        },
+
+        headDown: {
+            label: "LOWER THE<br>HEAD OF THE BED",
+            speech: "Please lower the head of the bed"
+        },
+
+        legsUp: {
+            label: "RAISE<br>MY LEGS",
+            speech: "Please raise my legs"
+        },
+
+        legsDown: {
+            label: "LOWER<br>MY LEGS",
+            speech: "Please lower my legs"
+        },
+
+        pillow: {
+            label: "PILLOW",
+            speech: "I need a pillow"
+        },
+
+        removePillow: {
+            label: "REMOVE<br>THE PILLOW",
+            speech: "Please remove this pillow"
+        },
+
+        hot: {
+            label: "I'M HOT",
+            speech: "I'm hot"
+        },
+
+        cold: {
+            label: "I'M COLD",
+            speech: "I'm cold"
+        },
+
+        blanket: {
+            label: "BLANKET",
+            speech: "Please give me a blanket"
+        },
+
+        removeBlanket: {
+            label: "REMOVE<br>THE BLANKET",
+            speech: "Please remove the blanket"
+        },
+
+        positionHurts: {
+            label: "THIS POSITION<br>HURTS",
+            speech: "This position hurts"
+        },
+
+        comfortable: {
+            label: "I'M COMFORTABLE<br>LIKE THIS",
+            speech: "I'm comfortable like this"
+        }
+    },
+
+
+    de: {
+
+        title: "Position / Komfort",
+
+        bed: {
+            label: "INS BETT<br>LEGEN",
+            speech: "Bitte legen Sie mich wieder ins Bett"
+        },
+
+        chair: {
+            label: "IN DEN SESSEL<br>SETZEN",
+            speech: "Bitte setzen Sie mich in den Sessel"
+        },
+
+        moveUp: {
+            label: "IM BETT<br>HÖHER",
+            speech: "Bitte schieben Sie mich im Bett höher"
+        },
+
+        moveDown: {
+            label: "ETWAS<br>TIEFER",
+            speech: "Bitte schieben Sie mich etwas tiefer"
+        },
+
+        turnLeft: {
+            label: "NACH LINKS<br>DREHEN",
+            speech: "Bitte drehen Sie mich nach links"
+        },
+
+        turnRight: {
+            label: "NACH RECHTS<br>DREHEN",
+            speech: "Bitte drehen Sie mich nach rechts"
+        },
+
+        sitUp: {
+            label: "AUFRICHTEN",
+            speech: "Bitte richten Sie mich auf"
+        },
+
+        flatter: {
+            label: "FLACHER<br>LEGEN",
+            speech: "Bitte legen Sie mich flacher"
+        },
+
+        headUp: {
+            label: "KOPFTEIL<br>HÖHER",
+            speech: "Bitte stellen Sie das Kopfteil höher"
+        },
+
+        headDown: {
+            label: "KOPFTEIL<br>TIEFER",
+            speech: "Bitte stellen Sie das Kopfteil tiefer"
+        },
+
+        legsUp: {
+            label: "BEINE<br>HÖHER",
+            speech: "Bitte lagern Sie meine Beine höher"
+        },
+
+        legsDown: {
+            label: "BEINE<br>TIEFER",
+            speech: "Bitte lagern Sie meine Beine tiefer"
+        },
+
+        pillow: {
+            label: "KISSEN",
+            speech: "Ich brauche ein Kissen"
+        },
+
+        removePillow: {
+            label: "KISSEN<br>ENTFERNEN",
+            speech: "Bitte nehmen Sie dieses Kissen weg"
+        },
+
+        hot: {
+            label: "MIR IST WARM",
+            speech: "Mir ist warm"
+        },
+
+        cold: {
+            label: "MIR IST KALT",
+            speech: "Mir ist kalt"
+        },
+
+        blanket: {
+            label: "DECKE",
+            speech: "Bitte geben Sie mir eine Decke"
+        },
+
+        removeBlanket: {
+            label: "DECKE<br>ENTFERNEN",
+            speech: "Bitte nehmen Sie die Decke weg"
+        },
+
+        positionHurts: {
+            label: "DIESE POSITION<br>TUT WEH",
+            speech: "Diese Position tut mir weh"
+        },
+
+        comfortable: {
+            label: "SO IST<br>ES GUT",
+            speech: "So ist es gut"
+        }
+    },
+
+
+    it: {
+
+        title: "Posizione / Comfort",
+
+        bed: {
+            label: "RIMETTETEMI<br>A LETTO",
+            speech: "Rimettetemi a letto, per favore"
+        },
+
+        chair: {
+            label: "METTETEMI<br>IN POLTRONA",
+            speech: "Mettetemi in poltrona, per favore"
+        },
+
+        moveUp: {
+            label: "SPOSTATEMI<br>PIÙ IN ALTO",
+            speech: "Spostatemi più in alto nel letto, per favore"
+        },
+
+        moveDown: {
+            label: "SPOSTATEMI<br>PIÙ IN BASSO",
+            speech: "Spostatemi un po’ più in basso, per favore"
+        },
+
+        turnLeft: {
+            label: "GIRATEMI<br>A SINISTRA",
+            speech: "Giratemi a sinistra, per favore"
+        },
+
+        turnRight: {
+            label: "GIRATEMI<br>A DESTRA",
+            speech: "Giratemi a destra, per favore"
+        },
+
+        sitUp: {
+            label: "RADDRIZZATEMI",
+            speech: "Raddrizzatemi, per favore"
+        },
+
+        flatter: {
+            label: "SDRAIATEMI<br>DI PIÙ",
+            speech: "Sdraiami di più, per favore"
+        },
+
+        headUp: {
+            label: "ALZATE<br>LA TESTIERA",
+            speech: "Alzate la testiera del letto, per favore"
+        },
+
+        headDown: {
+            label: "ABBASSATE<br>LA TESTIERA",
+            speech: "Abbassate la testiera del letto, per favore"
+        },
+
+        legsUp: {
+            label: "ALZATE<br>LE MIE GAMBE",
+            speech: "Alzate le mie gambe, per favore"
+        },
+
+        legsDown: {
+            label: "ABBASSATE<br>LE MIE GAMBE",
+            speech: "Abbassate le mie gambe, per favore"
+        },
+
+        pillow: {
+            label: "CUSCINO",
+            speech: "Ho bisogno di un cuscino"
+        },
+
+        removePillow: {
+            label: "TOGLIETE<br>IL CUSCINO",
+            speech: "Togliete questo cuscino, per favore"
+        },
+
+        hot: {
+            label: "HO CALDO",
+            speech: "Ho caldo"
+        },
+
+        cold: {
+            label: "HO FREDDO",
+            speech: "Ho freddo"
+        },
+
+        blanket: {
+            label: "COPERTA",
+            speech: "Mettetemi una coperta, per favore"
+        },
+
+        removeBlanket: {
+            label: "TOGLIETE<br>LA COPERTA",
+            speech: "Togliete la coperta, per favore"
+        },
+
+        positionHurts: {
+            label: "QUESTA POSIZIONE<br>MI FA MALE",
+            speech: "Questa posizione mi fa male"
+        },
+
+        comfortable: {
+            label: "STO BENE<br>COSÌ",
+            speech: "Sto bene così"
+        }
+    }
+
+};
+
+function updatePositionLanguage() {
+
+    const translation =
+        POSITION_TRANSLATIONS[
+            patientLanguage
+        ];
+
+    if (!translation) {
+        return;
+    }
+
+    const title =
+        document.getElementById(
+            "positionTitle"
+        );
+
+    if (title) {
+        title.textContent =
+            translation.title;
+    }
+
+    const elements = {
+
+        positionBedButton:
+            translation.bed.label,
+
+        positionChairButton:
+            translation.chair.label,
+
+        positionMoveUpButton:
+            translation.moveUp.label,
+
+        positionMoveDownButton:
+            translation.moveDown.label,
+
+        positionTurnLeftButton:
+            translation.turnLeft.label,
+
+        positionTurnRightButton:
+            translation.turnRight.label,
+
+        positionSitUpButton:
+            translation.sitUp.label,
+
+        positionFlatterButton:
+            translation.flatter.label,
+
+        positionHeadUpButton:
+            translation.headUp.label,
+
+        positionHeadDownButton:
+            translation.headDown.label,
+
+        positionLegsUpButton:
+            translation.legsUp.label,
+
+        positionLegsDownButton:
+            translation.legsDown.label,
+
+        positionPillowButton:
+            translation.pillow.label,
+
+        positionRemovePillowButton:
+            translation.removePillow.label,
+
+        positionHotButton:
+            translation.hot.label,
+
+        positionColdButton:
+            translation.cold.label,
+
+        positionBlanketButton:
+            translation.blanket.label,
+
+        positionRemoveBlanketButton:
+            translation.removeBlanket.label,
+
+        positionHurtsButton:
+            translation.positionHurts.label,
+
+        positionComfortableButton:
+            translation.comfortable.label
+    };
+
+    Object.entries(elements).forEach(
+        function(entry) {
+
+            const element =
+                document.getElementById(
+                    entry[0]
+                );
+
+            if (element) {
+                element.innerHTML =
+                    entry[1];
+            }
+        }
+    );
+}
+
+
+function speakPositionPhrase(phraseKey) {
+
+    const translation =
+        POSITION_TRANSLATIONS[
+            caregiverLanguage
+        ];
+
+    if (!translation) {
+        return;
+    }
+
+    const phrase =
+        translation[phraseKey];
+
+    if (!phrase) {
+        return;
+    }
+
+    speak(
+        phrase.speech,
+        caregiverLanguage
+    );
+}
+
+function updatePainLanguage() {
+
+    const translation =
+        PAIN_TRANSLATIONS[
+            patientLanguage
+        ];
+
+    if (!translation) {
+        return;
+    }
+
+
+    const title =
+        document.getElementById(
+            "painTitle"
+        );
+
+    if (title) {
+        title.textContent =
+            translation.title;
+    }
+
+
+    const whereTitle =
+        document.getElementById(
+            "painWhereTitle"
+        );
+
+    if (whereTitle) {
+        whereTitle.textContent =
+            translation.where;
+    }
+
+
+    const changeButton =
+        document.getElementById(
+            "painChangeLocationButton"
+        );
+
+    if (changeButton) {
+        changeButton.textContent =
+            translation.changeLocation;
+    }
+
+
+    const locationElements = {
+
+        painLocationHead:
+            "head",
+
+        painLocationNeck:
+            "neck",
+
+        painLocationThroat:
+            "throat",
+
+        painLocationChest:
+            "chest",
+
+        painLocationBack:
+            "back",
+
+        painLocationAbdomen:
+            "abdomen",
+
+        painLocationLeftShoulder:
+            "leftShoulder",
+
+        painLocationRightShoulder:
+            "rightShoulder",
+
+        painLocationLeftArm:
+            "leftArm",
+
+        painLocationRightArm:
+            "rightArm",
+
+        painLocationLeftHand:
+            "leftHand",
+
+        painLocationRightHand:
+            "rightHand",
+
+        painLocationLeftHip:
+            "leftHip",
+
+        painLocationRightHip:
+            "rightHip",
+
+        painLocationLeftLeg:
+            "leftLeg",
+
+        painLocationRightLeg:
+            "rightLeg",
+
+        painLocationLeftFoot:
+            "leftFoot",
+
+        painLocationRightFoot:
+            "rightFoot"
+    };
+
+
+    Object.entries(locationElements).forEach(
+        function(entry) {
+
+            const elementId =
+                entry[0];
+
+            const locationKey =
+                entry[1];
+
+            const element =
+                document.getElementById(
+                    elementId
+                );
+
+            const location =
+                PAIN_LOCATIONS[
+                    locationKey
+                ];
+
+            if (
+                element &&
+                location &&
+                location[patientLanguage]
+            ) {
+
+                element.innerHTML =
+                    location[
+                        patientLanguage
+                    ].label;
+            }
+
+        }
+    );
+
+
+    updatePainIntensityTitle();
+}
+
+function updatePainIntensityTitle() {
+
+    const title =
+        document.getElementById(
+            "painLocationTitle"
+        );
+
+    if (!title) {
+        return;
+    }
+
+
+    const translation =
+        PAIN_TRANSLATIONS[
+            patientLanguage
+        ];
+
+    if (!translation) {
+        return;
+    }
+
+
+    title.textContent =
+        translation.intensity;
+}
+
 function updateRespirationLanguage() {
 
     const translation =
@@ -1194,6 +2392,10 @@ function choosePatientLanguage(language) {
 	updateHomeLanguage();
 	
 	updateRespirationLanguage();
+	
+	updatePainLanguage();
+	
+	updatePositionLanguage();
 
     updateTopRightButton("voiceScreen");
 }
@@ -1637,32 +2839,105 @@ if (
 let selectedPainLocation = "";
 
 
-function selectPainLocation(location) {
+function selectPainLocation(locationKey) {
 
-    selectedPainLocation = location;
+    if (!PAIN_LOCATIONS[locationKey]) {
+        return;
+    }
 
-    document.getElementById("painStep1").classList.add("hidden");
-    document.getElementById("painStep2").classList.remove("hidden");
+    selectedPainLocation =
+        locationKey;
 
-    document.getElementById("painLocationTitle").textContent =
-        "Douleur " + location + " : quelle intensité ?";
+    document
+        .getElementById("painStep1")
+        .classList.add("hidden");
+
+    document
+        .getElementById("painStep2")
+        .classList.remove("hidden");
+
+    updatePainIntensityTitle();
 }
 
 
 function selectPainLevel(level) {
 
-    if (selectedPainLocation === "") {
+    if (
+        selectedPainLocation === "" ||
+        !PAIN_LOCATIONS[selectedPainLocation]
+    ) {
         return;
     }
 
-    const sentence =
-        "J’ai mal " +
-        selectedPainLocation +
-        ". Douleur " +
-        level +
-        " sur 10.";
 
-    speak(sentence);
+    const location =
+        PAIN_LOCATIONS[
+            selectedPainLocation
+        ];
+
+
+    const caregiverLocation =
+        location[
+            caregiverLanguage
+        ];
+
+
+    if (!caregiverLocation) {
+        return;
+    }
+
+
+    let sentence = "";
+
+
+    if (caregiverLanguage === "fr") {
+
+        sentence =
+            caregiverLocation.speech +
+            ". Douleur " +
+            level +
+            " sur 10.";
+
+    }
+
+
+    else if (caregiverLanguage === "en") {
+
+        sentence =
+            caregiverLocation.speech +
+            ". Pain level " +
+            level +
+            " out of 10.";
+
+    }
+
+
+    else if (caregiverLanguage === "de") {
+
+        sentence =
+            caregiverLocation.speech +
+            ". Schmerzstärke " +
+            level +
+            " von 10.";
+
+    }
+
+
+    else if (caregiverLanguage === "it") {
+
+        sentence =
+            caregiverLocation.speech +
+            ". Dolore " +
+            level +
+            " su 10.";
+
+    }
+
+
+    speak(
+        sentence,
+        caregiverLanguage
+    );
 }
 
 
@@ -2179,6 +3454,10 @@ document.addEventListener(
 		updateHomeLanguage();
 		
 		updateRespirationLanguage();
+		
+		updatePainLanguage();
+		
+		updatePositionLanguage();
 
 		updateTopRightButton("homeScreen");
 		
