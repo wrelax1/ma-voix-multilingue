@@ -5710,6 +5710,309 @@ const MISSING_VOICE_TRANSLATIONS = {
 
 };
 
+const VOICE_SCREEN_TRANSLATIONS = {
+
+    fr: {
+        title: "Langues / Voix",
+        back: "← RETOUR",
+        patientTitle: "Langue du patient",
+        patientHelp: "pour les boutons des écrans.",
+        caregiverTitle: "Langue du soignant",
+        caregiverHelp: "pour la prononciation des phrases.",
+        test: "🔊 TESTER LA VOIX",
+        voiceAvailable: "✓ Voix {language} disponible hors connexion.",
+        voiceOnline: "⚠️ Voix {language} détectée, mais son fonctionnement hors connexion n'est pas garanti.",
+        voiceMissing: "⚠️ Aucune voix {language} détectée sur cet appareil."
+    },
+
+    en: {
+        title: "Languages / Voice",
+        back: "← BACK",
+        patientTitle: "Patient language",
+        patientHelp: "for the buttons on the screens.",
+        caregiverTitle: "Caregiver language",
+        caregiverHelp: "for spoken phrases.",
+        test: "🔊 TEST VOICE",
+        voiceAvailable: "✓ {language} voice available offline.",
+        voiceOnline: "⚠️ {language} voice detected, but offline operation is not guaranteed.",
+        voiceMissing: "⚠️ No {language} voice detected on this device."
+    },
+
+    de: {
+        title: "Sprachen / Stimme",
+        back: "← ZURÜCK",
+        patientTitle: "Sprache des Patienten",
+        patientHelp: "für die Schaltflächen auf den Bildschirmen.",
+        caregiverTitle: "Sprache der Pflegeperson",
+        caregiverHelp: "für die Aussprache der Sätze.",
+        test: "🔊 STIMME TESTEN",
+        voiceAvailable: "✓ {language} Stimme ist offline verfügbar.",
+        voiceOnline: "⚠️ {language} Stimme erkannt, aber die Offline-Nutzung ist nicht garantiert.",
+        voiceMissing: "⚠️ Keine {language} Stimme auf diesem Gerät erkannt."
+    },
+
+    it: {
+        title: "Lingue / Voce",
+        back: "← INDIETRO",
+        patientTitle: "Lingua del paziente",
+        patientHelp: "per i pulsanti delle schermate.",
+        caregiverTitle: "Lingua del personale curante",
+        caregiverHelp: "per la pronuncia delle frasi.",
+        test: "🔊 PROVA LA VOCE",
+        voiceAvailable: "✓ Voce {language} disponibile offline.",
+        voiceOnline: "⚠️ Voce {language} rilevata, ma il funzionamento offline non è garantito.",
+        voiceMissing: "⚠️ Nessuna voce {language} rilevata su questo dispositivo."
+    }
+
+};
+
+const ABOUT_SCREEN_TRANSLATIONS = {
+
+    fr: {
+        back: "← RETOUR",
+        title: "À propos",
+
+        intro:
+            "Cette application a pour but d'aider des patients hospitalisés " +
+            "avec trachéotomie ou aphones à exprimer leurs besoins et leurs émotions " +
+            "auprès du personnel soignant, de leur famille et de leurs proches aidants, " +
+            "par la simple pression de boutons très lisibles sur une tablette " +
+            "ou un smartphone.",
+
+        free:
+            "Cette application est et restera gratuite.",
+
+        contact:
+            "Pour toute demande d'amélioration, contacter " +
+            "Winfried Windegger par email :",
+
+        shareTitle:
+            "Partager VoxHelp",
+
+        shareIntro:
+            "Vous souhaitez faire connaître cette application à un collègue " +
+            "soignant ou à un proche aidant ?",
+
+        shareInstructions:
+            "Activez une connexion Internet, saisissez simplement son adresse " +
+            "email puis cliquez sur <strong>PARTAGER</strong>. " +
+            "Un message contenant le lien vers l'application et les instructions " +
+            "pour l'installer hors connexion sera préparé.",
+
+        emailLabel:
+            "Email du destinataire",
+
+        emailPlaceholder:
+            "adresse@email.com",
+
+        shareButton:
+            "✉️ PARTAGER",
+
+        previewTitle:
+            "Message prêt à envoyer",
+
+        recipient:
+            "DESTINATAIRE",
+
+        subject:
+            "OBJET",
+
+        message:
+            "MESSAGE",
+
+        openButton:
+            "📋 COPIER ET OUVRIR<br>MA MESSAGERIE",
+
+        copyHelp:
+            "Si votre messagerie n'insère pas automatiquement le texte, " +
+            "celui-ci aura déjà été copié : il suffira de le coller."
+    },
+
+
+    en: {
+        back: "← BACK",
+        title: "About",
+
+        intro:
+            "This application is designed to help hospitalized patients " +
+            "with a tracheostomy or who are unable to speak express their needs " +
+            "and emotions to healthcare staff, their family and caregivers, " +
+            "simply by pressing highly readable buttons on a tablet or smartphone.",
+
+        free:
+            "This application is and will remain free.",
+
+        contact:
+            "For any suggestion for improvement, contact " +
+            "Winfried Windegger by email:",
+
+        shareTitle:
+            "Share VoxHelp",
+
+        shareIntro:
+            "Would you like to tell a healthcare colleague or caregiver " +
+            "about this application?",
+
+        shareInstructions:
+            "Connect to the Internet, simply enter their email address " +
+            "and tap <strong>SHARE</strong>. " +
+            "A message containing the link to the application and instructions " +
+            "for installing it for offline use will be prepared.",
+
+        emailLabel:
+            "Recipient's email",
+
+        emailPlaceholder:
+            "email@address.com",
+
+        shareButton:
+            "✉️ SHARE",
+
+        previewTitle:
+            "Message ready to send",
+
+        recipient:
+            "RECIPIENT",
+
+        subject:
+            "SUBJECT",
+
+        message:
+            "MESSAGE",
+
+        openButton:
+            "📋 COPY AND OPEN<br>MY EMAIL APP",
+
+        copyHelp:
+            "If your email app does not insert the text automatically, " +
+            "it will already have been copied: just paste it."
+    },
+
+
+    de: {
+        back: "← ZURÜCK",
+        title: "Über VoxHelp",
+
+        intro:
+            "Diese Anwendung hilft hospitalisierten Patientinnen und Patienten " +
+            "mit Tracheotomie oder Personen, die nicht sprechen können, " +
+            "ihre Bedürfnisse und Gefühle gegenüber dem Pflegepersonal, " +
+            "ihrer Familie und ihren betreuenden Angehörigen auszudrücken – " +
+            "durch einfaches Antippen gut lesbarer Schaltflächen auf einem Tablet " +
+            "oder Smartphone.",
+
+        free:
+            "Diese Anwendung ist und bleibt kostenlos.",
+
+        contact:
+            "Für Verbesserungsvorschläge kontaktieren Sie " +
+            "Winfried Windegger per E-Mail:",
+
+        shareTitle:
+            "VoxHelp teilen",
+
+        shareIntro:
+            "Möchten Sie diese Anwendung einer Pflegefachperson, " +
+            "einem Kollegen oder einer betreuenden Person empfehlen?",
+
+        shareInstructions:
+            "Stellen Sie eine Internetverbindung her, geben Sie einfach die " +
+            "E-Mail-Adresse der Person ein und klicken Sie auf <strong>TEILEN</strong>. " +
+            "Eine Nachricht mit dem Link zur Anwendung und den Anweisungen " +
+            "zur Offline-Installation wird vorbereitet.",
+
+        emailLabel:
+            "E-Mail des Empfängers",
+
+        emailPlaceholder:
+            "adresse@email.com",
+
+        shareButton:
+            "✉️ TEILEN",
+
+        previewTitle:
+            "Nachricht zum Senden bereit",
+
+        recipient:
+            "EMPFÄNGER",
+
+        subject:
+            "BETREFF",
+
+        message:
+            "NACHRICHT",
+
+        openButton:
+            "📋 KOPIEREN UND<br>E-MAIL ÖFFNEN",
+
+        copyHelp:
+            "Wenn Ihr E-Mail-Programm den Text nicht automatisch einfügt, " +
+            "wurde er bereits kopiert: Sie müssen ihn nur noch einfügen."
+    },
+
+
+    it: {
+        back: "← INDIETRO",
+        title: "Informazioni",
+
+        intro:
+            "Questa applicazione ha lo scopo di aiutare i pazienti ricoverati " +
+            "con tracheostomia o impossibilitati a parlare a esprimere i propri " +
+            "bisogni e le proprie emozioni al personale sanitario, alla famiglia " +
+            "e alle persone che li assistono, semplicemente premendo pulsanti " +
+            "molto leggibili su un tablet o uno smartphone.",
+
+        free:
+            "Questa applicazione è e rimarrà gratuita.",
+
+        contact:
+            "Per qualsiasi suggerimento di miglioramento, contattare " +
+            "Winfried Windegger via email:",
+
+        shareTitle:
+            "Condividi VoxHelp",
+
+        shareIntro:
+            "Vuoi far conoscere questa applicazione a un collega del personale " +
+            "sanitario o a una persona che presta assistenza?",
+
+        shareInstructions:
+            "Attiva una connessione Internet, inserisci semplicemente il suo " +
+            "indirizzo email e premi <strong>CONDIVIDI</strong>. " +
+            "Verrà preparato un messaggio con il link all'applicazione e le " +
+            "istruzioni per installarla e usarla offline.",
+
+        emailLabel:
+            "Email del destinatario",
+
+        emailPlaceholder:
+            "indirizzo@email.com",
+
+        shareButton:
+            "✉️ CONDIVIDI",
+
+        previewTitle:
+            "Messaggio pronto per l'invio",
+
+        recipient:
+            "DESTINATARIO",
+
+        subject:
+            "OGGETTO",
+
+        message:
+            "MESSAGGIO",
+
+        openButton:
+            "📋 COPIA E APRI<br>L'APP EMAIL",
+
+        copyHelp:
+            "Se l'app email non inserisce automaticamente il testo, " +
+            "questo sarà già stato copiato: basterà incollarlo."
+    }
+
+};
+
 function hasVoiceForLanguage(language) {
 
     return (
@@ -6544,6 +6847,8 @@ function openVoiceScreen() {
 
     updateLanguageButtons();
 	
+	updateVoiceScreenLanguage();
+	
 	updateCaregiverVoiceStatus();
 	
 }
@@ -6589,6 +6894,12 @@ function choosePatientLanguage(language) {
 	updateTalkLanguage();
 	
 	updateWriteLanguage();
+	
+	updateVoiceScreenLanguage();
+	
+	updateAboutScreenLanguage();
+	
+	updateCaregiverVoiceStatus();
 
     updateTopRightButton("voiceScreen");
 }
@@ -6690,6 +7001,161 @@ function updateLanguageButtons() {
     );
 }
 
+function updateVoiceScreenLanguage() {
+
+    const translation =
+        VOICE_SCREEN_TRANSLATIONS[
+            patientLanguage
+        ] ||
+        VOICE_SCREEN_TRANSLATIONS.fr;
+
+
+    const elements = {
+        voiceBackButton:
+            translation.back,
+
+        voiceTitle:
+            translation.title,
+
+        voicePatientTitle:
+            translation.patientTitle,
+
+        voicePatientHelp:
+            translation.patientHelp,
+
+        voiceCaregiverTitle:
+            translation.caregiverTitle,
+
+        voiceCaregiverHelp:
+            translation.caregiverHelp,
+
+        voiceTestButton:
+            translation.test
+    };
+
+
+    Object.entries(elements).forEach(
+        function(entry) {
+
+            const element =
+                document.getElementById(
+                    entry[0]
+                );
+
+            if (element) {
+                element.textContent =
+                    entry[1];
+            }
+        }
+    );
+}
+
+function updateAboutScreenLanguage() {
+
+    const translation =
+        ABOUT_SCREEN_TRANSLATIONS[
+            patientLanguage
+        ] ||
+        ABOUT_SCREEN_TRANSLATIONS.fr;
+
+
+    const textElements = {
+
+        aboutBackButton:
+            translation.back,
+
+        aboutTitle:
+            translation.title,
+
+        aboutIntroText:
+            translation.intro,
+
+        aboutFreeText:
+            translation.free,
+
+        aboutContactText:
+            translation.contact,
+
+        shareTitle:
+            translation.shareTitle,
+
+        shareIntroText:
+            translation.shareIntro,
+
+        shareEmailLabel:
+            translation.emailLabel,
+
+        shareButton:
+            translation.shareButton,
+
+        sharePreviewTitle:
+            translation.previewTitle,
+
+        sharePreviewRecipientLabel:
+            translation.recipient,
+
+        sharePreviewSubjectLabel:
+            translation.subject,
+
+        sharePreviewMessageLabel:
+            translation.message,
+
+        shareCopyHelp:
+            translation.copyHelp
+    };
+
+
+    Object.entries(
+        textElements
+    ).forEach(
+        function(entry) {
+
+            const element =
+                document.getElementById(
+                    entry[0]
+                );
+
+            if (element) {
+                element.textContent =
+                    entry[1];
+            }
+        }
+    );
+
+
+    const instructions =
+        document.getElementById(
+            "shareInstructionsText"
+        );
+
+    if (instructions) {
+        instructions.innerHTML =
+            translation.shareInstructions;
+    }
+
+
+    const openButton =
+        document.getElementById(
+            "shareOpenButtonText"
+        );
+
+    if (openButton) {
+        openButton.innerHTML =
+            translation.openButton;
+    }
+
+
+    const emailInput =
+        document.getElementById(
+            "shareEmail"
+        );
+
+    if (emailInput) {
+        emailInput.placeholder =
+            translation.emailPlaceholder;
+    }
+}
+
 function updateCaregiverVoiceStatus() {
 
     const status =
@@ -6718,16 +7184,57 @@ function updateCaregiverVoiceStatus() {
         );
 
 
+    const translation =
+        VOICE_SCREEN_TRANSLATIONS[
+            patientLanguage
+        ] ||
+        VOICE_SCREEN_TRANSLATIONS.fr;
+
+
     const languageNames = {
-        fr: "française",
-        en: "anglaise",
-        de: "allemande",
-        it: "italienne"
+
+        fr: {
+            fr: "française",
+            en: "anglaise",
+            de: "allemande",
+            it: "italienne"
+        },
+
+        en: {
+            fr: "French",
+            en: "English",
+            de: "German",
+            it: "Italian"
+        },
+
+        de: {
+            fr: "Französische",
+            en: "Englische",
+            de: "Deutsche",
+            it: "Italienische"
+        },
+
+        it: {
+            fr: "francese",
+            en: "inglese",
+            de: "tedesca",
+            it: "italiana"
+        }
+
     };
 
 
     const languageName =
-        languageNames[caregiverLanguage] ||
+        (
+            languageNames[
+                patientLanguage
+            ] &&
+            languageNames[
+                patientLanguage
+            ][
+                caregiverLanguage
+            ]
+        ) ||
         caregiverLanguage;
 
 
@@ -6740,9 +7247,10 @@ function updateCaregiverVoiceStatus() {
     if (localVoices.length > 0) {
 
         status.textContent =
-            "✓ Voix " +
-            languageName +
-            " disponible hors connexion.";
+            translation.voiceAvailable.replace(
+                "{language}",
+                languageName
+            );
 
         status.classList.add(
             "voice-status-ok"
@@ -6755,9 +7263,10 @@ function updateCaregiverVoiceStatus() {
     if (voices.length > 0) {
 
         status.textContent =
-            "⚠️ Voix " +
-            languageName +
-            " détectée, mais son fonctionnement hors connexion n'est pas garanti.";
+            translation.voiceOnline.replace(
+                "{language}",
+                languageName
+            );
 
         status.classList.add(
             "voice-status-warning"
@@ -6768,9 +7277,10 @@ function updateCaregiverVoiceStatus() {
 
 
     status.textContent =
-        "⚠️ Aucune voix " +
-        languageName +
-        " détectée sur cet appareil.";
+        translation.voiceMissing.replace(
+            "{language}",
+            languageName
+        );
 
     status.classList.add(
         "voice-status-warning"
@@ -7009,59 +7519,26 @@ let shareEmailSubject = "";
 let shareEmailBody = "";
 
 
-function shareAppByEmail() {
+const SHARE_EMAIL_TRANSLATIONS = {
 
-    const emailInput =
-        document.getElementById("shareEmail");
+    fr: {
 
-    const messageElement =
-        document.getElementById("shareMessage");
+        invalidEmail:
+            "Veuillez saisir une adresse email valide.",
 
-    const preview =
-        document.getElementById("sharePreview");
+        ready:
+            "Vérifiez le message ci-dessous avant de l'envoyer.",
 
+        copied:
+            "Message copié. Ouverture de votre messagerie…",
 
-    if (
-        !emailInput ||
-        !messageElement ||
-        !preview
-    ) {
-        return;
-    }
+        opening:
+            "Ouverture de votre messagerie… Le message reste affiché ci-dessous.",
 
+        subject:
+            "Une app pour faire parler un patient aphone",
 
-    const email =
-        emailInput.value.trim();
-
-
-    messageElement.textContent = "";
-
-
-    if (
-        email === "" ||
-        !emailInput.checkValidity()
-    ) {
-
-        preview.classList.add("hidden");
-
-        messageElement.textContent =
-            "Veuillez saisir une adresse email valide.";
-
-        emailInput.focus();
-
-        return;
-    }
-
-
-    shareEmailAddress =
-        email;
-
-
-    shareEmailSubject =
-        "Une app pour faire parler un patient aphone";
-
-
-    shareEmailBody =
+        body:
 `Vous êtes invité-e à découvrir « VoxHelp », une application gratuite et simple, développée à partir des besoins rencontrés auprès de patients et de soignants en milieu hospitalier à Genève, pour aider les patients avec trachéotomie ou aphones à sortir de leur prison du silence.
 
 Le principe de l'application est très simple :
@@ -7127,7 +7604,340 @@ Sur ANDROID
 4. Valider « VoxHelp ».
 5. VoxHelp apparaîtra comme une application normale avec son icône « VoxHelp ».
 
-Redonnons une voix à ceux qui en sont privés.`;
+Redonnons une voix à ceux qui en sont privés.`
+    },
+
+
+    en: {
+
+        invalidEmail:
+            "Please enter a valid email address.",
+
+        ready:
+            "Please check the message below before sending it.",
+
+        copied:
+            "Message copied. Opening your email app…",
+
+        opening:
+            "Opening your email app… The message remains displayed below.",
+
+        subject:
+            "An app that gives a voice to patients who cannot speak",
+
+        body:
+`You are invited to discover VoxHelp, a simple and free application developed from needs identified among patients and healthcare professionals in hospitals in Geneva. It is designed to help patients with a tracheostomy or who are unable to speak communicate and escape the isolation of silence.
+
+The principle is very simple:
+
+The patient has large buttons corresponding to what they may want to say — for example Yes, No, Stop, I am in pain, Difficulty breathing, Change my position, I need care, Toilet, Family / Friends, Emotions, Questions, and more.
+
+The patient simply presses a button and the phone or tablet speaks the phrase for them in one of the four main languages used in Swiss hospitals: French, German, Italian and English.
+
+
+SIMPLE, LIGHTWEIGHT AND PRIVATE
+
+• The application requires no account and does not collect personal data.
+
+• It works on Android and iPhone, smartphones and tablets, with a display that adapts to the screen size.
+
+• An Internet connection is required only for the initial installation and for future updates.
+
+• The application uses very little storage: less than 5 MB.
+
+• Once installed, the application can work without an Internet connection.
+
+
+VOICES AND LANGUAGES
+
+VoxHelp uses the text-to-speech voices available on the phone or tablet. For a language to be spoken correctly, the corresponding text-to-speech voice must be installed on the device.
+
+On a personal tablet or smartphone, these voices can usually be added in the device's language or text-to-speech settings.
+
+On a professional device managed by a hospital, however, some installations may be restricted. If a voice for your language is missing, ask the hospital's IT department to install the appropriate text-to-speech voice.
+
+To install a text-to-speech voice:
+
+On ANDROID
+
+Settings → Text-to-speech / Text-to-speech output → languages or voice data → download the required language.
+
+The exact path may vary depending on the Android version and device manufacturer.
+
+On IPHONE / IPAD
+
+Settings → Accessibility → Spoken Content → Voices → select the language and download a voice.
+
+
+INSTALLING VOXHELP ON YOUR SMARTPHONE / TABLET
+
+Open the application here:
+
+https://wrelax1.github.io/ma-voix-multilingue/
+
+On IPHONE / IPAD
+
+1. Open the address above in Safari.
+2. Tap the Share button.
+3. Select “Add to Home Screen”.
+4. Make sure the name is “VoxHelp”, then tap “Add”.
+5. VoxHelp will appear like a normal application with its VoxHelp icon.
+
+On ANDROID
+
+1. Open the address above in a browser.
+2. Tap the three-dot menu ⋮.
+3. Select “Install app” or “Add to Home screen”.
+4. Confirm “VoxHelp”.
+5. VoxHelp will appear like a normal application with its VoxHelp icon.
+
+Giving a voice back to those who have lost theirs.`
+    },
+
+
+    de: {
+
+        invalidEmail:
+            "Bitte geben Sie eine gültige E-Mail-Adresse ein.",
+
+        ready:
+            "Bitte überprüfen Sie die Nachricht vor dem Senden.",
+
+        copied:
+            "Nachricht kopiert. E-Mail-Programm wird geöffnet…",
+
+        opening:
+            "E-Mail-Programm wird geöffnet… Die Nachricht bleibt unten sichtbar.",
+
+        subject:
+            "Eine App, die Patienten ohne Stimme das Sprechen ermöglicht",
+
+        body:
+`Wir möchten Ihnen VoxHelp vorstellen, eine einfache und kostenlose Anwendung, die aus den Erfahrungen und Bedürfnissen von Patienten und Pflegefachpersonen in Genfer Krankenhäusern entstanden ist. Sie hilft Patienten mit Tracheotomie oder Personen, die nicht sprechen können, ihre Bedürfnisse mitzuteilen und die Isolation des Schweigens zu überwinden.
+
+Das Prinzip der Anwendung ist sehr einfach:
+
+Dem Patienten stehen große, gut lesbare Schaltflächen für typische Aussagen zur Verfügung — zum Beispiel Ja, Nein, Stopp, Ich habe Schmerzen, Atemnot, Bitte ändern Sie meine Position, Ich brauche Pflege, Toilette, Familie / Freunde, Gefühle, Fragen usw.
+
+Der Patient muss lediglich eine Schaltfläche berühren. Das Smartphone oder Tablet spricht den entsprechenden Satz in einer der vier wichtigsten Sprachen der Schweizer Spitäler aus: Französisch, Deutsch, Italienisch oder Englisch.
+
+
+EINFACH, LEICHT UND DATENSCHUTZFREUNDLICH
+
+• Die Anwendung benötigt kein Benutzerkonto und sammelt keine persönlichen Daten.
+
+• Sie funktioniert auf Android und iPhone sowie auf Smartphones und Tablets und passt die Anzeige automatisch an die Bildschirmgröße an.
+
+• Eine Internetverbindung ist nur für die erste Installation und für spätere Aktualisierungen erforderlich.
+
+• Die Anwendung benötigt sehr wenig Speicherplatz: weniger als 5 MB.
+
+• Nach der Installation kann die Anwendung ohne Internetverbindung verwendet werden.
+
+
+STIMMEN UND SPRACHEN
+
+VoxHelp verwendet die auf dem Smartphone oder Tablet verfügbaren Sprachausgabestimmen. Damit eine Sprache korrekt ausgesprochen wird, muss die entsprechende Text-to-Speech-Stimme auf dem Gerät installiert sein.
+
+Auf einem privaten Smartphone oder Tablet können diese Stimmen normalerweise über die Sprach- oder Sprachausgabe-Einstellungen des Geräts hinzugefügt werden.
+
+Bei professionellen Geräten, die von einem Krankenhaus verwaltet werden, können solche Installationen gesperrt sein. Falls die gewünschte Stimme fehlt, bitten Sie die IT-Abteilung des Krankenhauses, die entsprechende Sprachausgabe zu installieren.
+
+So installieren Sie eine Stimme:
+
+Auf ANDROID
+
+Einstellungen → Text-in-Sprache / Sprachausgabe → Sprachen oder Sprachdaten → gewünschte Sprache herunterladen.
+
+Der genaue Menüpfad kann je nach Android-Version und Hersteller abweichen.
+
+Auf IPHONE / IPAD
+
+Einstellungen → Bedienungshilfen → Gesprochene Inhalte → Stimmen → Sprache auswählen und eine Stimme herunterladen.
+
+
+VOXHELP AUF SMARTPHONE / TABLET INSTALLIEREN
+
+Öffnen Sie die Anwendung hier:
+
+https://wrelax1.github.io/ma-voix-multilingue/
+
+Auf IPHONE / IPAD
+
+1. Öffnen Sie die oben angegebene Adresse mit Safari.
+2. Tippen Sie auf die Schaltfläche „Teilen“.
+3. Wählen Sie „Zum Home-Bildschirm“.
+4. Überprüfen Sie, dass der Name „VoxHelp“ lautet, und tippen Sie auf „Hinzufügen“.
+5. VoxHelp erscheint anschließend wie eine normale App mit dem VoxHelp-Symbol.
+
+Auf ANDROID
+
+1. Öffnen Sie die oben angegebene Adresse in einem Browser.
+2. Tippen Sie auf das Drei-Punkte-Menü ⋮.
+3. Wählen Sie „App installieren“ oder „Zum Startbildschirm hinzufügen“.
+4. Bestätigen Sie „VoxHelp“.
+5. VoxHelp erscheint anschließend wie eine normale App mit dem VoxHelp-Symbol.
+
+Geben wir denjenigen eine Stimme zurück, die ihre Stimme verloren haben.`
+    },
+
+
+    it: {
+
+        invalidEmail:
+            "Inserisca un indirizzo email valido.",
+
+        ready:
+            "Controlli il messaggio qui sotto prima di inviarlo.",
+
+        copied:
+            "Messaggio copiato. Apertura dell'app email…",
+
+        opening:
+            "Apertura dell'app email… Il messaggio rimane visualizzato qui sotto.",
+
+        subject:
+            "Un'app che dà voce ai pazienti che non possono parlare",
+
+        body:
+`La invitiamo a scoprire VoxHelp, un'applicazione semplice e gratuita sviluppata a partire dai bisogni riscontrati tra pazienti e personale sanitario negli ospedali di Ginevra. È stata creata per aiutare i pazienti con tracheostomia o impossibilitati a parlare a comunicare e a uscire dall'isolamento del silenzio.
+
+Il principio dell'applicazione è molto semplice:
+
+Il paziente dispone di grandi pulsanti corrispondenti a ciò che potrebbe voler dire — per esempio Sì, No, Stop, Ho dolore, Difficoltà a respirare, Cambiatemi posizione, Ho bisogno di cure, Toilette, Famiglia / Amici, Emozioni, Domande e altro ancora.
+
+È sufficiente premere un pulsante e il telefono o il tablet pronuncia la frase al posto del paziente in una delle quattro principali lingue utilizzate negli ospedali svizzeri: francese, tedesco, italiano e inglese.
+
+
+SEMPLICE, LEGGERA E RISPETTOSA DELLA PRIVACY
+
+• L'applicazione non richiede alcun account e non raccoglie dati personali.
+
+• Funziona su Android e iPhone, smartphone e tablet, con una visualizzazione che si adatta alle dimensioni dello schermo.
+
+• Una connessione Internet è necessaria solo per la prima installazione e per gli eventuali aggiornamenti futuri.
+
+• L'applicazione occupa pochissimo spazio: meno di 5 MB.
+
+• Dopo l'installazione, l'applicazione può funzionare senza connessione Internet.
+
+
+VOCI E LINGUE
+
+VoxHelp utilizza le voci di sintesi disponibili sul telefono o sul tablet. Perché una lingua venga pronunciata correttamente, la relativa voce di sintesi deve essere installata sul dispositivo.
+
+Su uno smartphone o tablet personale, queste voci possono generalmente essere aggiunte nelle impostazioni della lingua o della sintesi vocale.
+
+Su un dispositivo professionale gestito da un ospedale, alcune installazioni possono invece essere bloccate. Se manca la voce della lingua desiderata, chieda al servizio informatico dell'ospedale di installare la voce di sintesi corrispondente.
+
+Per installare una voce di sintesi:
+
+Su ANDROID
+
+Impostazioni → Sintesi vocale / Output sintesi vocale → lingue o dati vocali → scaricare la lingua desiderata.
+
+Il percorso esatto può variare a seconda della versione di Android e del produttore del dispositivo.
+
+Su IPHONE / IPAD
+
+Impostazioni → Accessibilità → Contenuto letto ad alta voce → Voci → scegliere la lingua e scaricare una voce.
+
+
+INSTALLAZIONE DI VOXHELP SU SMARTPHONE / TABLET
+
+Acceda all'applicazione qui:
+
+https://wrelax1.github.io/ma-voix-multilingue/
+
+Su IPHONE / IPAD
+
+1. Apra l'indirizzo qui sopra con Safari.
+2. Tocchi il pulsante Condividi.
+3. Scelga “Aggiungi alla schermata Home”.
+4. Verifichi che il nome sia “VoxHelp”, quindi tocchi “Aggiungi”.
+5. VoxHelp apparirà come una normale applicazione con la sua icona VoxHelp.
+
+Su ANDROID
+
+1. Apra l'indirizzo qui sopra con un browser.
+2. Tocchi il menu con i tre puntini ⋮.
+3. Scelga “Installa app” oppure “Aggiungi alla schermata Home”.
+4. Confermi “VoxHelp”.
+5. VoxHelp apparirà come una normale applicazione con la sua icona VoxHelp.
+
+Ridiamo una voce a chi ne è stato privato.`
+    }
+
+};
+
+
+function shareAppByEmail() {
+
+    const emailInput =
+        document.getElementById(
+            "shareEmail"
+        );
+
+    const messageElement =
+        document.getElementById(
+            "shareMessage"
+        );
+
+    const preview =
+        document.getElementById(
+            "sharePreview"
+        );
+
+
+    if (
+        !emailInput ||
+        !messageElement ||
+        !preview
+    ) {
+        return;
+    }
+
+
+    const translation =
+        SHARE_EMAIL_TRANSLATIONS[
+            patientLanguage
+        ] ||
+        SHARE_EMAIL_TRANSLATIONS.fr;
+
+
+    const email =
+        emailInput.value.trim();
+
+
+    messageElement.textContent = "";
+
+
+    if (
+        email === "" ||
+        !emailInput.checkValidity()
+    ) {
+
+        preview.classList.add(
+            "hidden"
+        );
+
+        messageElement.textContent =
+            translation.invalidEmail;
+
+        emailInput.focus();
+
+        return;
+    }
+
+
+    shareEmailAddress =
+        email;
+
+    shareEmailSubject =
+        translation.subject;
+
+    shareEmailBody =
+        translation.body;
 
 
     document.getElementById(
@@ -7148,11 +7958,13 @@ Redonnons une voix à ceux qui en sont privés.`;
         shareEmailBody;
 
 
-    preview.classList.remove("hidden");
+    preview.classList.remove(
+        "hidden"
+    );
 
 
     messageElement.textContent =
-        "Vérifiez le message ci-dessous avant de l'envoyer.";
+        translation.ready;
 
 
     preview.scrollIntoView({
@@ -7174,7 +7986,16 @@ async function copyAndOpenMail() {
 
 
     const messageElement =
-        document.getElementById("shareMessage");
+        document.getElementById(
+            "shareMessage"
+        );
+
+
+    const translation =
+        SHARE_EMAIL_TRANSLATIONS[
+            patientLanguage
+        ] ||
+        SHARE_EMAIL_TRANSLATIONS.fr;
 
 
     try {
@@ -7185,7 +8006,7 @@ async function copyAndOpenMail() {
 
         if (messageElement) {
             messageElement.textContent =
-                "Message copié. Ouverture de votre messagerie…";
+                translation.copied;
         }
 
     }
@@ -7193,19 +8014,23 @@ async function copyAndOpenMail() {
 
         if (messageElement) {
             messageElement.textContent =
-                "Ouverture de votre messagerie… Le message reste affiché ci-dessous.";
+                translation.opening;
         }
 
     }
 
 
-	const mailtoUrl =
-		"mailto:" +
-		shareEmailAddress +
-		"?subject=" +
-		encodeURIComponent(shareEmailSubject) +
-		"&body=" +
-		encodeURIComponent(shareEmailBody);
+    const mailtoUrl =
+        "mailto:" +
+        shareEmailAddress +
+        "?subject=" +
+        encodeURIComponent(
+            shareEmailSubject
+        ) +
+        "&body=" +
+        encodeURIComponent(
+            shareEmailBody
+        );
 
 
     window.location.href =
@@ -7513,6 +8338,10 @@ document.addEventListener(
 		checkCaregiverVoiceAvailability();
 
 		updateLanguageButtons();
+		
+		updateVoiceScreenLanguage();
+		
+		updateAboutScreenLanguage();
 		
 		updateQuickBarLanguage();
 		

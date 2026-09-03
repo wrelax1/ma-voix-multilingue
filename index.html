@@ -17,6 +17,11 @@
 	<meta name="theme-color" content="#202124">
 
 	<meta name="apple-mobile-web-app-capable" content="yes">
+	
+	<meta
+		name="apple-mobile-web-app-title"
+		content="VoxHelp"
+	>
 
 	<meta
 		name="apple-mobile-web-app-status-bar-style"
@@ -1660,120 +1665,134 @@
 >
 
     <button
+        id="voiceBackButton"
         class="back-button"
         onclick="showScreen('homeScreen')"
     >
         ← RETOUR
     </button>
 
-    <h1>Langues / Voix</h1>
+    <h1 id="voiceTitle">
+        Langues / Voix
+    </h1>
 
-<div class="language-setting">
+    <div class="language-setting">
 
-    <h2>Langue du patient</h2>
+        <h2 id="voicePatientTitle">
+            Langue du patient
+        </h2>
 
-    <p class="language-help">
-        pour les boutons des écrans.
-    </p>
-
-    <div class="language-choice">
-
-        <button
-            data-patient-language="fr"
-            onclick="choosePatientLanguage('fr')"
+        <p
+            id="voicePatientHelp"
+            class="language-help"
         >
-            🇫🇷<br>
-            FRANÇAIS
-        </button>
+            pour les boutons des écrans.
+        </p>
 
-        <button
-            data-patient-language="en"
-            onclick="choosePatientLanguage('en')"
-        >
-            🇬🇧<br>
-            ENGLISH
-        </button>
+        <div class="language-choice">
 
-        <button
-            data-patient-language="de"
-            onclick="choosePatientLanguage('de')"
-        >
-            🇩🇪<br>
-            DEUTSCH
-        </button>
+            <button
+                data-patient-language="fr"
+                onclick="choosePatientLanguage('fr')"
+            >
+                🇫🇷<br>
+                FRANÇAIS
+            </button>
 
-        <button
-            data-patient-language="it"
-            onclick="choosePatientLanguage('it')"
-        >
-            🇮🇹<br>
-            ITALIANO
-        </button>
+            <button
+                data-patient-language="en"
+                onclick="choosePatientLanguage('en')"
+            >
+                🇬🇧<br>
+                ENGLISH
+            </button>
+
+            <button
+                data-patient-language="de"
+                onclick="choosePatientLanguage('de')"
+            >
+                🇩🇪<br>
+                DEUTSCH
+            </button>
+
+            <button
+                data-patient-language="it"
+                onclick="choosePatientLanguage('it')"
+            >
+                🇮🇹<br>
+                ITALIANO
+            </button>
+
+        </div>
 
     </div>
 
-</div>
 
+    <div class="language-setting">
 
-<div class="language-setting">
+        <h2 id="voiceCaregiverTitle">
+            Langue du soignant
+        </h2>
 
-    <h2>Langue du soignant</h2>
+        <p
+            id="voiceCaregiverHelp"
+            class="language-help"
+        >
+            pour la prononciation des phrases.
+        </p>
 
-    <p class="language-help">
-        pour la prononciation des phrases.
-    </p>
+        <div class="language-choice">
 
-    <div class="language-choice">
+            <button
+                data-caregiver-language="fr"
+                onclick="chooseCaregiverLanguage('fr')"
+            >
+                🇫🇷<br>
+                FRANÇAIS
+            </button>
+
+            <button
+                data-caregiver-language="en"
+                onclick="chooseCaregiverLanguage('en')"
+            >
+                🇬🇧<br>
+                ENGLISH
+            </button>
+
+            <button
+                data-caregiver-language="de"
+                onclick="chooseCaregiverLanguage('de')"
+            >
+                🇩🇪<br>
+                DEUTSCH
+            </button>
+
+            <button
+                data-caregiver-language="it"
+                onclick="chooseCaregiverLanguage('it')"
+            >
+                🇮🇹<br>
+                ITALIANO
+            </button>
+
+        </div>
+
+        <p
+            id="caregiverVoiceStatus"
+            class="language-voice-status"
+            aria-live="polite"
+        ></p>
 
         <button
-            data-caregiver-language="fr"
-            onclick="chooseCaregiverLanguage('fr')"
+            id="voiceTestButton"
+            type="button"
+            class="voice-test-button"
+            onclick="testCaregiverVoice()"
         >
-            🇫🇷<br>
-            FRANÇAIS
-        </button>
-
-        <button
-            data-caregiver-language="en"
-            onclick="chooseCaregiverLanguage('en')"
-        >
-            🇬🇧<br>
-            ENGLISH
-        </button>
-
-        <button
-            data-caregiver-language="de"
-            onclick="chooseCaregiverLanguage('de')"
-        >
-            🇩🇪<br>
-            DEUTSCH
-        </button>
-
-        <button
-            data-caregiver-language="it"
-            onclick="chooseCaregiverLanguage('it')"
-        >
-            🇮🇹<br>
-            ITALIANO
+            🔊 TESTER LA VOIX
         </button>
 
     </div>
-
-	<p
-		id="caregiverVoiceStatus"
-		class="language-voice-status"
-		aria-live="polite"
-	></p>
-	
-	<button
-		type="button"
-		class="voice-test-button"
-		onclick="testCaregiverVoice()"
-	>
-		🔊 TESTER LA VOIX
-	</button>
-
-</div>
 
 </section>
 
@@ -1787,17 +1806,20 @@
 >
 
     <button
+        id="aboutBackButton"
         class="back-button"
         onclick="showScreen('homeScreen')"
     >
         ← RETOUR
     </button>
 
-    <h1>À propos</h1>
+    <h1 id="aboutTitle">
+        À propos
+    </h1>
 
     <div class="about-content">
 
-        <p>
+        <p id="aboutIntroText">
             Cette application a pour but d'aider des patients hospitalisés
             avec trachéotomie ou aphones à exprimer leurs besoins et leurs émotions
             auprès du personnel soignant, de leur famille et de leurs proches aidants,
@@ -1805,11 +1827,14 @@
             ou un smartphone.
         </p>
 
-        <p class="about-free">
+        <p
+            id="aboutFreeText"
+            class="about-free"
+        >
             Cette application est et restera gratuite.
         </p>
 
-        <p>
+        <p id="aboutContactText">
             Pour toute demande d'amélioration, contacter
             Winfried Windegger par email :
         </p>
@@ -1820,104 +1845,125 @@
         >
             ✉️ wwinfried@gmail.com
         </a>
-		
-		<div class="share-app">
 
-			<h2>Partager VoxHelp</h2>
 
-			<p>
-				Vous souhaitez faire connaître cette application à un collègue
-				soignant ou à un proche aidant ?
-			</p>
+        <div class="share-app">
 
-			<p>
-				Activez une connexion Internet, saisissez simplement son adresse
-				email puis cliquez sur <strong>PARTAGER</strong>.
-				Un message contenant le lien vers l'application et les instructions
-				pour l'installer hors connexion sera préparé.
-			</p>
+            <h2 id="shareTitle">
+                Partager VoxHelp
+            </h2>
 
-			<label
-				class="share-email-label"
-				for="shareEmail"
-			>
-				Email du destinataire
-			</label>
+            <p id="shareIntroText">
+                Vous souhaitez faire connaître cette application à un collègue
+                soignant ou à un proche aidant ?
+            </p>
 
-			<input
-				id="shareEmail"
-				class="share-email-input"
-				type="email"
-				inputmode="email"
-				autocomplete="email"
-				placeholder="adresse@email.com"
-			>
+            <p id="shareInstructionsText">
+                Activez une connexion Internet, saisissez simplement son adresse
+                email puis cliquez sur <strong>PARTAGER</strong>.
+                Un message contenant le lien vers l'application et les instructions
+                pour l'installer hors connexion sera préparé.
+            </p>
 
-			<button
-				type="button"
-				class="share-button"
-				onclick="shareAppByEmail()"
-			>
-				✉️ PARTAGER
-			</button>
+            <label
+                id="shareEmailLabel"
+                class="share-email-label"
+                for="shareEmail"
+            >
+                Email du destinataire
+            </label>
 
-			<p
-				id="shareMessage"
-				class="share-message"
-				aria-live="polite"
-			></p>
+            <input
+                id="shareEmail"
+                class="share-email-input"
+                type="email"
+                inputmode="email"
+                autocomplete="email"
+                placeholder="adresse@email.com"
+            >
 
-			<div
-				id="sharePreview"
-				class="share-preview hidden"
-			>
+            <button
+                id="shareButton"
+                type="button"
+                class="share-button"
+                onclick="shareAppByEmail()"
+            >
+                ✉️ PARTAGER
+            </button>
 
-				<h2>Message prêt à envoyer</h2>
+            <p
+                id="shareMessage"
+                class="share-message"
+                aria-live="polite"
+            ></p>
 
-				<p class="share-preview-label">
-					DESTINATAIRE
-				</p>
+            <div
+                id="sharePreview"
+                class="share-preview hidden"
+            >
 
-				<div
-					id="sharePreviewEmail"
-					class="share-preview-field"
-				></div>
+                <h2 id="sharePreviewTitle">
+                    Message prêt à envoyer
+                </h2>
 
-				<p class="share-preview-label">
-					OBJET
-				</p>
+                <p
+                    id="sharePreviewRecipientLabel"
+                    class="share-preview-label"
+                >
+                    DESTINATAIRE
+                </p>
 
-				<div
-					id="sharePreviewSubject"
-					class="share-preview-field"
-				></div>
+                <div
+                    id="sharePreviewEmail"
+                    class="share-preview-field"
+                ></div>
 
-				<p class="share-preview-label">
-					MESSAGE
-				</p>
+                <p
+                    id="sharePreviewSubjectLabel"
+                    class="share-preview-label"
+                >
+                    OBJET
+                </p>
 
-				<div
-					id="sharePreviewBody"
-					class="share-preview-body"
-				></div>
+                <div
+                    id="sharePreviewSubject"
+                    class="share-preview-field"
+                ></div>
 
-				<button
-					type="button"
-					class="share-open-button"
-					onclick="copyAndOpenMail()"
-				>
-					📋 COPIER ET OUVRIR<br>
-					MA MESSAGERIE
-				</button>
+                <p
+                    id="sharePreviewMessageLabel"
+                    class="share-preview-label"
+                >
+                    MESSAGE
+                </p>
 
-				<p class="share-copy-help">
-					Si votre messagerie n'insère pas automatiquement le texte,
-					celui-ci aura déjà été copié : il suffira de le coller.
-				</p>
+                <div
+                    id="sharePreviewBody"
+                    class="share-preview-body"
+                ></div>
 
-			</div>
+                <button
+                    type="button"
+                    class="share-open-button"
+                    onclick="copyAndOpenMail()"
+                >
+                    <span id="shareOpenButtonText">
+                        📋 COPIER ET OUVRIR<br>
+                        MA MESSAGERIE
+                    </span>
+                </button>
 
-		</div>		
+                <p
+                    id="shareCopyHelp"
+                    class="share-copy-help"
+                >
+                    Si votre messagerie n'insère pas automatiquement le texte,
+                    celui-ci aura déjà été copié : il suffira de le coller.
+                </p>
+
+            </div>
+
+        </div>
 
     </div>
 
