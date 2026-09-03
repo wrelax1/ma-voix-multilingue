@@ -996,3 +996,127 @@ button:focus-visible {
 		font-size: 21px;
 	}
 }
+
+/* =========================================
+   POPUP — VOIX DE SYNTHÈSE MANQUANTE
+   ========================================= */
+
+.voice-warning-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    z-index: 9999;
+}
+
+.voice-warning-overlay[hidden] {
+    display: none;
+}
+
+.voice-warning-modal {
+    width: min(92vw, 620px);
+    max-height: 88vh;
+    overflow-y: auto;
+
+    background: white;
+    border-radius: 18px;
+
+    padding: 24px;
+
+    box-shadow:
+        0 10px 35px
+        rgba(0, 0, 0, 0.30);
+
+    text-align: left;
+}
+
+.voice-warning-modal h2 {
+    margin-top: 0;
+    margin-bottom: 16px;
+
+    font-size: 1.7rem;
+    text-align: center;
+}
+
+.voice-warning-modal p {
+    font-size: 1.05rem;
+    line-height: 1.45;
+}
+
+.voice-warning-status {
+    margin: 18px 0;
+    padding: 14px;
+
+    border-radius: 12px;
+    background: #f3f3f3;
+
+    font-size: 1.05rem;
+    line-height: 1.7;
+}
+
+.voice-warning-actions {
+    display: grid;
+    gap: 12px;
+
+    margin-top: 20px;
+}
+
+.voice-warning-actions button,
+#missingVoiceCloseButton,
+.available-voice-languages button {
+    width: 100%;
+
+    min-height: 58px;
+
+    padding: 12px 16px;
+
+    border: none;
+    border-radius: 12px;
+
+    font-size: 1rem;
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+#missingVoiceHelpButton {
+    background: #e8e8e8;
+}
+
+#missingVoiceChooseButton {
+    background: #dbeafe;
+}
+
+#missingVoiceCloseButton {
+    margin-top: 18px;
+    background: #f1f1f1;
+}
+
+.available-voice-languages {
+    display: grid;
+    gap: 10px;
+
+    margin-top: 18px;
+}
+
+.available-voice-languages[hidden] {
+    display: none;
+}
+
+.voice-installation-help {
+    margin-top: 18px;
+    padding: 14px;
+
+    border-radius: 12px;
+    background: #f7f7f7;
+
+    font-size: 0.98rem;
+    line-height: 1.45;
+}
+
+.voice-installation-help[hidden] {
+    display: none;
+}

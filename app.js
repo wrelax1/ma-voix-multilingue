@@ -1,3 +1,5 @@
+const APP_VERSION = "2.0";
+
 const VOICE_STORAGE_KEYS = {
     male: "maVoixMaleVoiceName",
     female: "maVoixFemaleVoiceName",
@@ -5544,6 +5546,797 @@ function getVoicesForLanguage(language) {
     );
 }
 
+const SPEECH_LANGUAGE_NAMES = {
+    fr: "Français",
+    en: "English",
+    de: "Deutsch",
+    it: "Italiano"
+};
+
+const MISSING_VOICE_TRANSLATIONS = {
+
+    fr: {
+        title:
+            "Voix de synthèse indisponible",
+
+        message:
+            "Aucune voix de synthèse {language} n'est installée ou accessible sur cet appareil.",
+
+        instructions:
+            "Pour utiliser cette langue, installez la voix de synthèse correspondante dans les paramètres de l'appareil ou demandez à votre service informatique de l'installer.",
+
+        installButton:
+            "COMMENT INSTALLER UNE VOIX",
+
+        chooseButton:
+            "CHOISIR UNE AUTRE LANGUE",
+
+        closeButton:
+            "✕ FERMER",
+
+        availableTitle:
+            "Choisissez une langue de vocalisation disponible :",
+
+        noVoice:
+            "Aucune voix compatible avec Ma Voix n'est actuellement disponible sur cet appareil.",
+
+        helpTitle:
+            "Pour installer une voix :",
+
+        android:
+            "ANDROID",
+
+        androidInstructions:
+            "Paramètres → Synthèse vocale / Texte par synthèse vocale → langues ou données vocales → télécharger la langue souhaitée.",
+
+        ios:
+            "IPHONE / IPAD",
+
+        iosInstructions:
+            "Réglages → Accessibilité → Contenu énoncé → Voix → choisir la langue puis télécharger une voix.",
+
+        hospital:
+            "Si l'appareil est géré par votre hôpital et que cette modification est bloquée, demandez au service informatique d'installer la voix de synthèse pour vous."
+    },
+
+
+    en: {
+        title:
+            "Text-to-speech voice unavailable",
+
+        message:
+            "No {language} text-to-speech voice is installed or accessible on this device.",
+
+        instructions:
+            "To use this language, install the corresponding text-to-speech voice in the device settings or ask your IT department to install it.",
+
+        installButton:
+            "HOW TO INSTALL A VOICE",
+
+        chooseButton:
+            "CHOOSE ANOTHER LANGUAGE",
+
+        closeButton:
+            "✕ CLOSE",
+
+        availableTitle:
+            "Choose an available speech language:",
+
+        noVoice:
+            "No voice compatible with Ma Voix is currently available on this device.",
+
+        helpTitle:
+            "To install a voice:",
+
+        android:
+            "ANDROID",
+
+        androidInstructions:
+            "Settings → Text-to-speech / Text-to-speech output → languages or voice data → download the required language.",
+
+        ios:
+            "IPHONE / IPAD",
+
+        iosInstructions:
+            "Settings → Accessibility → Spoken Content → Voices → choose the language, then download a voice.",
+
+        hospital:
+            "If this device is managed by your hospital and this setting is blocked, ask your IT department to install the text-to-speech voice for you."
+    },
+
+
+    de: {
+        title:
+            "Sprachausgabe nicht verfügbar",
+
+        message:
+            "Auf diesem Gerät ist keine {language} Sprachausgabe installiert oder verfügbar.",
+
+        instructions:
+            "Um diese Sprache zu verwenden, installieren Sie die entsprechende Sprachausgabe in den Geräteeinstellungen oder bitten Sie Ihre IT-Abteilung, sie zu installieren.",
+
+        installButton:
+            "SPRACHE INSTALLIEREN",
+
+        chooseButton:
+            "ANDERE SPRACHE WÄHLEN",
+
+        closeButton:
+            "✕ SCHLIESSEN",
+
+        availableTitle:
+            "Wählen Sie eine verfügbare Sprache für die Sprachausgabe:",
+
+        noVoice:
+            "Auf diesem Gerät ist derzeit keine mit Ma Voix kompatible Sprachausgabe verfügbar.",
+
+        helpTitle:
+            "So installieren Sie eine Stimme:",
+
+        android:
+            "ANDROID",
+
+        androidInstructions:
+            "Einstellungen → Text-in-Sprache / Sprachausgabe → Sprachen oder Sprachdaten → gewünschte Sprache herunterladen.",
+
+        ios:
+            "IPHONE / IPAD",
+
+        iosInstructions:
+            "Einstellungen → Bedienungshilfen → Gesprochene Inhalte → Stimmen → Sprache auswählen und eine Stimme herunterladen.",
+
+        hospital:
+            "Wenn dieses Gerät von Ihrem Krankenhaus verwaltet wird und diese Änderung gesperrt ist, bitten Sie die IT-Abteilung, die Sprachausgabe für Sie zu installieren."
+    },
+
+
+    it: {
+        title:
+            "Voce di sintesi non disponibile",
+
+        message:
+            "Nessuna voce di sintesi {language} è installata o accessibile su questo dispositivo.",
+
+        instructions:
+            "Per utilizzare questa lingua, installi la voce di sintesi corrispondente nelle impostazioni del dispositivo oppure chieda al servizio informatico di installarla.",
+
+        installButton:
+            "COME INSTALLARE UNA VOCE",
+
+        chooseButton:
+            "SCEGLIERE UN'ALTRA LINGUA",
+
+        closeButton:
+            "✕ CHIUDI",
+
+        availableTitle:
+            "Scelga una lingua di vocalizzazione disponibile:",
+
+        noVoice:
+            "Nessuna voce compatibile con Ma Voix è attualmente disponibile su questo dispositivo.",
+
+        helpTitle:
+            "Per installare una voce:",
+
+        android:
+            "ANDROID",
+
+        androidInstructions:
+            "Impostazioni → Sintesi vocale / Output sintesi vocale → lingue o dati vocali → scaricare la lingua desiderata.",
+
+        ios:
+            "IPHONE / IPAD",
+
+        iosInstructions:
+            "Impostazioni → Accessibilità → Contenuto letto ad alta voce → Voci → scegliere la lingua e scaricare una voce.",
+
+        hospital:
+            "Se il dispositivo è gestito dall'ospedale e questa modifica è bloccata, chieda al servizio informatico di installare la voce di sintesi."
+    }
+
+};
+
+function hasVoiceForLanguage(language) {
+
+    return (
+        getVoicesForLanguage(language)
+            .length > 0
+    );
+}
+
+
+function getAvailableSpeechLanguages() {
+
+    return SUPPORTED_LANGUAGES.filter(
+        function(language) {
+
+            return hasVoiceForLanguage(
+                language
+            );
+        }
+    );
+}
+
+let missingVoiceLanguage = null;
+
+
+function openMissingVoiceModal(language) {
+
+    const modal =
+        document.getElementById(
+            "missingVoiceModal"
+        );
+
+    if (!modal) {
+        return;
+    }
+
+
+    missingVoiceLanguage =
+        language;
+
+
+    const languageName =
+        SPEECH_LANGUAGE_NAMES[language] ||
+        language;
+
+
+    const title =
+        document.getElementById(
+            "missingVoiceTitle"
+        );
+
+    if (title) {
+        title.textContent =
+            "Voix de synthèse indisponible : " +
+            languageName;
+    }
+
+
+    const message =
+        document.getElementById(
+            "missingVoiceMessage"
+        );
+
+    if (message) {
+        message.textContent =
+            "Aucune voix de synthèse " +
+            languageName +
+            " n'est installée ou accessible sur cet appareil.";
+    }
+
+
+    updateMissingVoiceStatus();
+
+
+    const availableContainer =
+        document.getElementById(
+            "availableVoiceLanguages"
+        );
+
+    if (availableContainer) {
+        availableContainer.hidden = true;
+        availableContainer.innerHTML = "";
+    }
+
+
+    const help =
+        document.getElementById(
+            "voiceInstallationHelp"
+        );
+
+    if (help) {
+        help.hidden = true;
+        help.innerHTML = "";
+    }
+
+
+    modal.hidden = false;
+
+    document.body.style.overflow =
+        "hidden";
+}
+
+function openMissingVoiceModal(language) {
+
+    const modal =
+        document.getElementById(
+            "missingVoiceModal"
+        );
+
+    if (!modal) {
+        return;
+    }
+
+
+    missingVoiceLanguage =
+        language;
+
+
+    /*
+       Le popup est affiché dans la langue
+       de vocalisation demandée par le soignant.
+       L'anglais sert uniquement de secours.
+    */
+
+    const translation =
+        MISSING_VOICE_TRANSLATIONS[
+            language
+        ] ||
+        MISSING_VOICE_TRANSLATIONS.en;
+
+
+    const languageName =
+        SPEECH_LANGUAGE_NAMES[
+            language
+        ] ||
+        language;
+
+
+    const title =
+        document.getElementById(
+            "missingVoiceTitle"
+        );
+
+    if (title) {
+        title.textContent =
+            translation.title +
+            " : " +
+            languageName;
+    }
+
+
+    const message =
+        document.getElementById(
+            "missingVoiceMessage"
+        );
+
+    if (message) {
+        message.textContent =
+            translation.message.replace(
+                "{language}",
+                languageName
+            );
+    }
+
+
+    const instructions =
+        document.getElementById(
+            "missingVoiceInstructions"
+        );
+
+    if (instructions) {
+        instructions.textContent =
+            translation.instructions;
+    }
+
+
+    const helpButton =
+        document.getElementById(
+            "missingVoiceHelpButton"
+        );
+
+    if (helpButton) {
+        helpButton.textContent =
+            translation.installButton;
+    }
+
+
+    const chooseButton =
+        document.getElementById(
+            "missingVoiceChooseButton"
+        );
+
+    if (chooseButton) {
+        chooseButton.textContent =
+            translation.chooseButton;
+    }
+
+
+    const closeButton =
+        document.getElementById(
+            "missingVoiceCloseButton"
+        );
+
+    if (closeButton) {
+        closeButton.textContent =
+            translation.closeButton;
+    }
+
+
+    updateMissingVoiceStatus();
+
+
+    const availableContainer =
+        document.getElementById(
+            "availableVoiceLanguages"
+        );
+
+    if (availableContainer) {
+        availableContainer.hidden = true;
+        availableContainer.innerHTML = "";
+    }
+
+
+    const help =
+        document.getElementById(
+            "voiceInstallationHelp"
+        );
+
+    if (help) {
+        help.hidden = true;
+        help.innerHTML = "";
+    }
+
+
+    modal.hidden = false;
+
+    document.body.style.overflow =
+        "hidden";
+}
+
+function closeMissingVoiceModal() {
+
+    const modal =
+        document.getElementById(
+            "missingVoiceModal"
+        );
+
+    if (!modal) {
+        return;
+    }
+
+
+    modal.hidden = true;
+
+    document.body.style.overflow =
+        "";
+
+
+    /*
+       Si la langue actuelle du soignant
+       n'est pas vocalisable, on revient
+       automatiquement à une langue
+       réellement disponible.
+    */
+
+    if (
+        !hasVoiceForLanguage(
+            caregiverLanguage
+        )
+    ) {
+
+        const availableLanguages =
+            getAvailableSpeechLanguages();
+
+
+        let fallbackLanguage = null;
+
+
+        /*
+           Priorité :
+           utiliser la langue du patient
+           si une voix correspondante existe.
+        */
+
+        if (
+            availableLanguages.includes(
+                patientLanguage
+            )
+        ) {
+
+            fallbackLanguage =
+                patientLanguage;
+        }
+
+
+        /*
+           Sinon :
+           première langue réellement disponible.
+        */
+
+        else if (
+            availableLanguages.length > 0
+        ) {
+
+            fallbackLanguage =
+                availableLanguages[0];
+        }
+
+
+        if (fallbackLanguage) {
+
+            caregiverLanguage =
+                fallbackLanguage;
+
+
+            writeLocalSetting(
+                LANGUAGE_STORAGE_KEYS.caregiver,
+                caregiverLanguage
+            );
+
+
+            updateLanguageButtons();
+
+            updateCaregiverVoiceStatus();
+
+            updateTopRightButton(
+                "voiceScreen"
+            );
+        }
+    }
+
+
+    missingVoiceLanguage = null;
+}
+
+
+function updateMissingVoiceStatus() {
+
+    const container =
+        document.getElementById(
+            "missingVoiceStatus"
+        );
+
+    if (!container) {
+        return;
+    }
+
+
+    container.innerHTML = "";
+
+
+    SUPPORTED_LANGUAGES.forEach(
+        function(language) {
+
+            const line =
+                document.createElement("div");
+
+
+            const available =
+                hasVoiceForLanguage(
+                    language
+                );
+
+
+            line.textContent =
+                (
+                    available
+                        ? "✓ "
+                        : "✗ "
+                ) +
+                SPEECH_LANGUAGE_NAMES[
+                    language
+                ];
+
+
+            container.appendChild(
+                line
+            );
+        }
+    );
+}
+
+
+function showAvailableVoiceLanguages() {
+
+    const container =
+        document.getElementById(
+            "availableVoiceLanguages"
+        );
+
+    if (!container) {
+        return;
+    }
+
+
+    const translation =
+        MISSING_VOICE_TRANSLATIONS[
+            missingVoiceLanguage
+        ] ||
+        MISSING_VOICE_TRANSLATIONS.en;
+
+
+    const help =
+        document.getElementById(
+            "voiceInstallationHelp"
+        );
+
+    if (help) {
+        help.hidden = true;
+    }
+
+
+    container.innerHTML = "";
+
+
+    const languages =
+        getAvailableSpeechLanguages();
+
+
+    if (languages.length === 0) {
+
+        const message =
+            document.createElement("p");
+
+        message.textContent =
+            translation.noVoice;
+
+        container.appendChild(
+            message
+        );
+
+        container.hidden = false;
+
+        return;
+    }
+
+
+    const title =
+        document.createElement("p");
+
+    title.textContent =
+        translation.availableTitle;
+
+    container.appendChild(
+        title
+    );
+
+
+    languages.forEach(
+        function(language) {
+
+            const button =
+                document.createElement(
+                    "button"
+                );
+
+
+            button.type =
+                "button";
+
+
+            button.textContent =
+                SPEECH_LANGUAGE_NAMES[
+                    language
+                ];
+
+
+            button.onclick =
+                function() {
+
+                    selectAvailableVoiceLanguage(
+                        language
+                    );
+                };
+
+
+            container.appendChild(
+                button
+            );
+        }
+    );
+
+
+    container.hidden = false;
+}
+
+
+function selectAvailableVoiceLanguage(language) {
+
+    if (
+        !SUPPORTED_LANGUAGES.includes(
+            language
+        )
+    ) {
+        return;
+    }
+
+
+    if (
+        !hasVoiceForLanguage(
+            language
+        )
+    ) {
+        return;
+    }
+
+
+    closeMissingVoiceModal();
+
+
+    chooseCaregiverLanguage(
+        language
+    );
+}
+
+
+function showVoiceInstallationHelp() {
+
+    const help =
+        document.getElementById(
+            "voiceInstallationHelp"
+        );
+
+    if (!help) {
+        return;
+    }
+
+
+    const translation =
+        MISSING_VOICE_TRANSLATIONS[
+            missingVoiceLanguage
+        ] ||
+        MISSING_VOICE_TRANSLATIONS.en;
+
+
+    const availableContainer =
+        document.getElementById(
+            "availableVoiceLanguages"
+        );
+
+    if (availableContainer) {
+        availableContainer.hidden = true;
+    }
+
+
+    help.innerHTML =
+        "<strong>" +
+        translation.helpTitle +
+        "</strong>" +
+
+        "<br><br>" +
+
+        "<strong>" +
+        translation.android +
+        "</strong><br>" +
+
+        translation.androidInstructions +
+
+        "<br><br>" +
+
+        "<strong>" +
+        translation.ios +
+        "</strong><br>" +
+
+        translation.iosInstructions +
+
+        "<br><br>" +
+
+        translation.hospital;
+
+
+    help.hidden = false;
+}
+
+function checkCaregiverVoiceAvailability() {
+
+    /*
+       Certaines plateformes chargent
+       les voix avec un léger retard.
+       Tant que la liste est vide,
+       on ne conclut pas qu'une voix manque.
+    */
+
+    if (availableVoices.length === 0) {
+        return;
+    }
+
+
+    updateCaregiverVoiceStatus();
+
+
+    if (
+        !hasVoiceForLanguage(
+            caregiverLanguage
+        )
+    ) {
+
+        openMissingVoiceModal(
+            caregiverLanguage
+        );
+    }
+}
 
 function getAutomaticVoice(language) {
 
@@ -5782,20 +6575,34 @@ let selectedVoice = null;
 	}
 
 
-	if (selectedVoice) {
+	/*
+	   SÉCURITÉ :
+	   si aucune vraie voix correspondant
+	   à la langue demandée n'existe,
+	   Ma Voix ne laisse jamais le navigateur
+	   utiliser une voix de secours.
+	*/
 
-		message.voice =
-			selectedVoice;
+	if (!selectedVoice) {
 
-		message.lang =
-			selectedVoice.lang;
+		openMissingVoiceModal(
+			language
+		);
 
+		return;
 	}
 
 
-    window.speechSynthesis.speak(
-        message
-    );
+	message.voice =
+		selectedVoice;
+
+	message.lang =
+		selectedVoice.lang;
+
+
+	window.speechSynthesis.speak(
+		message
+	);
 }
 
 function handleTopRightButton() {
@@ -6047,23 +6854,60 @@ function choosePatientLanguage(language) {
 
 function chooseCaregiverLanguage(language) {
 
-    if (!SUPPORTED_LANGUAGES.includes(language)) {
+    if (
+        !SUPPORTED_LANGUAGES.includes(
+            language
+        )
+    ) {
         return;
     }
 
+
+    /*
+       Recharge la liste réelle des voix
+       disponibles sur l'appareil.
+    */
+
+    loadFrenchVoices();
+
+
+    /*
+       Si aucune voix correspondant à la
+       langue choisie n'existe, on refuse
+       la sélection et on affiche l'aide.
+    */
+
+    if (
+        !hasVoiceForLanguage(
+            language
+        )
+    ) {
+
+        openMissingVoiceModal(
+            language
+        );
+
+        return;
+    }
+
+
     caregiverLanguage =
         language;
+
 
     writeLocalSetting(
         LANGUAGE_STORAGE_KEYS.caregiver,
         caregiverLanguage
     );
 
-    updateLanguageButtons();
-	
-	updateCaregiverVoiceStatus();
 
-    updateTopRightButton("voiceScreen");
+    updateLanguageButtons();
+
+    updateCaregiverVoiceStatus();
+
+    updateTopRightButton(
+        "voiceScreen"
+    );
 }
 
 
@@ -6471,7 +7315,7 @@ if (
 
 			loadFrenchVoices();
 
-			updateCaregiverVoiceStatus();
+			checkCaregiverVoiceAvailability();
 		}
 	);
 
@@ -6723,11 +7567,12 @@ function shareAppByEmail() {
 
 Le principe de l'application est très simple :
 
-Le patient dispose de gros boutons correspondant à ce qu'il peut vouloir dire — par exemple Oui, Non, Stop, HEP!, J'ai mal, Respiration, Position, Soins, Toilettes, Famille / Amis, Émotions, Questions, etc.
+Le patient dispose de gros boutons correspondant à ce qu'il peut vouloir dire — par exemple Oui, Non, Stop, J'ai mal, Difficulté à respirer, Changez-moi de position, Besoin de soins, Toilettes, Famille / Amis, Émotions, Questions, etc.
 
-Il lui suffit d'appuyer sur un bouton et le téléphone ou la tablette prononce la phrase à sa place.
+Il lui suffit d'appuyer sur un bouton et le téléphone ou la tablette prononce la phrase à sa place, dans l'une des quatre principales langues utilisées dans les hôpitaux suisses : français, allemand, italien et anglais.
 
-Quelques informations importantes :
+
+SIMPLICITÉ, LÉGÈRETÉ ET CONFIDENTIALITÉ
 
 • L'application ne nécessite aucun compte ; 0 impact sur la confidentialité des données.
 
@@ -6735,27 +7580,53 @@ Quelques informations importantes :
 
 • Une connexion Internet est nécessaire uniquement pour la première installation et pour les éventuelles mises à jour ultérieures.
 
+• L'application est peu gourmande en stockage : moins de 5 Mo.
+
 • Après son installation, l'application peut fonctionner sans connexion Internet.
 
-Vous pouvez accéder à l'application ici :
 
-https://wrelax1.github.io/ma-voix/
+VOIX ET LANGUES
 
-INSTALLATION SUR IPHONE
+Ma Voix utilise les voix de synthèse disponibles sur le téléphone ou la tablette. Pour qu'une langue soit prononcée correctement, la voix de synthèse correspondante doit être installée sur l'appareil.
+
+Sur une tablette personnelle, ces voix peuvent généralement être ajoutées dans les paramètres de langue ou de synthèse vocale de l'appareil.
+
+Mais sur une tablette professionnelle gérée par un hôpital, certaines installations peuvent être bloquées. Dans ce cas, s'il manque une voix de synthèse dans votre langue sur votre tablette, demandez au service informatique de l'établissement de l'installer pour vous.
+
+Pour installer une voix de synthèse dans votre langue :
+
+Sur ANDROID
+
+Paramètres → Synthèse vocale / Texte par synthèse vocale → langues ou données vocales → télécharger la langue souhaitée.
+
+Le chemin exact peut varier selon la marque et la version d'Android.
+
+Sur IPHONE / IPAD
+
+Réglages → Accessibilité → Contenu énoncé → Voix → choisir la langue puis télécharger une voix.
+
+
+INSTALLATION DE L'APP SUR VOTRE SMARTPHONE / TABLETTE
+
+Accéder à l'application ici :
+
+https://wrelax1.github.io/ma-voix-multilingue/
+
+Sur IPHONE / IPAD
 
 1. Ouvrir l'adresse ci-dessus avec Safari.
 2. Appuyer sur le bouton Partager.
 3. Choisir « Ajouter à l'écran d'accueil ».
 4. Vérifier que le nom est « Ma Voix », puis appuyer sur « Ajouter ».
-5. Ma Voix apparaîtra comme une application normale.
+5. Ma Voix apparaîtra comme une application normale avec son icône « Ma Voix ».
 
-INSTALLATION SUR ANDROID
+Sur ANDROID
 
 1. Ouvrir l'adresse ci-dessus avec un navigateur.
 2. Appuyer sur les trois points ⋮.
 3. Choisir « Installer l'application » ou « Ajouter à l'écran d'accueil ».
 4. Valider « Ma Voix ».
-5. Ma Voix apparaîtra comme une application normale.
+5. Ma Voix apparaîtra comme une application normale avec son icône « Ma Voix ».
 
 Redonnons une voix à ceux qui en sont privés.`;
 
@@ -7118,8 +7989,9 @@ async function updateAppVersion() {
         }
 
 
-        versionElement.textContent =
-            "(v" + match[1] + ")";
+		versionElement.textContent =
+			"(v" + APP_VERSION +
+			"/c" + match[1] + ")";
 
     }
     catch (error) {
@@ -7138,6 +8010,8 @@ document.addEventListener(
         renderCustomFavorites();
 
         loadFrenchVoices();
+		
+		checkCaregiverVoiceAvailability();
 
         updateVoiceButtons();
 		

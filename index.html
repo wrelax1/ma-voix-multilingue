@@ -1990,5 +1990,83 @@
 
     <script src="app.js"></script>
 
+<!-- ======================================= -->
+<!-- VOIX DE SYNTHÈSE MANQUANTE -->
+<!-- ======================================= -->
+
+<div
+    id="missingVoiceModal"
+    class="voice-warning-overlay"
+    hidden
+>
+
+    <div
+        class="voice-warning-modal"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="missingVoiceTitle"
+    >
+
+        <h2 id="missingVoiceTitle">
+            Voix non disponible
+        </h2>
+
+        <p id="missingVoiceMessage">
+            Aucune voix de synthèse correspondant à cette langue n'est disponible sur cet appareil.
+        </p>
+
+        <div
+            id="missingVoiceStatus"
+            class="voice-warning-status"
+        ></div>
+
+		<p id="missingVoiceInstructions">
+			Pour utiliser cette langue, installez la voix de synthèse correspondante dans les paramètres de l'appareil ou demandez à votre service informatique de l'installer.
+		</p>
+
+        <div class="voice-warning-actions">
+
+            <button
+                id="missingVoiceHelpButton"
+                type="button"
+                onclick="showVoiceInstallationHelp()"
+            >
+                COMMENT INSTALLER UNE VOIX
+            </button>
+
+            <button
+                id="missingVoiceChooseButton"
+                type="button"
+                onclick="showAvailableVoiceLanguages()"
+            >
+                CHOISIR UNE AUTRE LANGUE
+            </button>
+
+        </div>
+
+        <div
+            id="availableVoiceLanguages"
+            class="available-voice-languages"
+            hidden
+        ></div>
+
+        <div
+            id="voiceInstallationHelp"
+            class="voice-installation-help"
+            hidden
+        ></div>
+
+		<button
+			id="missingVoiceCloseButton"
+			type="button"
+			onclick="closeMissingVoiceModal()"
+		>
+			✕ FERMER
+		</button>
+
+    </div>
+
+</div>
+
 </body>
 </html>
