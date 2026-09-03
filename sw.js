@@ -1,4 +1,4 @@
-const CACHE_NAME = "ma-voix-multilingue-v23";
+const CACHE_NAME = "ma-voix-multilingue-v24";
 
 const FILES_TO_CACHE = [
     "./",
