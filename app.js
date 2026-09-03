@@ -5801,6 +5801,9 @@ const ABOUT_SCREEN_TRANSLATIONS = {
 
         emailLabel:
             "Email du destinataire",
+			
+		recipientLanguage:
+			"Langue du destinataire :",
 
         emailPlaceholder:
             "adresse@email.com",
@@ -5861,6 +5864,9 @@ const ABOUT_SCREEN_TRANSLATIONS = {
 
         emailLabel:
             "Recipient's email",
+			
+		recipientLanguage:
+			"Recipient language:",
 
         emailPlaceholder:
             "email@address.com",
@@ -5923,6 +5929,9 @@ const ABOUT_SCREEN_TRANSLATIONS = {
 
         emailLabel:
             "E-Mail des Empfängers",
+			
+		recipientLanguage:
+			"Lingua del destinatario:",
 
         emailPlaceholder:
             "adresse@email.com",
@@ -6955,6 +6964,10 @@ function chooseCaregiverLanguage(language) {
 
 
     updateLanguageButtons();
+	
+	updateVoiceScreenLanguage();
+	
+	updateAboutScreenLanguage();
 
     updateCaregiverVoiceStatus();
 
@@ -7005,7 +7018,7 @@ function updateVoiceScreenLanguage() {
 
     const translation =
         VOICE_SCREEN_TRANSLATIONS[
-            patientLanguage
+            caregiverLanguage
         ] ||
         VOICE_SCREEN_TRANSLATIONS.fr;
 
@@ -7054,7 +7067,7 @@ function updateAboutScreenLanguage() {
 
     const translation =
         ABOUT_SCREEN_TRANSLATIONS[
-            patientLanguage
+            caregiverLanguage
         ] ||
         ABOUT_SCREEN_TRANSLATIONS.fr;
 
@@ -7084,6 +7097,9 @@ function updateAboutScreenLanguage() {
 
         shareEmailLabel:
             translation.emailLabel,
+			
+		shareRecipientLanguageLabel:
+			translation.recipientLanguage,
 
         shareButton:
             translation.shareButton,
@@ -7186,7 +7202,7 @@ function updateCaregiverVoiceStatus() {
 
     const translation =
         VOICE_SCREEN_TRANSLATIONS[
-            patientLanguage
+            caregiverLanguage
         ] ||
         VOICE_SCREEN_TRANSLATIONS.fr;
 
@@ -7227,10 +7243,10 @@ function updateCaregiverVoiceStatus() {
     const languageName =
         (
             languageNames[
-                patientLanguage
+                caregiverLanguage
             ] &&
             languageNames[
-                patientLanguage
+                caregiverLanguage
             ][
                 caregiverLanguage
             ]
@@ -7898,11 +7914,30 @@ function shareAppByEmail() {
     }
 
 
-    const translation =
-        SHARE_EMAIL_TRANSLATIONS[
-            patientLanguage
-        ] ||
-        SHARE_EMAIL_TRANSLATIONS.fr;
+	const uiTranslation =
+		SHARE_EMAIL_TRANSLATIONS[
+			caregiverLanguage
+		] ||
+		SHARE_EMAIL_TRANSLATIONS.fr;
+
+
+	const selectedLanguage =
+		document.querySelector(
+			'input[name="shareRecipientLanguage"]:checked'
+		);
+
+
+	const recipientLanguage =
+		selectedLanguage
+			? selectedLanguage.value
+			: "fr";
+
+
+	const emailTranslation =
+		SHARE_EMAIL_TRANSLATIONS[
+			recipientLanguage
+		] ||
+		SHARE_EMAIL_TRANSLATIONS.fr;
 
 
     const email =
@@ -7922,7 +7957,7 @@ function shareAppByEmail() {
         );
 
         messageElement.textContent =
-            translation.invalidEmail;
+            uiTranslation.invalidEmail;
 
         emailInput.focus();
 
@@ -7934,10 +7969,10 @@ function shareAppByEmail() {
         email;
 
     shareEmailSubject =
-        translation.subject;
+        emailTranslation.subject;
 
     shareEmailBody =
-        translation.body;
+        emailTranslation.body;
 
 
     document.getElementById(
@@ -7964,7 +7999,7 @@ function shareAppByEmail() {
 
 
     messageElement.textContent =
-        translation.ready;
+        uiTranslation.ready;
 
 
     preview.scrollIntoView({
@@ -7993,7 +8028,7 @@ async function copyAndOpenMail() {
 
     const translation =
         SHARE_EMAIL_TRANSLATIONS[
-            patientLanguage
+            caregiverLanguage
         ] ||
         SHARE_EMAIL_TRANSLATIONS.fr;
 
