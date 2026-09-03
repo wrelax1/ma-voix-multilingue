@@ -5501,7 +5501,7 @@ function getLanguagePairLabel() {
 
     return (
         patientLanguage.toUpperCase() +
-        " → " +
+        "→" +
         caregiverLanguage.toUpperCase()
     );
 }
