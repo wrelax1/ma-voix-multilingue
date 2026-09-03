@@ -8,7 +8,7 @@
         content="width=device-width, initial-scale=1.0, maximum-scale=1.0"
     >
 
-    <title>Ma Voix</title>
+    <title>VoxHelp</title>
 
 	<link rel="manifest" href="manifest.json">
 	
@@ -1673,7 +1673,7 @@
     <h2>Langue du patient</h2>
 
     <p class="language-help">
-        Langue utilisée pour les textes affichés à l'écran.
+        pour les boutons des écrans.
     </p>
 
     <div class="language-choice">
@@ -1720,7 +1720,7 @@
     <h2>Langue du soignant</h2>
 
     <p class="language-help">
-        Langue utilisée lorsque Ma Voix prononce les phrases.
+        pour la prononciation des phrases.
     </p>
 
     <div class="language-choice">
@@ -1764,79 +1764,16 @@
 		class="language-voice-status"
 		aria-live="polite"
 	></p>
+	
+	<button
+		type="button"
+		class="voice-test-button"
+		onclick="testCaregiverVoice()"
+	>
+		🔊 TESTER LA VOIX
+	</button>
 
 </div>
-
-    <p class="voice-help">
-        Choisissez une voix française pour chaque bouton.
-    </p>
-
-
-    <!-- VOIX MASCULINE -->
-
-    <div class="voice-setting">
-
-        <h2>👨 Voix masculine</h2>
-
-        <select
-            id="maleVoiceSelect"
-            class="voice-select"
-        >
-        </select>
-
-        <button
-            class="voice-test-button"
-            onclick="testVoice('male')"
-        >
-            🔊 TESTER
-        </button>
-
-    </div>
-
-
-    <!-- VOIX FÉMININE -->
-
-    <div class="voice-setting">
-
-        <h2>👩 Voix féminine</h2>
-
-        <select
-            id="femaleVoiceSelect"
-            class="voice-select"
-        >
-        </select>
-
-        <button
-            class="voice-test-button"
-            onclick="testVoice('female')"
-        >
-            🔊 TESTER
-        </button>
-
-    </div>
-
-
-    <h2>Voix utilisée</h2>
-
-    <div class="voice-choice">
-
-        <button
-            id="maleVoiceButton"
-            onclick="chooseVoice('male')"
-        >
-            👨<br>
-            MASCULINE
-        </button>
-
-        <button
-            id="femaleVoiceButton"
-            onclick="chooseVoice('female')"
-        >
-            👩<br>
-            FÉMININE
-        </button>
-
-    </div>
 
 </section>
 
@@ -1886,7 +1823,7 @@
 		
 		<div class="share-app">
 
-			<h2>Partager Ma Voix</h2>
+			<h2>Partager VoxHelp</h2>
 
 			<p>
 				Vous souhaitez faire connaître cette application à un collègue

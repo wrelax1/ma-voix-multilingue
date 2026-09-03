@@ -1,11 +1,5 @@
 const APP_VERSION = "2.0";
 
-const VOICE_STORAGE_KEYS = {
-    male: "maVoixMaleVoiceName",
-    female: "maVoixFemaleVoiceName",
-    active: "maVoixActiveVoiceType"
-};
-
 const LANGUAGE_STORAGE_KEYS = {
     patient: "maVoixPatientLanguage",
     caregiver: "maVoixCaregiverLanguage"
@@ -5482,26 +5476,6 @@ function writeLocalSetting(key, value) {
 
 
 let availableVoices = [];
-let availableFrenchVoices = [];
-
-let maleVoiceName = readLocalSetting(
-    VOICE_STORAGE_KEYS.male,
-    ""
-);
-
-let femaleVoiceName = readLocalSetting(
-    VOICE_STORAGE_KEYS.female,
-    ""
-);
-
-let activeVoiceType = readLocalSetting(
-    VOICE_STORAGE_KEYS.active,
-    "male"
-);
-
-if (activeVoiceType !== "male" && activeVoiceType !== "female") {
-    activeVoiceType = "male";
-}
 
 let patientLanguage = readLocalSetting(
     LANGUAGE_STORAGE_KEYS.patient,
@@ -5578,7 +5552,7 @@ const MISSING_VOICE_TRANSLATIONS = {
             "Choisissez une langue de vocalisation disponible :",
 
         noVoice:
-            "Aucune voix compatible avec Ma Voix n'est actuellement disponible sur cet appareil.",
+            "Aucune voix compatible avec VoxHelp n'est actuellement disponible sur cet appareil.",
 
         helpTitle:
             "Pour installer une voix :",
@@ -5623,7 +5597,7 @@ const MISSING_VOICE_TRANSLATIONS = {
             "Choose an available speech language:",
 
         noVoice:
-            "No voice compatible with Ma Voix is currently available on this device.",
+            "No voice compatible with VoxHelp is currently available on this device.",
 
         helpTitle:
             "To install a voice:",
@@ -5668,7 +5642,7 @@ const MISSING_VOICE_TRANSLATIONS = {
             "Wählen Sie eine verfügbare Sprache für die Sprachausgabe:",
 
         noVoice:
-            "Auf diesem Gerät ist derzeit keine mit Ma Voix kompatible Sprachausgabe verfügbar.",
+            "Auf diesem Gerät ist derzeit keine mit VoxHelp kompatible Sprachausgabe verfügbar.",
 
         helpTitle:
             "So installieren Sie eine Stimme:",
@@ -5713,7 +5687,7 @@ const MISSING_VOICE_TRANSLATIONS = {
             "Scelga una lingua di vocalizzazione disponibile:",
 
         noVoice:
-            "Nessuna voce compatibile con Ma Voix è attualmente disponibile su questo dispositivo.",
+            "Nessuna voce compatibile con VoxHelp è attualmente disponibile su questo dispositivo.",
 
         helpTitle:
             "Per installare una voce:",
@@ -5759,83 +5733,6 @@ function getAvailableSpeechLanguages() {
 
 let missingVoiceLanguage = null;
 
-
-function openMissingVoiceModal(language) {
-
-    const modal =
-        document.getElementById(
-            "missingVoiceModal"
-        );
-
-    if (!modal) {
-        return;
-    }
-
-
-    missingVoiceLanguage =
-        language;
-
-
-    const languageName =
-        SPEECH_LANGUAGE_NAMES[language] ||
-        language;
-
-
-    const title =
-        document.getElementById(
-            "missingVoiceTitle"
-        );
-
-    if (title) {
-        title.textContent =
-            "Voix de synthèse indisponible : " +
-            languageName;
-    }
-
-
-    const message =
-        document.getElementById(
-            "missingVoiceMessage"
-        );
-
-    if (message) {
-        message.textContent =
-            "Aucune voix de synthèse " +
-            languageName +
-            " n'est installée ou accessible sur cet appareil.";
-    }
-
-
-    updateMissingVoiceStatus();
-
-
-    const availableContainer =
-        document.getElementById(
-            "availableVoiceLanguages"
-        );
-
-    if (availableContainer) {
-        availableContainer.hidden = true;
-        availableContainer.innerHTML = "";
-    }
-
-
-    const help =
-        document.getElementById(
-            "voiceInstallationHelp"
-        );
-
-    if (help) {
-        help.hidden = true;
-        help.innerHTML = "";
-    }
-
-
-    modal.hidden = false;
-
-    document.body.style.overflow =
-        "hidden";
-}
 
 function openMissingVoiceModal(language) {
 
@@ -6497,112 +6394,47 @@ function speak(text, language = "fr") {
         return;
     }
 
+
     window.speechSynthesis.cancel();
+
 
     const message =
         new SpeechSynthesisUtterance(text);
 
 
-    const locale =
-        LANGUAGE_LOCALES[language] ||
-        "fr-FR";
+    const selectedVoice =
+        getAutomaticVoice(language);
 
+
+    /*
+       SÉCURITÉ :
+       aucune voix d'une autre langue
+       ne doit être utilisée par défaut.
+    */
+
+    if (!selectedVoice) {
+
+        openMissingVoiceModal(
+            language
+        );
+
+        return;
+    }
+
+
+    message.voice =
+        selectedVoice;
 
     message.lang =
-        locale;
+        selectedVoice.lang;
 
     message.rate =
         0.9;
 
 
-    /*
-       Pour l'instant, les voix choisies manuellement
-       dans Ma Voix sont encore les voix françaises.
-
-       Elles sont donc utilisées uniquement pour
-       les phrases françaises.
-    */
-
-let selectedVoice = null;
-
-
-/*
-   En français, on conserve le choix
-   masculin / féminin déjà configuré.
-*/
-
-	if (language === "fr") {
-
-		let selectedVoiceName = "";
-
-		if (activeVoiceType === "male") {
-
-			selectedVoiceName =
-				maleVoiceName;
-
-		}
-		else {
-
-			selectedVoiceName =
-				femaleVoiceName;
-
-		}
-
-
-		selectedVoice =
-			availableFrenchVoices.find(
-				function(voice) {
-
-					return voice.name ===
-						selectedVoiceName;
-
-				}
-			);
-	}
-
-
-	/*
-	   Si aucune voix manuelle n'est trouvée,
-	   Ma Voix choisit automatiquement
-	   la meilleure voix disponible.
-	*/
-
-	if (!selectedVoice) {
-
-		selectedVoice =
-			getAutomaticVoice(language);
-
-	}
-
-
-	/*
-	   SÉCURITÉ :
-	   si aucune vraie voix correspondant
-	   à la langue demandée n'existe,
-	   Ma Voix ne laisse jamais le navigateur
-	   utiliser une voix de secours.
-	*/
-
-	if (!selectedVoice) {
-
-		openMissingVoiceModal(
-			language
-		);
-
-		return;
-	}
-
-
-	message.voice =
-		selectedVoice;
-
-	message.lang =
-		selectedVoice.lang;
-
-
-	window.speechSynthesis.speak(
-		message
-	);
+    window.speechSynthesis.speak(
+        message
+    );
 }
 
 function handleTopRightButton() {
@@ -6698,112 +6530,22 @@ function openWriteScreen() {
     showScreen("writeScreen");
 }
 
-function loadFrenchVoices() {
-
-    const voices =
-        window.speechSynthesis.getVoices();
-
+function loadAvailableVoices() {
 
     availableVoices =
-        voices;
-
-
-    availableFrenchVoices =
-        voices.filter(
-            function(voice) {
-
-                return voice.lang
-                    .toLowerCase()
-                    .startsWith("fr");
-
-            }
-        );
-
-    fillVoiceSelect(
-        "maleVoiceSelect",
-        maleVoiceName
-    );
-
-    fillVoiceSelect(
-        "femaleVoiceSelect",
-        femaleVoiceName
-    );
+        window.speechSynthesis.getVoices();
 }
-
-
-function fillVoiceSelect(selectId, selectedName) {
-
-    const select =
-        document.getElementById(selectId);
-
-    if (!select) {
-        return;
-    }
-
-    select.innerHTML = "";
-
-
-    if (availableFrenchVoices.length === 0) {
-
-        const option =
-            document.createElement("option");
-
-        option.textContent =
-            "Aucune voix française trouvée";
-
-        option.value = "";
-
-        select.appendChild(option);
-
-        return;
-    }
-
-
-    availableFrenchVoices.forEach(
-        function(voice) {
-
-            const option =
-                document.createElement("option");
-
-            option.value =
-                voice.name;
-
-            option.textContent =
-                voice.name +
-                " — " +
-                voice.lang;
-
-            select.appendChild(option);
-
-        }
-    );
-
-
-    if (
-        selectedName &&
-        availableFrenchVoices.some(
-            function(voice) {
-                return voice.name === selectedName;
-            }
-        )
-    ) {
-        select.value =
-            selectedName;
-    }
-}
-
 
 function openVoiceScreen() {
 
-    loadFrenchVoices();
+    loadAvailableVoices();
 
     showScreen("voiceScreen");
 
     updateLanguageButtons();
 	
 	updateCaregiverVoiceStatus();
-
-    updateVoiceButtons();
+	
 }
 
 function choosePatientLanguage(language) {
@@ -6868,7 +6610,7 @@ function chooseCaregiverLanguage(language) {
        disponibles sur l'appareil.
     */
 
-    loadFrenchVoices();
+    loadAvailableVoices();
 
 
     /*
@@ -7035,272 +6777,29 @@ function updateCaregiverVoiceStatus() {
     );
 }
 
-function testVoice(type) {
+function testCaregiverVoice() {
 
-    const selectId =
-        type === "male"
-            ? "maleVoiceSelect"
-            : "femaleVoiceSelect";
+    const testPhrases = {
+        fr: "Bonjour. Voici la voix utilisée par VoxHelp.",
+        en: "Hello. This is the voice used by VoxHelp.",
+        de: "Hallo. Dies ist die von VoxHelp verwendete Stimme.",
+        it: "Buongiorno. Questa è la voce utilizzata da VoxHelp."
+    };
 
-    const select =
-        document.getElementById(selectId);
 
-    if (!select || !select.value) {
+    const text =
+        testPhrases[caregiverLanguage];
+
+    if (!text) {
         return;
     }
 
-
-    const voice =
-        availableFrenchVoices.find(
-            function(item) {
-                return item.name === select.value;
-            }
-        );
-
-    if (!voice) {
-        return;
-    }
-
-
-    window.speechSynthesis.cancel();
-
-    const message =
-        new SpeechSynthesisUtterance(
-            "Bonjour. Voici ma voix."
-        );
-
-    message.lang =
-        voice.lang;
-
-    message.voice =
-        voice;
-
-    message.rate =
-        0.9;
-
-    window.speechSynthesis.speak(message);
-}
-
-/* =========================================
-   SONNERIE D'APPEL HEP!
-   ========================================= */
-
-let attentionAudioContext = null;
-
-
-function playAttentionAlarm() {
-
-    const AudioContext =
-        window.AudioContext ||
-        window.webkitAudioContext;
-
-    if (!AudioContext) {
-        return;
-    }
-
-
-    if (!attentionAudioContext) {
-        attentionAudioContext =
-            new AudioContext();
-    }
-
-
-    const ctx =
-        attentionAudioContext;
-
-
-    if (ctx.state === "suspended") {
-        ctx.resume();
-    }
-
-
-    const startTime =
-        ctx.currentTime + 0.05;
-
-
-    /*
-       4 séries de deux bips.
-       Durée totale : environ 4 secondes.
-    */
-
-    for (let i = 0; i < 4; i++) {
-
-        const baseTime =
-            startTime + (i * 1.0);
-
-        createAlarmTone(
-            ctx,
-            880,
-            baseTime,
-            0.22
-        );
-
-        createAlarmTone(
-            ctx,
-            1175,
-            baseTime + 0.30,
-            0.30
-        );
-    }
-}
-
-
-function createAlarmTone(
-    ctx,
-    frequency,
-    startTime,
-    duration
-) {
-
-    const oscillator =
-        ctx.createOscillator();
-
-    const gain =
-        ctx.createGain();
-
-
-    oscillator.type =
-        "sine";
-
-    oscillator.frequency.value =
-        frequency;
-
-
-    gain.gain.setValueAtTime(
-        0.0001,
-        startTime
-    );
-
-    gain.gain.exponentialRampToValueAtTime(
-        0.8,
-        startTime + 0.02
-    );
-
-    gain.gain.exponentialRampToValueAtTime(
-        0.0001,
-        startTime + duration
-    );
-
-
-    oscillator.connect(gain);
-
-    gain.connect(
-        ctx.destination
-    );
-
-
-    oscillator.start(
-        startTime
-    );
-
-    oscillator.stop(
-        startTime + duration + 0.05
-    );
-}
-
-function chooseVoice(type) {
-
-    const selectId =
-        type === "male"
-            ? "maleVoiceSelect"
-            : "femaleVoiceSelect";
-
-    const select =
-        document.getElementById(selectId);
-
-    if (!select || !select.value) {
-        return;
-    }
-
-
-    if (type === "male") {
-
-        maleVoiceName =
-            select.value;
-
-        activeVoiceType =
-            "male";
-
-        writeLocalSetting(
-            VOICE_STORAGE_KEYS.male,
-            maleVoiceName
-        );
-
-    }
-    else {
-
-        femaleVoiceName =
-            select.value;
-
-        activeVoiceType =
-            "female";
-
-        writeLocalSetting(
-            VOICE_STORAGE_KEYS.female,
-            femaleVoiceName
-        );
-
-    }
-
-
-    writeLocalSetting(
-        VOICE_STORAGE_KEYS.active,
-        activeVoiceType
-    );
-
-    updateVoiceButtons();
 
     speak(
-        type === "male"
-            ? "Voix masculine sélectionnée"
-            : "Voix féminine sélectionnée"
+        text,
+        caregiverLanguage
     );
 }
-
-
-function updateVoiceButtons() {
-
-    const maleButton =
-        document.getElementById(
-            "maleVoiceButton"
-        );
-
-    const femaleButton =
-        document.getElementById(
-            "femaleVoiceButton"
-        );
-
-
-    if (!maleButton || !femaleButton) {
-        return;
-    }
-
-
-    maleButton.classList.remove(
-        "voice-active"
-    );
-
-    femaleButton.classList.remove(
-        "voice-active"
-    );
-
-
-    if (activeVoiceType === "male") {
-
-        maleButton.classList.add(
-            "voice-active"
-        );
-
-    }
-    else {
-
-        femaleButton.classList.add(
-            "voice-active"
-        );
-
-    }
-}
-
 
 /* Compatibilité voix Android / iPhone */
 
@@ -7313,7 +6812,7 @@ if (
 		"voiceschanged",
 		function() {
 
-			loadFrenchVoices();
+			loadAvailableVoices();
 
 			checkCaregiverVoiceAvailability();
 		}
@@ -7502,7 +7001,7 @@ function addText(text) {
 }
 
 /* =========================================
-   PARTAGER MA VOIX PAR EMAIL
+   PARTAGER VoxHelp PAR EMAIL
    ========================================= */
 
 let shareEmailAddress = "";
@@ -7563,7 +7062,7 @@ function shareAppByEmail() {
 
 
     shareEmailBody =
-`Vous êtes invité-e à découvrir « Ma Voix », une application gratuite et simple, développée à partir des besoins rencontrés auprès de patients et de soignants en milieu hospitalier à Genève, pour aider les patients avec trachéotomie ou aphones à sortir de leur prison du silence.
+`Vous êtes invité-e à découvrir « VoxHelp », une application gratuite et simple, développée à partir des besoins rencontrés auprès de patients et de soignants en milieu hospitalier à Genève, pour aider les patients avec trachéotomie ou aphones à sortir de leur prison du silence.
 
 Le principe de l'application est très simple :
 
@@ -7587,7 +7086,7 @@ SIMPLICITÉ, LÉGÈRETÉ ET CONFIDENTIALITÉ
 
 VOIX ET LANGUES
 
-Ma Voix utilise les voix de synthèse disponibles sur le téléphone ou la tablette. Pour qu'une langue soit prononcée correctement, la voix de synthèse correspondante doit être installée sur l'appareil.
+VoxHelp utilise les voix de synthèse disponibles sur le téléphone ou la tablette. Pour qu'une langue soit prononcée correctement, la voix de synthèse correspondante doit être installée sur l'appareil.
 
 Sur une tablette personnelle, ces voix peuvent généralement être ajoutées dans les paramètres de langue ou de synthèse vocale de l'appareil.
 
@@ -7617,16 +7116,16 @@ Sur IPHONE / IPAD
 1. Ouvrir l'adresse ci-dessus avec Safari.
 2. Appuyer sur le bouton Partager.
 3. Choisir « Ajouter à l'écran d'accueil ».
-4. Vérifier que le nom est « Ma Voix », puis appuyer sur « Ajouter ».
-5. Ma Voix apparaîtra comme une application normale avec son icône « Ma Voix ».
+4. Vérifier que le nom est « VoxHelp », puis appuyer sur « Ajouter ».
+5. VoxHelp apparaîtra comme une application normale avec son icône « VoxHelp ».
 
 Sur ANDROID
 
 1. Ouvrir l'adresse ci-dessus avec un navigateur.
 2. Appuyer sur les trois points ⋮.
 3. Choisir « Installer l'application » ou « Ajouter à l'écran d'accueil ».
-4. Valider « Ma Voix ».
-5. Ma Voix apparaîtra comme une application normale avec son icône « Ma Voix ».
+4. Valider « VoxHelp ».
+5. VoxHelp apparaîtra comme une application normale avec son icône « VoxHelp ».
 
 Redonnons une voix à ceux qui en sont privés.`;
 
@@ -8009,12 +7508,10 @@ document.addEventListener(
 
         renderCustomFavorites();
 
-        loadFrenchVoices();
+        loadAvailableVoices();
 		
 		checkCaregiverVoiceAvailability();
 
-        updateVoiceButtons();
-		
 		updateLanguageButtons();
 		
 		updateQuickBarLanguage();

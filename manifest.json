@@ -1,7 +1,7 @@
 {
-    "name": "Ma Voix - Communication",
-    "short_name": "Ma Voix",
-    "description": "Application de communication vocale",
+	"name": "VoxHelp - Communication",
+	"short_name": "VoxHelp",
+	"description": "Application de communication vocale",
     "lang": "fr",
     "start_url": "./",
     "scope": "./",
