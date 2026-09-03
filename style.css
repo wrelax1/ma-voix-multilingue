@@ -861,9 +861,12 @@ button:focus-visible {
 .share-language-choice {
     display: flex;
     align-items: center;
+    justify-content: center;
     flex-wrap: wrap;
 
-    gap: 18px 24px;
+    gap: 18px 72px;
+
+    width: 100%;
 
     margin-bottom: 8px;
 }
@@ -899,7 +902,7 @@ button:focus-visible {
 
     min-height: clamp(68px, 10vh, 88px);
 
-    margin-top: clamp(12px, 2.5vw, 18px);
+    margin-top: clamp(28px, 5vw, 36px);
 
     padding: clamp(10px, 2vw, 14px);
 
